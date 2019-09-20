@@ -19,9 +19,10 @@ namespace Kalender_Prg_Projekt
         }
 
 
-        private void MonthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            textBox1.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
+
         }
     }
 }
