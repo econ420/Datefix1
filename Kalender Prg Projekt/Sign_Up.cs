@@ -37,11 +37,11 @@ namespace Kalender_Prg_Projekt
                 {
                     this.query = $"INSERT INTO tbl_user (`ID` , `Firstname` , `Lastname`, `Username`, `Password`) VALUES (NULL, '{firstnameTextbox1.Text}', '{lastnameTextbox1.Text}', '{usernameTextbox1.Text}', '{passwordTextbox1.Text}')";
                     SQL_Query.Query_Insert(query);
-                    MessageBox.Show("+");
+                    MessageBox.Show("Nutzer Angelegt");
                 }
                 else
                 {
-                    MessageBox.Show("-");
+                    MessageBox.Show("Passwort Falsch");
                 }
             }
 

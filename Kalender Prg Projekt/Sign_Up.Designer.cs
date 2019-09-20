@@ -157,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 450);
+            this.ClientSize = new System.Drawing.Size(284, 248);
             this.Controls.Add(this.sign_UpButton1);
             this.Controls.Add(this.birthdateTextbox1);
             this.Controls.Add(this.passwordConfirmTextbox1);
