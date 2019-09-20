@@ -29,66 +29,56 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DateFix));
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.StartpagelinkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.calendarlinkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.eventslinkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.calendarPanel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.calendarPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // StartpagelinkLabel1
+            // monthCalendar1
             // 
-            this.StartpagelinkLabel1.AutoSize = true;
-            this.StartpagelinkLabel1.Location = new System.Drawing.Point(12, 9);
-            this.StartpagelinkLabel1.Name = "StartpagelinkLabel1";
-            this.StartpagelinkLabel1.Size = new System.Drawing.Size(51, 13);
-            this.StartpagelinkLabel1.TabIndex = 0;
-            this.StartpagelinkLabel1.TabStop = true;
-            this.StartpagelinkLabel1.Text = "Startseite";
-            this.StartpagelinkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.StartpagelinkLabel1_LinkClicked);
+            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(1, 2);
+            this.monthCalendar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.monthCalendar1.Location = new System.Drawing.Point(0, 0);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 4;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.MonthCalendar1_DateSelected);
             // 
-            // calendarlinkLabel2
+            // calendarPanel1
             // 
-            this.calendarlinkLabel2.AutoSize = true;
-            this.calendarlinkLabel2.Location = new System.Drawing.Point(115, 9);
-            this.calendarlinkLabel2.Name = "calendarlinkLabel2";
-            this.calendarlinkLabel2.Size = new System.Drawing.Size(49, 13);
-            this.calendarlinkLabel2.TabIndex = 1;
-            this.calendarlinkLabel2.TabStop = true;
-            this.calendarlinkLabel2.Text = "Kalender";
-            this.calendarlinkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
+            this.calendarPanel1.Controls.Add(this.monthCalendar1);
+            this.calendarPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.calendarPanel1.Location = new System.Drawing.Point(0, 0);
+            this.calendarPanel1.Name = "calendarPanel1";
+            this.calendarPanel1.Size = new System.Drawing.Size(255, 450);
+            this.calendarPanel1.TabIndex = 5;
             // 
-            // eventslinkLabel3
+            // textBox1
             // 
-            this.eventslinkLabel3.AutoSize = true;
-            this.eventslinkLabel3.Location = new System.Drawing.Point(205, 9);
-            this.eventslinkLabel3.Name = "eventslinkLabel3";
-            this.eventslinkLabel3.Size = new System.Drawing.Size(45, 13);
-            this.eventslinkLabel3.TabIndex = 2;
-            this.eventslinkLabel3.TabStop = true;
-            this.eventslinkLabel3.Text = "Termine";
-            this.eventslinkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.EventslinkLabel3_LinkClicked);
+            this.textBox1.Location = new System.Drawing.Point(293, 22);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 6;
             // 
             // DateFix
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.eventslinkLabel3);
-            this.Controls.Add(this.calendarlinkLabel2);
-            this.Controls.Add(this.StartpagelinkLabel1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.calendarPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DateFix";
             this.Text = "DateFix";
+            this.calendarPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.LinkLabel StartpagelinkLabel1;
-        private System.Windows.Forms.LinkLabel calendarlinkLabel2;
-        private System.Windows.Forms.LinkLabel eventslinkLabel3;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Panel calendarPanel1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

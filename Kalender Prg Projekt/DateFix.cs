@@ -8,8 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-//test comment
-//BlaBlasad
 
 namespace Kalender_Prg_Projekt
 {
@@ -20,19 +18,10 @@ namespace Kalender_Prg_Projekt
             InitializeComponent();
         }
 
-        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+
+        private void MonthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
-
-        }
-
-        private void EventslinkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void StartpagelinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
+            textBox1.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
         }
     }
 }
