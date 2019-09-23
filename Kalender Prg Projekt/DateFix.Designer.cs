@@ -29,56 +29,61 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DateFix));
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.calendarPanel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.calendarPanel1.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // monthCalendar1
+            // tabControl1
             // 
-            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(1, 2);
-            this.monthCalendar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.monthCalendar1.Location = new System.Drawing.Point(0, 0);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 4;
-            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.MonthCalendar1_DateSelected);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(797, 452);
+            this.tabControl1.TabIndex = 0;
             // 
-            // calendarPanel1
+            // tabPage1
             // 
-            this.calendarPanel1.Controls.Add(this.monthCalendar1);
-            this.calendarPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.calendarPanel1.Location = new System.Drawing.Point(0, 0);
-            this.calendarPanel1.Name = "calendarPanel1";
-            this.calendarPanel1.Size = new System.Drawing.Size(255, 450);
-            this.calendarPanel1.TabIndex = 5;
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(789, 426);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tabPage2
             // 
-            this.textBox1.Location = new System.Drawing.Point(293, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(192, 74);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // DateFix
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.calendarPanel1);
+            this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DateFix";
             this.Text = "DateFix";
-            this.calendarPanel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.DateFix_Load);
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Panel calendarPanel1;
-        private System.Windows.Forms.TextBox textBox1;
+
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }

@@ -18,10 +18,34 @@ namespace Kalender_Prg_Projekt
             InitializeComponent();
         }
 
-
-        private void MonthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        private void CheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            textBox1.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
+
+        }
+
+        private void DateFix_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CalendarPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
