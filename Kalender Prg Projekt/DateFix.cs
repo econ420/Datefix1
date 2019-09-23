@@ -18,32 +18,9 @@ namespace Kalender_Prg_Projekt
             InitializeComponent();
         }
 
-        private void CheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
 
-        private void DateFix_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CalendarPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button3_Click(object sender, EventArgs e)
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }

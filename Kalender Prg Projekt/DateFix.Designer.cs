@@ -30,40 +30,74 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DateFix));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.calendarTabPage1 = new System.Windows.Forms.TabPage();
+            this.appointmentTabPage1 = new System.Windows.Forms.TabPage();
+            this.taskTabPage1 = new System.Windows.Forms.TabPage();
+            this.accountTabPage1 = new System.Windows.Forms.TabPage();
+            this.contactsTabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.calendarTabPage1);
+            this.tabControl1.Controls.Add(this.contactsTabPage1);
+            this.tabControl1.Controls.Add(this.appointmentTabPage1);
+            this.tabControl1.Controls.Add(this.taskTabPage1);
+            this.tabControl1.Controls.Add(this.accountTabPage1);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(797, 452);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(800, 450);
+            this.tabControl1.TabIndex = 7;
             // 
-            // tabPage1
+            // calendarTabPage1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(789, 426);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.calendarTabPage1.Location = new System.Drawing.Point(4, 22);
+            this.calendarTabPage1.Name = "calendarTabPage1";
+            this.calendarTabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.calendarTabPage1.Size = new System.Drawing.Size(792, 424);
+            this.calendarTabPage1.TabIndex = 0;
+            this.calendarTabPage1.Text = "Kalendar";
+            this.calendarTabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // appointmentTabPage1
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.appointmentTabPage1.Location = new System.Drawing.Point(4, 22);
+            this.appointmentTabPage1.Name = "appointmentTabPage1";
+            this.appointmentTabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.appointmentTabPage1.Size = new System.Drawing.Size(792, 424);
+            this.appointmentTabPage1.TabIndex = 1;
+            this.appointmentTabPage1.Text = "Termine";
+            this.appointmentTabPage1.UseVisualStyleBackColor = true;
+            // 
+            // taskTabPage1
+            // 
+            this.taskTabPage1.Location = new System.Drawing.Point(4, 22);
+            this.taskTabPage1.Name = "taskTabPage1";
+            this.taskTabPage1.Size = new System.Drawing.Size(792, 424);
+            this.taskTabPage1.TabIndex = 2;
+            this.taskTabPage1.Text = "Aufgaben";
+            this.taskTabPage1.UseVisualStyleBackColor = true;
+            // 
+            // accountTabPage1
+            // 
+            this.accountTabPage1.Location = new System.Drawing.Point(4, 22);
+            this.accountTabPage1.Name = "accountTabPage1";
+            this.accountTabPage1.Size = new System.Drawing.Size(792, 424);
+            this.accountTabPage1.TabIndex = 3;
+            this.accountTabPage1.Text = "Konto";
+            this.accountTabPage1.UseVisualStyleBackColor = true;
+            // 
+            // contactsTabPage1
+            // 
+            this.contactsTabPage1.Location = new System.Drawing.Point(4, 22);
+            this.contactsTabPage1.Name = "contactsTabPage1";
+            this.contactsTabPage1.Size = new System.Drawing.Size(792, 424);
+            this.contactsTabPage1.TabIndex = 4;
+            this.contactsTabPage1.Text = "Kontakte";
+            this.contactsTabPage1.UseVisualStyleBackColor = true;
             // 
             // DateFix
             // 
@@ -74,7 +108,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DateFix";
             this.Text = "DateFix";
-            this.Load += new System.EventHandler(this.DateFix_Load);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -83,7 +116,10 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage calendarTabPage1;
+        private System.Windows.Forms.TabPage appointmentTabPage1;
+        private System.Windows.Forms.TabPage taskTabPage1;
+        private System.Windows.Forms.TabPage accountTabPage1;
+        private System.Windows.Forms.TabPage contactsTabPage1;
     }
 }
