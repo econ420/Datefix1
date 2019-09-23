@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DateFix));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.calendarTabPage1 = new System.Windows.Forms.TabPage();
+            this.contactsTabPage1 = new System.Windows.Forms.TabPage();
             this.appointmentTabPage1 = new System.Windows.Forms.TabPage();
             this.taskTabPage1 = new System.Windows.Forms.TabPage();
             this.accountTabPage1 = new System.Windows.Forms.TabPage();
-            this.contactsTabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,15 @@
             this.calendarTabPage1.TabIndex = 0;
             this.calendarTabPage1.Text = "Kalendar";
             this.calendarTabPage1.UseVisualStyleBackColor = true;
+            // 
+            // contactsTabPage1
+            // 
+            this.contactsTabPage1.Location = new System.Drawing.Point(4, 22);
+            this.contactsTabPage1.Name = "contactsTabPage1";
+            this.contactsTabPage1.Size = new System.Drawing.Size(792, 424);
+            this.contactsTabPage1.TabIndex = 4;
+            this.contactsTabPage1.Text = "Kontakte";
+            this.contactsTabPage1.UseVisualStyleBackColor = true;
             // 
             // appointmentTabPage1
             // 
@@ -89,15 +98,6 @@
             this.accountTabPage1.TabIndex = 3;
             this.accountTabPage1.Text = "Konto";
             this.accountTabPage1.UseVisualStyleBackColor = true;
-            // 
-            // contactsTabPage1
-            // 
-            this.contactsTabPage1.Location = new System.Drawing.Point(4, 22);
-            this.contactsTabPage1.Name = "contactsTabPage1";
-            this.contactsTabPage1.Size = new System.Drawing.Size(792, 424);
-            this.contactsTabPage1.TabIndex = 4;
-            this.contactsTabPage1.Text = "Kontakte";
-            this.contactsTabPage1.UseVisualStyleBackColor = true;
             // 
             // DateFix
             // 
