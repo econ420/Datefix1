@@ -82,7 +82,7 @@
             this.contactsTabPage1.TabIndex = 4;
             this.contactsTabPage1.Text = "Kontakte";
             this.contactsTabPage1.UseVisualStyleBackColor = true;
-            this.contactsTabPage1.Click += new System.EventHandler(this.ContactsTabPage1_Click);
+            //this.contactsTabPage1.Click += new System.EventHandler(this.ContactsTabPage1_Click);
             // 
             // contactListContactsListview
             // 
@@ -91,7 +91,7 @@
             this.contactListContactsListview.Size = new System.Drawing.Size(780, 385);
             this.contactListContactsListview.TabIndex = 1;
             this.contactListContactsListview.UseCompatibleStateImageBehavior = false;
-            this.contactListContactsListview.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
+            //this.contactListContactsListview.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
             // 
             // NewUserContactsButton
             // 
@@ -209,7 +209,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DateFix";
             this.Text = "DateFix";
-            this.Load += new System.EventHandler(this.DateFix_Load);
+            //this.Load += new System.EventHandler(this.DateFix_Load);
             this.tabControl1.ResumeLayout(false);
             this.accountTabPage1.ResumeLayout(false);
             this.accountTabPage1.PerformLayout();
@@ -232,5 +232,7 @@
         private System.Windows.Forms.TextBox usernameAccountTextbox1;
         private System.Windows.Forms.Label passwordAccountLabel1;
         private System.Windows.Forms.Label usernameAccountLabel1;
+        private System.Windows.Forms.Button NewUserContactsButton;
+        private System.Windows.Forms.ListView contactListContactsListview;
     }
 }
