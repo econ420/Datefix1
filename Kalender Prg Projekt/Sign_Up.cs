@@ -35,7 +35,7 @@ namespace Kalender_Prg_Projekt
             {
                 if (passwordTextbox1.Text == passwordConfirmTextbox1.Text && passwordTextbox1.Text != "")
                 {
-                    this.query = $"INSERT INTO tbl_user (`ID` , `Firstname` , `Lastname`, `Username`, `Password`) VALUES (NULL, '{firstnameTextbox1.Text}', '{lastnameTextbox1.Text}', '{usernameTextbox1.Text}', '{passwordTextbox1.Text}')";
+                    this.query = $"INSERT INTO tbl_user (`ID` , `Firstname` , `Lastname`, `Username`, `Password`) VALUES (NULL, '{firstnameTextbox1.Text}', '{lastnameTextbox1.Text}', '{usernameTextbox1.Text}', '{Password.passwordHash(passwordTextbox1.Text)}')";
                     SQL_Query.Query_Insert(query);
                     MessageBox.Show("Nutzer Angelegt");
                 }

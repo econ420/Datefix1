@@ -109,6 +109,39 @@ namespace Kalender_Prg_Projekt
             return dummy;
         }
 
+        public static int Query_Int(string abfrage)
+        {
+            int dummy = 0;
 
+            MySqlConnection databaseConnection = new MySqlConnection(MySQLConnectionString);
+
+            MySqlCommand commandDatabase = new MySqlCommand(abfrage, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+
+            try
+            {
+                databaseConnection.Open();
+                MySqlDataReader myReader = commandDatabase.ExecuteReader();
+
+                if (myReader.HasRows)
+                {
+                    while (myReader.Read())
+                    {
+                        dummy = Convert.ToInt32(myReader.GetString(0));
+                        return dummy;
+                    }
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Query error " + ex.Message);
+                return dummy;
+            }
+            return 0;
+        }
     }
 }

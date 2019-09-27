@@ -77,9 +77,9 @@
             // 
             this.passwordTextbox1.Location = new System.Drawing.Point(139, 57);
             this.passwordTextbox1.Name = "passwordTextbox1";
-            this.passwordTextbox1.PasswordChar = '*';
             this.passwordTextbox1.Size = new System.Drawing.Size(100, 20);
             this.passwordTextbox1.TabIndex = 3;
+            this.passwordTextbox1.UseSystemPasswordChar = true;
             // 
             // signUpLinkLabel1
             // 

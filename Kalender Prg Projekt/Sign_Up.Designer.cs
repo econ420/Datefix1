@@ -126,6 +126,7 @@
             this.passwordTextbox1.Name = "passwordTextbox1";
             this.passwordTextbox1.Size = new System.Drawing.Size(100, 20);
             this.passwordTextbox1.TabIndex = 9;
+            this.passwordTextbox1.UseSystemPasswordChar = true;
             this.passwordTextbox1.TextChanged += new System.EventHandler(this.PasswordConfirmationCorrect_Textchanged);
             // 
             // passwordConfirmTextbox1
@@ -134,6 +135,7 @@
             this.passwordConfirmTextbox1.Name = "passwordConfirmTextbox1";
             this.passwordConfirmTextbox1.Size = new System.Drawing.Size(100, 20);
             this.passwordConfirmTextbox1.TabIndex = 10;
+            this.passwordConfirmTextbox1.UseSystemPasswordChar = true;
             this.passwordConfirmTextbox1.TextChanged += new System.EventHandler(this.PasswordConfirmationCorrect_Textchanged);
             // 
             // birthdateTextbox1
@@ -157,7 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 248);
+            this.ClientSize = new System.Drawing.Size(284, 263);
             this.Controls.Add(this.sign_UpButton1);
             this.Controls.Add(this.birthdateTextbox1);
             this.Controls.Add(this.passwordConfirmTextbox1);

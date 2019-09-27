@@ -13,6 +13,8 @@ namespace Kalender_Prg_Projekt
 {
     public partial class DateFix : Form
     {
+        int activeUserID = 0;
+
         public DateFix()
         {
             InitializeComponent();
@@ -53,14 +55,23 @@ namespace Kalender_Prg_Projekt
 
         }
 
-        private void ContactsTabPage1_Click(object sender, EventArgs e)
+
+
+        private void SignInAccountButton1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            string query = $"SELECT * FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
+            if (SQL_Query.Query_Compare(query))
+            {
+                Console.Write("Sign In successfull");
+                DateFix dateFix = new DateFix();
+                query = $"SELECT ID FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
+                dateFix.setActiveUserID(SQL_Query.Query_Int(query));
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("False");
+            }
         }
     }
 }
