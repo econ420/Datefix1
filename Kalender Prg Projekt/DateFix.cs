@@ -22,8 +22,6 @@ namespace Kalender_Prg_Projekt
 
         private void DateFix_Load(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
         }
 
         public void setActiveUserID (int dummy)
@@ -34,17 +32,22 @@ namespace Kalender_Prg_Projekt
         private void SignInAccountButton1_Click(object sender, EventArgs e)
         {
             string query = $"SELECT * FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
-            if (SQL_Query.Query_Compare(query))
+            if(SQL_Query.Query_Compare(query))
             {
-                Console.Write("Sign In successfull");
-                DateFix dateFix = new DateFix();
-                query = $"SELECT ID FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
-                dateFix.setActiveUserID(SQL_Query.Query_Int(query));
-                this.Close();
+                if (Password.checkHashedPassword(passwordAccountTextbox1.Text, usernameAccountTextbox1.Text))
+                {
+                    Console.Write("Sign In successfull");
+                    query = $"SELECT ID FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
+                    setActiveUserID(SQL_Query.Query_Int(query));
+                }
+                else
+                {
+                    MessageBox.Show("False");
+                }
             }
             else
             {
-                MessageBox.Show("False");
+                MessageBox.Show("Username not found");
             }
         }
     }

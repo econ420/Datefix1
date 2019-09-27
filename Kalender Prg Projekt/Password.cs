@@ -26,6 +26,31 @@ namespace Kalender_Prg_Projekt
         }
 
 
+        public static bool checkHashedPassword(string password, string Username)
+        {
+            bool passwordEqual = true;
+
+            string query = $"SELECT Password FROM tbl_user WHERE tbl_user.Username = '{Username}'";
+            string savedPasswordHash = SQL_Query.Query_String(query);
+
+            byte[] hashBytes = Convert.FromBase64String(savedPasswordHash);
+            byte[] salt = new byte[16];
+
+            Array.Copy(hashBytes, 0, salt, 0, 16);
+
+            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000);
+            byte[] hash = pbkdf2.GetBytes(20);
+
+            for(int i = 0; i < 20; i++)
+            {
+                if(hashBytes[i+16] != hash[i])
+                {
+                    passwordEqual = false;
+                }
+            }
+            return passwordEqual;
+        }
+
 
     }
 }
