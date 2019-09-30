@@ -32,19 +32,23 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.calendarTabPage1 = new System.Windows.Forms.TabPage();
             this.contactsTabPage1 = new System.Windows.Forms.TabPage();
-            this.contactListContactsListview = new System.Windows.Forms.ListView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.NewUserContactsButton = new System.Windows.Forms.Button();
             this.appointmentTabPage1 = new System.Windows.Forms.TabPage();
             this.taskTabPage1 = new System.Windows.Forms.TabPage();
             this.accountTabPage1 = new System.Windows.Forms.TabPage();
+            this.titleAccountSignInLabel1 = new System.Windows.Forms.Label();
             this.signUpAccountLinkLabel1 = new System.Windows.Forms.LinkLabel();
             this.signInAccountButton1 = new System.Windows.Forms.Button();
             this.passwordAccountTextbox1 = new System.Windows.Forms.TextBox();
             this.usernameAccountTextbox1 = new System.Windows.Forms.TextBox();
             this.passwordAccountLabel1 = new System.Windows.Forms.Label();
             this.usernameAccountLabel1 = new System.Windows.Forms.Label();
-            this.titleAccountSignInLabel1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
+            this.contactsTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.accountTabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,24 +78,33 @@
             // 
             // contactsTabPage1
             // 
-            this.contactsTabPage1.Controls.Add(this.contactListContactsListview);
-            this.contactsTabPage1.Controls.Add(this.NewUserContactsButton);
+            this.contactsTabPage1.Controls.Add(this.dataGridView1);
+            this.contactsTabPage1.Controls.Add(this.panel1);
             this.contactsTabPage1.Location = new System.Drawing.Point(4, 22);
             this.contactsTabPage1.Name = "contactsTabPage1";
             this.contactsTabPage1.Size = new System.Drawing.Size(792, 424);
             this.contactsTabPage1.TabIndex = 4;
             this.contactsTabPage1.Text = "Kontakte";
             this.contactsTabPage1.UseVisualStyleBackColor = true;
-            //this.contactsTabPage1.Click += new System.EventHandler(this.ContactsTabPage1_Click);
             // 
-            // contactListContactsListview
+            // dataGridView1
             // 
-            this.contactListContactsListview.Location = new System.Drawing.Point(8, 29);
-            this.contactListContactsListview.Name = "contactListContactsListview";
-            this.contactListContactsListview.Size = new System.Drawing.Size(780, 385);
-            this.contactListContactsListview.TabIndex = 1;
-            this.contactListContactsListview.UseCompatibleStateImageBehavior = false;
-            //this.contactListContactsListview.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(792, 396);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.NewUserContactsButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(792, 28);
+            this.panel1.TabIndex = 8;
             // 
             // NewUserContactsButton
             // 
@@ -138,6 +151,15 @@
             this.accountTabPage1.Text = "Konto";
             this.accountTabPage1.UseVisualStyleBackColor = true;
             // 
+            // titleAccountSignInLabel1
+            // 
+            this.titleAccountSignInLabel1.AutoSize = true;
+            this.titleAccountSignInLabel1.Location = new System.Drawing.Point(532, 83);
+            this.titleAccountSignInLabel1.Name = "titleAccountSignInLabel1";
+            this.titleAccountSignInLabel1.Size = new System.Drawing.Size(33, 13);
+            this.titleAccountSignInLabel1.TabIndex = 12;
+            this.titleAccountSignInLabel1.Text = "Login";
+            // 
             // signUpAccountLinkLabel1
             // 
             this.signUpAccountLinkLabel1.AutoSize = true;
@@ -156,7 +178,6 @@
             this.signInAccountButton1.TabIndex = 10;
             this.signInAccountButton1.Text = "Anmelden";
             this.signInAccountButton1.UseVisualStyleBackColor = true;
-            this.signInAccountButton1.Click += new System.EventHandler(this.SignInAccountButton1_Click);
             // 
             // passwordAccountTextbox1
             // 
@@ -185,20 +206,11 @@
             // usernameAccountLabel1
             // 
             this.usernameAccountLabel1.AutoSize = true;
-            this.usernameAccountLabel1.Location = new System.Drawing.Point(532, 120);
+            this.usernameAccountLabel1.Location = new System.Drawing.Point(0, 0);
             this.usernameAccountLabel1.Name = "usernameAccountLabel1";
             this.usernameAccountLabel1.Size = new System.Drawing.Size(75, 13);
             this.usernameAccountLabel1.TabIndex = 6;
             this.usernameAccountLabel1.Text = "Benutzername";
-            // 
-            // titleAccountSignInLabel1
-            // 
-            this.titleAccountSignInLabel1.AutoSize = true;
-            this.titleAccountSignInLabel1.Location = new System.Drawing.Point(532, 83);
-            this.titleAccountSignInLabel1.Name = "titleAccountSignInLabel1";
-            this.titleAccountSignInLabel1.Size = new System.Drawing.Size(33, 13);
-            this.titleAccountSignInLabel1.TabIndex = 12;
-            this.titleAccountSignInLabel1.Text = "Login";
             // 
             // DateFix
             // 
@@ -209,8 +221,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DateFix";
             this.Text = "DateFix";
-            //this.Load += new System.EventHandler(this.DateFix_Load);
             this.tabControl1.ResumeLayout(false);
+            this.contactsTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.accountTabPage1.ResumeLayout(false);
             this.accountTabPage1.PerformLayout();
             this.ResumeLayout(false);
@@ -233,6 +247,7 @@
         private System.Windows.Forms.Label passwordAccountLabel1;
         private System.Windows.Forms.Label usernameAccountLabel1;
         private System.Windows.Forms.Button NewUserContactsButton;
-        private System.Windows.Forms.ListView contactListContactsListview;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
