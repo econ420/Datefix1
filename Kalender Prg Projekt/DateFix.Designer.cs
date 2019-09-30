@@ -33,13 +33,13 @@
             this.calendarTabPage1 = new System.Windows.Forms.TabPage();
             this.contactsTabPage1 = new System.Windows.Forms.TabPage();
             this.appointmentTabPage1 = new System.Windows.Forms.TabPage();
+            this.appointmentsCalenderAppointmentsMonthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.titelAppointmentsAppointmentsLabel1 = new System.Windows.Forms.Label();
+            this.titelBirthdayAppointmentsLabel2 = new System.Windows.Forms.Label();
+            this.birthdayAppointmentsTextBox2 = new System.Windows.Forms.TextBox();
+            this.appointmentsAppointmentsTextBox1 = new System.Windows.Forms.TextBox();
             this.taskTabPage1 = new System.Windows.Forms.TabPage();
             this.accountTabPage1 = new System.Windows.Forms.TabPage();
-            this.appointmentsAppointmentsTextBox1 = new System.Windows.Forms.TextBox();
-            this.birthdayAppointmentsTextBox2 = new System.Windows.Forms.TextBox();
-            this.titelBirthdayAppointmentsLabel2 = new System.Windows.Forms.Label();
-            this.titelAppointmentsAppointmentsLabel1 = new System.Windows.Forms.Label();
-            this.appointmentsCalenderAppointmentsMonthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.tabControl1.SuspendLayout();
             this.appointmentTabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +92,49 @@
             this.appointmentTabPage1.Text = "Termine";
             this.appointmentTabPage1.UseVisualStyleBackColor = true;
             // 
+            // appointmentsCalenderAppointmentsMonthCalendar1
+            // 
+            this.appointmentsCalenderAppointmentsMonthCalendar1.Location = new System.Drawing.Point(9, 21);
+            this.appointmentsCalenderAppointmentsMonthCalendar1.Name = "appointmentsCalenderAppointmentsMonthCalendar1";
+            this.appointmentsCalenderAppointmentsMonthCalendar1.TabIndex = 4;
+            // 
+            // titelAppointmentsAppointmentsLabel1
+            // 
+            this.titelAppointmentsAppointmentsLabel1.AutoSize = true;
+            this.titelAppointmentsAppointmentsLabel1.Location = new System.Drawing.Point(384, 17);
+            this.titelAppointmentsAppointmentsLabel1.Name = "titelAppointmentsAppointmentsLabel1";
+            this.titelAppointmentsAppointmentsLabel1.Size = new System.Drawing.Size(153, 13);
+            this.titelAppointmentsAppointmentsLabel1.TabIndex = 3;
+            this.titelAppointmentsAppointmentsLabel1.Text = "Termine der nächsten 14 Tage";
+            // 
+            // titelBirthdayAppointmentsLabel2
+            // 
+            this.titelBirthdayAppointmentsLabel2.AutoSize = true;
+            this.titelBirthdayAppointmentsLabel2.Location = new System.Drawing.Point(384, 207);
+            this.titelBirthdayAppointmentsLabel2.Name = "titelBirthdayAppointmentsLabel2";
+            this.titelBirthdayAppointmentsLabel2.Size = new System.Drawing.Size(189, 13);
+            this.titelBirthdayAppointmentsLabel2.TabIndex = 2;
+            this.titelBirthdayAppointmentsLabel2.Text = "Die Geburstage der nächsten 14 Tage";
+            // 
+            // birthdayAppointmentsTextBox2
+            // 
+            this.birthdayAppointmentsTextBox2.Location = new System.Drawing.Point(384, 223);
+            this.birthdayAppointmentsTextBox2.Multiline = true;
+            this.birthdayAppointmentsTextBox2.Name = "birthdayAppointmentsTextBox2";
+            this.birthdayAppointmentsTextBox2.Size = new System.Drawing.Size(400, 150);
+            this.birthdayAppointmentsTextBox2.TabIndex = 1;
+            this.birthdayAppointmentsTextBox2.TextChanged += new System.EventHandler(this.BirthdaytextBox2_TextChanged);
+            // 
+            // appointmentsAppointmentsTextBox1
+            // 
+            this.appointmentsAppointmentsTextBox1.Location = new System.Drawing.Point(384, 33);
+            this.appointmentsAppointmentsTextBox1.Multiline = true;
+            this.appointmentsAppointmentsTextBox1.Name = "appointmentsAppointmentsTextBox1";
+            this.appointmentsAppointmentsTextBox1.Size = new System.Drawing.Size(400, 150);
+            this.appointmentsAppointmentsTextBox1.TabIndex = 0;
+            this.appointmentsAppointmentsTextBox1.Text = "\r\n\r\n";
+            this.appointmentsAppointmentsTextBox1.TextChanged += new System.EventHandler(this.AppointmentstextBox1_TextChanged);
+            // 
             // taskTabPage1
             // 
             this.taskTabPage1.Location = new System.Drawing.Point(4, 22);
@@ -109,49 +152,6 @@
             this.accountTabPage1.TabIndex = 3;
             this.accountTabPage1.Text = "Konto";
             this.accountTabPage1.UseVisualStyleBackColor = true;
-            // 
-            // appointmentsAppointmentsTextBox1
-            // 
-            this.appointmentsAppointmentsTextBox1.Location = new System.Drawing.Point(384, 33);
-            this.appointmentsAppointmentsTextBox1.Multiline = true;
-            this.appointmentsAppointmentsTextBox1.Name = "appointmentsAppointmentsTextBox1";
-            this.appointmentsAppointmentsTextBox1.Size = new System.Drawing.Size(400, 150);
-            this.appointmentsAppointmentsTextBox1.TabIndex = 0;
-            this.appointmentsAppointmentsTextBox1.Text = "\r\n\r\n";
-            this.appointmentsAppointmentsTextBox1.TextChanged += new System.EventHandler(this.AppointmentstextBox1_TextChanged);
-            // 
-            // birthdayAppointmentsTextBox2
-            // 
-            this.birthdayAppointmentsTextBox2.Location = new System.Drawing.Point(384, 223);
-            this.birthdayAppointmentsTextBox2.Multiline = true;
-            this.birthdayAppointmentsTextBox2.Name = "birthdayAppointmentsTextBox2";
-            this.birthdayAppointmentsTextBox2.Size = new System.Drawing.Size(400, 150);
-            this.birthdayAppointmentsTextBox2.TabIndex = 1;
-            this.birthdayAppointmentsTextBox2.TextChanged += new System.EventHandler(this.BirthdaytextBox2_TextChanged);
-            // 
-            // titelBirthdayAppointmentsLabel2
-            // 
-            this.titelBirthdayAppointmentsLabel2.AutoSize = true;
-            this.titelBirthdayAppointmentsLabel2.Location = new System.Drawing.Point(384, 207);
-            this.titelBirthdayAppointmentsLabel2.Name = "titelBirthdayAppointmentsLabel2";
-            this.titelBirthdayAppointmentsLabel2.Size = new System.Drawing.Size(189, 13);
-            this.titelBirthdayAppointmentsLabel2.TabIndex = 2;
-            this.titelBirthdayAppointmentsLabel2.Text = "Die Geburstage der nächsten 14 Tage";
-            // 
-            // titelAppointmentsAppointmentsLabel1
-            // 
-            this.titelAppointmentsAppointmentsLabel1.AutoSize = true;
-            this.titelAppointmentsAppointmentsLabel1.Location = new System.Drawing.Point(384, 17);
-            this.titelAppointmentsAppointmentsLabel1.Name = "titelAppointmentsAppointmentsLabel1";
-            this.titelAppointmentsAppointmentsLabel1.Size = new System.Drawing.Size(153, 13);
-            this.titelAppointmentsAppointmentsLabel1.TabIndex = 3;
-            this.titelAppointmentsAppointmentsLabel1.Text = "Termine der nächsten 14 Tage";
-            // 
-            // appointmentsCalenderAppointmentsMonthCalendar1
-            // 
-            this.appointmentsCalenderAppointmentsMonthCalendar1.Location = new System.Drawing.Point(9, 17);
-            this.appointmentsCalenderAppointmentsMonthCalendar1.Name = "appointmentsCalenderAppointmentsMonthCalendar1";
-            this.appointmentsCalenderAppointmentsMonthCalendar1.TabIndex = 4;
             // 
             // DateFix
             // 
