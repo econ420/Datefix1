@@ -42,6 +42,10 @@
             this.passwordConfirmTextbox1 = new System.Windows.Forms.TextBox();
             this.birthdateTextbox1 = new System.Windows.Forms.TextBox();
             this.sign_UpButton1 = new System.Windows.Forms.Button();
+            this.emailLabel1 = new System.Windows.Forms.Label();
+            this.addressLabel1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // firstnameLabel1
@@ -114,7 +118,7 @@
             // birthdateLabel1
             // 
             this.birthdateLabel1.AutoSize = true;
-            this.birthdateLabel1.Location = new System.Drawing.Point(35, 172);
+            this.birthdateLabel1.Location = new System.Drawing.Point(32, 174);
             this.birthdateLabel1.Name = "birthdateLabel1";
             this.birthdateLabel1.Size = new System.Drawing.Size(73, 13);
             this.birthdateLabel1.TabIndex = 8;
@@ -147,7 +151,7 @@
             // 
             // sign_UpButton1
             // 
-            this.sign_UpButton1.Location = new System.Drawing.Point(38, 214);
+            this.sign_UpButton1.Location = new System.Drawing.Point(35, 261);
             this.sign_UpButton1.Name = "sign_UpButton1";
             this.sign_UpButton1.Size = new System.Drawing.Size(204, 23);
             this.sign_UpButton1.TabIndex = 12;
@@ -155,11 +159,47 @@
             this.sign_UpButton1.UseVisualStyleBackColor = true;
             this.sign_UpButton1.Click += new System.EventHandler(this.Sign_UpButton1_Click);
             // 
+            // emailLabel1
+            // 
+            this.emailLabel1.AutoSize = true;
+            this.emailLabel1.Location = new System.Drawing.Point(32, 202);
+            this.emailLabel1.Name = "emailLabel1";
+            this.emailLabel1.Size = new System.Drawing.Size(36, 13);
+            this.emailLabel1.TabIndex = 13;
+            this.emailLabel1.Text = "E-Mail";
+            // 
+            // addressLabel1
+            // 
+            this.addressLabel1.AutoSize = true;
+            this.addressLabel1.Location = new System.Drawing.Point(32, 230);
+            this.addressLabel1.Name = "addressLabel1";
+            this.addressLabel1.Size = new System.Drawing.Size(51, 13);
+            this.addressLabel1.TabIndex = 14;
+            this.addressLabel1.Text = "Addresse";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(139, 197);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 15;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(139, 225);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 16;
+            // 
             // Sign_Up
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 263);
+            this.ClientSize = new System.Drawing.Size(284, 304);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.addressLabel1);
+            this.Controls.Add(this.emailLabel1);
             this.Controls.Add(this.sign_UpButton1);
             this.Controls.Add(this.birthdateTextbox1);
             this.Controls.Add(this.passwordConfirmTextbox1);
@@ -197,5 +237,9 @@
         private System.Windows.Forms.TextBox passwordConfirmTextbox1;
         private System.Windows.Forms.TextBox birthdateTextbox1;
         private System.Windows.Forms.Button sign_UpButton1;
+        private System.Windows.Forms.Label emailLabel1;
+        private System.Windows.Forms.Label addressLabel1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
