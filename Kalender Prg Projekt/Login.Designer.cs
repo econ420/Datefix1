@@ -55,6 +55,7 @@
             // 
             // signInButton1
             // 
+            this.signInButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signInButton1.Location = new System.Drawing.Point(35, 93);
             this.signInButton1.Name = "signInButton1";
             this.signInButton1.Size = new System.Drawing.Size(204, 23);

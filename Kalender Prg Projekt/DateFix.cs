@@ -25,14 +25,11 @@ namespace Kalender_Prg_Projekt
             }
         }
 
-        private void DateFix_Load(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
+
         }
 
-        public void setActiveUserID (int dummy)
-        {
-            activeUserID = dummy;
-        }
 
         public void showAccountInformation()
         {
