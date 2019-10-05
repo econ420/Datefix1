@@ -19,17 +19,22 @@ namespace Kalender_Prg_Projekt
         public DateFix()
         {
             InitializeComponent();
+            string query = $@"SELECT 'Username','Firstname','Lastname','Birthdate','E-mail'
+                              FROM tbl_users
+                              WHERE userId = '{activeUserID}'";
             if(activeUserID == 0)
             {
                 accountInformationsPanel1.Hide();
             }
-        }
+        
 
+            SQL_Query.Query_DataGridview(query, dataGridView1);
+ }
         private void Button1_Click(object sender, EventArgs e)
         {
-
+           var popupNewContact = new NewContact(); 
+            popupNewContact.ShowDialog();
         }
-
 
         public void showAccountInformation()
         {
@@ -49,6 +54,9 @@ namespace Kalender_Prg_Projekt
         {
             activeUserID = dummy;
         }
+
+ 
+        
 
 
 

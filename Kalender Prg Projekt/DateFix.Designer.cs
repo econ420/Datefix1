@@ -32,6 +32,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.calendarTabPage1 = new System.Windows.Forms.TabPage();
             this.contactsTabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.NewUserContactsButton = new System.Windows.Forms.Button();
             this.appointmentTabPage1 = new System.Windows.Forms.TabPage();
             this.taskTabPage1 = new System.Windows.Forms.TabPage();
             this.accountTabPage1 = new System.Windows.Forms.TabPage();
@@ -44,15 +47,18 @@
             this.passwordAccountLabel1 = new System.Windows.Forms.Label();
             this.usernameAccountLabel1 = new System.Windows.Forms.Label();
             this.accountInformationsPanel1 = new System.Windows.Forms.Panel();
-            this.usernameInformationLabel1 = new System.Windows.Forms.Label();
-            this.firstnameInformationLabel1 = new System.Windows.Forms.Label();
-            this.lastnameInforamtionLabel1 = new System.Windows.Forms.Label();
-            this.birthdateInformationLabel1 = new System.Windows.Forms.Label();
-            this.usernameInformationTextBox1 = new System.Windows.Forms.TextBox();
-            this.firstnameInformationTextBox1 = new System.Windows.Forms.TextBox();
-            this.lastnameInforamtionTextBox1 = new System.Windows.Forms.TextBox();
             this.birthdateInformationTextBox1 = new System.Windows.Forms.TextBox();
+            this.lastnameInforamtionTextBox1 = new System.Windows.Forms.TextBox();
+            this.firstnameInformationTextBox1 = new System.Windows.Forms.TextBox();
+            this.usernameInformationTextBox1 = new System.Windows.Forms.TextBox();
+            this.birthdateInformationLabel1 = new System.Windows.Forms.Label();
+            this.lastnameInforamtionLabel1 = new System.Windows.Forms.Label();
+            this.firstnameInformationLabel1 = new System.Windows.Forms.Label();
+            this.usernameInformationLabel1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
+            this.contactsTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.accountTabPage1.SuspendLayout();
             this.accountLoginPanel1.SuspendLayout();
             this.accountInformationsPanel1.SuspendLayout();
@@ -84,12 +90,42 @@
             // 
             // contactsTabPage1
             // 
+            this.contactsTabPage1.Controls.Add(this.dataGridView1);
+            this.contactsTabPage1.Controls.Add(this.panel1);
             this.contactsTabPage1.Location = new System.Drawing.Point(4, 22);
             this.contactsTabPage1.Name = "contactsTabPage1";
             this.contactsTabPage1.Size = new System.Drawing.Size(792, 424);
             this.contactsTabPage1.TabIndex = 4;
             this.contactsTabPage1.Text = "Kontakte";
             this.contactsTabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(792, 396);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.NewUserContactsButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(792, 28);
+            this.panel1.TabIndex = 8;
+            // 
+            // NewUserContactsButton
+            // 
+            this.NewUserContactsButton.Location = new System.Drawing.Point(709, 3);
+            this.NewUserContactsButton.Name = "NewUserContactsButton";
+            this.NewUserContactsButton.Size = new System.Drawing.Size(75, 23);
+            this.NewUserContactsButton.TabIndex = 0;
+            this.NewUserContactsButton.Text = "Neu";
+            this.NewUserContactsButton.UseVisualStyleBackColor = true;
+            this.NewUserContactsButton.Click += new System.EventHandler(this.Button1_Click);
             // 
             // appointmentTabPage1
             // 
@@ -139,10 +175,10 @@
             // titleAccountSignInLabel1
             // 
             this.titleAccountSignInLabel1.AutoSize = true;
-            this.titleAccountSignInLabel1.Location = new System.Drawing.Point(68, 62);
+            this.titleAccountSignInLabel1.Location = new System.Drawing.Point(68, 75);
             this.titleAccountSignInLabel1.Name = "titleAccountSignInLabel1";
             this.titleAccountSignInLabel1.Size = new System.Drawing.Size(33, 13);
-            this.titleAccountSignInLabel1.TabIndex = 19;
+            this.titleAccountSignInLabel1.TabIndex = 12;
             this.titleAccountSignInLabel1.Text = "Login";
             // 
             // signUpAccountLinkLabel1
@@ -164,7 +200,6 @@
             this.signInAccountButton1.TabIndex = 17;
             this.signInAccountButton1.Text = "Anmelden";
             this.signInAccountButton1.UseVisualStyleBackColor = true;
-            this.signInAccountButton1.Click += new System.EventHandler(this.SignInAccountButton1_Click);
             // 
             // passwordAccountTextbox1
             // 
@@ -215,32 +250,37 @@
             this.accountInformationsPanel1.Size = new System.Drawing.Size(396, 424);
             this.accountInformationsPanel1.TabIndex = 13;
             // 
-            // usernameInformationLabel1
+            // birthdateInformationTextBox1
             // 
-            this.usernameInformationLabel1.AutoSize = true;
-            this.usernameInformationLabel1.Location = new System.Drawing.Point(35, 62);
-            this.usernameInformationLabel1.Name = "usernameInformationLabel1";
-            this.usernameInformationLabel1.Size = new System.Drawing.Size(75, 13);
-            this.usernameInformationLabel1.TabIndex = 0;
-            this.usernameInformationLabel1.Text = "Benutzername";
+            this.birthdateInformationTextBox1.Location = new System.Drawing.Point(158, 169);
+            this.birthdateInformationTextBox1.Name = "birthdateInformationTextBox1";
+            this.birthdateInformationTextBox1.ReadOnly = true;
+            this.birthdateInformationTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.birthdateInformationTextBox1.TabIndex = 7;
             // 
-            // firstnameInformationLabel1
+            // lastnameInforamtionTextBox1
             // 
-            this.firstnameInformationLabel1.AutoSize = true;
-            this.firstnameInformationLabel1.Location = new System.Drawing.Point(35, 100);
-            this.firstnameInformationLabel1.Name = "firstnameInformationLabel1";
-            this.firstnameInformationLabel1.Size = new System.Drawing.Size(49, 13);
-            this.firstnameInformationLabel1.TabIndex = 1;
-            this.firstnameInformationLabel1.Text = "Vorname";
+            this.lastnameInforamtionTextBox1.Location = new System.Drawing.Point(158, 132);
+            this.lastnameInforamtionTextBox1.Name = "lastnameInforamtionTextBox1";
+            this.lastnameInforamtionTextBox1.ReadOnly = true;
+            this.lastnameInforamtionTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.lastnameInforamtionTextBox1.TabIndex = 6;
             // 
-            // lastnameInforamtionLabel1
+            // firstnameInformationTextBox1
             // 
-            this.lastnameInforamtionLabel1.AutoSize = true;
-            this.lastnameInforamtionLabel1.Location = new System.Drawing.Point(35, 135);
-            this.lastnameInforamtionLabel1.Name = "lastnameInforamtionLabel1";
-            this.lastnameInforamtionLabel1.Size = new System.Drawing.Size(59, 13);
-            this.lastnameInforamtionLabel1.TabIndex = 2;
-            this.lastnameInforamtionLabel1.Text = "Nachname";
+            this.firstnameInformationTextBox1.Location = new System.Drawing.Point(158, 97);
+            this.firstnameInformationTextBox1.Name = "firstnameInformationTextBox1";
+            this.firstnameInformationTextBox1.ReadOnly = true;
+            this.firstnameInformationTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.firstnameInformationTextBox1.TabIndex = 5;
+            // 
+            // usernameInformationTextBox1
+            // 
+            this.usernameInformationTextBox1.Location = new System.Drawing.Point(158, 59);
+            this.usernameInformationTextBox1.Name = "usernameInformationTextBox1";
+            this.usernameInformationTextBox1.ReadOnly = true;
+            this.usernameInformationTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.usernameInformationTextBox1.TabIndex = 4;
             // 
             // birthdateInformationLabel1
             // 
@@ -251,37 +291,32 @@
             this.birthdateInformationLabel1.TabIndex = 3;
             this.birthdateInformationLabel1.Text = "Geburtsdatum";
             // 
-            // usernameInformationTextBox1
+            // lastnameInforamtionLabel1
             // 
-            this.usernameInformationTextBox1.Location = new System.Drawing.Point(158, 59);
-            this.usernameInformationTextBox1.Name = "usernameInformationTextBox1";
-            this.usernameInformationTextBox1.ReadOnly = true;
-            this.usernameInformationTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.usernameInformationTextBox1.TabIndex = 4;
+            this.lastnameInforamtionLabel1.AutoSize = true;
+            this.lastnameInforamtionLabel1.Location = new System.Drawing.Point(35, 135);
+            this.lastnameInforamtionLabel1.Name = "lastnameInforamtionLabel1";
+            this.lastnameInforamtionLabel1.Size = new System.Drawing.Size(59, 13);
+            this.lastnameInforamtionLabel1.TabIndex = 2;
+            this.lastnameInforamtionLabel1.Text = "Nachname";
             // 
-            // firstnameInformationTextBox1
+            // firstnameInformationLabel1
             // 
-            this.firstnameInformationTextBox1.Location = new System.Drawing.Point(158, 97);
-            this.firstnameInformationTextBox1.Name = "firstnameInformationTextBox1";
-            this.firstnameInformationTextBox1.ReadOnly = true;
-            this.firstnameInformationTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.firstnameInformationTextBox1.TabIndex = 5;
+            this.firstnameInformationLabel1.AutoSize = true;
+            this.firstnameInformationLabel1.Location = new System.Drawing.Point(35, 100);
+            this.firstnameInformationLabel1.Name = "firstnameInformationLabel1";
+            this.firstnameInformationLabel1.Size = new System.Drawing.Size(49, 13);
+            this.firstnameInformationLabel1.TabIndex = 1;
+            this.firstnameInformationLabel1.Text = "Vorname";
             // 
-            // lastnameInforamtionTextBox1
+            // usernameInformationLabel1
             // 
-            this.lastnameInforamtionTextBox1.Location = new System.Drawing.Point(158, 132);
-            this.lastnameInforamtionTextBox1.Name = "lastnameInforamtionTextBox1";
-            this.lastnameInforamtionTextBox1.ReadOnly = true;
-            this.lastnameInforamtionTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.lastnameInforamtionTextBox1.TabIndex = 6;
-            // 
-            // birthdateInformationTextBox1
-            // 
-            this.birthdateInformationTextBox1.Location = new System.Drawing.Point(158, 169);
-            this.birthdateInformationTextBox1.Name = "birthdateInformationTextBox1";
-            this.birthdateInformationTextBox1.ReadOnly = true;
-            this.birthdateInformationTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.birthdateInformationTextBox1.TabIndex = 7;
+            this.usernameInformationLabel1.AutoSize = true;
+            this.usernameInformationLabel1.Location = new System.Drawing.Point(35, 62);
+            this.usernameInformationLabel1.Name = "usernameInformationLabel1";
+            this.usernameInformationLabel1.Size = new System.Drawing.Size(75, 13);
+            this.usernameInformationLabel1.TabIndex = 0;
+            this.usernameInformationLabel1.Text = "Benutzername";
             // 
             // DateFix
             // 
@@ -293,6 +328,9 @@
             this.Name = "DateFix";
             this.Text = "DateFix";
             this.tabControl1.ResumeLayout(false);
+            this.contactsTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.accountTabPage1.ResumeLayout(false);
             this.accountLoginPanel1.ResumeLayout(false);
             this.accountLoginPanel1.PerformLayout();
@@ -318,6 +356,9 @@
         private System.Windows.Forms.TextBox usernameAccountTextbox1;
         private System.Windows.Forms.Label passwordAccountLabel1;
         private System.Windows.Forms.Label usernameAccountLabel1;
+        private System.Windows.Forms.Button NewUserContactsButton;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel accountInformationsPanel1;
         private System.Windows.Forms.Label birthdateInformationLabel1;
         private System.Windows.Forms.Label lastnameInforamtionLabel1;
