@@ -21,7 +21,6 @@ namespace Kalender_Prg_Projekt
 
         private void Sign_Up_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Environment.Exit(0);
         }
 
         private void Sign_UpButton1_Click(object sender, EventArgs e)
@@ -53,6 +52,7 @@ namespace Kalender_Prg_Projekt
 
         private void PasswordConfirmationCorrect_Textchanged(object sender, EventArgs e)
         {
+            //dummy
         }
     }
 }
