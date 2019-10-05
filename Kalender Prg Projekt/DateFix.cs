@@ -37,17 +37,14 @@ namespace Kalender_Prg_Projekt
 
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
         }
 
         private void AppointmentstextBox1_TextChanged(object sender, EventArgs e)
         {
-            
         }
 
         private void BirthdaytextBox2_TextChanged(object sender, EventArgs e)
         {
-      
         }
     }
 }
