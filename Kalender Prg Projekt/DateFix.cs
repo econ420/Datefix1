@@ -28,32 +28,8 @@ namespace Kalender_Prg_Projekt
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            PopupNewContact = new Form(); 
-            PopupNewContact.ShowDialog();
+            var popupNewContact = new NewContact(); 
+            popupNewContact.ShowDialog();
         }
-
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
-
-        //private void SignInAccountButton1_Click(object sender, EventArgs e)
-        //{
-        //    string query = $"SELECT * FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
-        //    if (SQL_Query.Query_Compare(query))
-        //    {
-        //        Console.Write("Sign In successfull");
-        //        DateFix dateFix = new DateFix();
-        //        query = $"SELECT ID FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
-        //        dateFix.setActiveUserID(SQL_Query.Query_Int(query));
-        //        this.Close();
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("False");
-        //    }
-        //}
     }
 }
