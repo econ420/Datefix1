@@ -32,8 +32,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.calendarTabPage1 = new System.Windows.Forms.TabPage();
             this.contactsTabPage1 = new System.Windows.Forms.TabPage();
-            this.contactListContactsListview = new System.Windows.Forms.ListView();
-            this.NewUserContactsButton = new System.Windows.Forms.Button();
             this.appointmentTabPage1 = new System.Windows.Forms.TabPage();
             this.taskTabPage1 = new System.Windows.Forms.TabPage();
             this.accountTabPage1 = new System.Windows.Forms.TabPage();
@@ -86,34 +84,12 @@
             // 
             // contactsTabPage1
             // 
-            this.contactsTabPage1.Controls.Add(this.contactListContactsListview);
-            this.contactsTabPage1.Controls.Add(this.NewUserContactsButton);
             this.contactsTabPage1.Location = new System.Drawing.Point(4, 22);
             this.contactsTabPage1.Name = "contactsTabPage1";
             this.contactsTabPage1.Size = new System.Drawing.Size(792, 424);
             this.contactsTabPage1.TabIndex = 4;
             this.contactsTabPage1.Text = "Kontakte";
             this.contactsTabPage1.UseVisualStyleBackColor = true;
-            this.contactsTabPage1.Click += new System.EventHandler(this.ContactsTabPage1_Click);
-            // 
-            // contactListContactsListview
-            // 
-            this.contactListContactsListview.Location = new System.Drawing.Point(8, 29);
-            this.contactListContactsListview.Name = "contactListContactsListview";
-            this.contactListContactsListview.Size = new System.Drawing.Size(780, 385);
-            this.contactListContactsListview.TabIndex = 1;
-            this.contactListContactsListview.UseCompatibleStateImageBehavior = false;
-            this.contactListContactsListview.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
-            // 
-            // NewUserContactsButton
-            // 
-            this.NewUserContactsButton.Location = new System.Drawing.Point(709, 3);
-            this.NewUserContactsButton.Name = "NewUserContactsButton";
-            this.NewUserContactsButton.Size = new System.Drawing.Size(75, 23);
-            this.NewUserContactsButton.TabIndex = 0;
-            this.NewUserContactsButton.Text = "Neu";
-            this.NewUserContactsButton.UseVisualStyleBackColor = true;
-            this.NewUserContactsButton.Click += new System.EventHandler(this.Button1_Click);
             // 
             // appointmentTabPage1
             // 
@@ -316,7 +292,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DateFix";
             this.Text = "DateFix";
-            this.Load += new System.EventHandler(this.DateFix_Load);
             this.tabControl1.ResumeLayout(false);
             this.accountTabPage1.ResumeLayout(false);
             this.accountLoginPanel1.ResumeLayout(false);

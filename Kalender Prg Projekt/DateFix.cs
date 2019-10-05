@@ -45,6 +45,11 @@ namespace Kalender_Prg_Projekt
             birthdateInformationTextBox1.Text = SQL_Query.Query_String(query);
         }
 
+        public void setActiveUserID(int dummy)
+        {
+            activeUserID = dummy;
+        }
+
 
 
         private void SignInAccountButton1_Click(object sender, EventArgs e)
