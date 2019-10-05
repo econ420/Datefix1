@@ -35,7 +35,6 @@
             this.passwordLabel1 = new System.Windows.Forms.Label();
             this.passwordTextbox1 = new System.Windows.Forms.TextBox();
             this.signUpLinkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // usernameLabel1
@@ -56,6 +55,7 @@
             // 
             // signInButton1
             // 
+            this.signInButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signInButton1.Location = new System.Drawing.Point(35, 93);
             this.signInButton1.Name = "signInButton1";
             this.signInButton1.Size = new System.Drawing.Size(204, 23);
@@ -77,9 +77,9 @@
             // 
             this.passwordTextbox1.Location = new System.Drawing.Point(139, 57);
             this.passwordTextbox1.Name = "passwordTextbox1";
-            this.passwordTextbox1.PasswordChar = '*';
             this.passwordTextbox1.Size = new System.Drawing.Size(100, 20);
             this.passwordTextbox1.TabIndex = 3;
+            this.passwordTextbox1.UseSystemPasswordChar = true;
             // 
             // signUpLinkLabel1
             // 
@@ -92,21 +92,11 @@
             this.signUpLinkLabel1.Text = "Jetzt Registrieren?";
             this.signUpLinkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SignUpLinkLabel1_LinkClicked);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(150, 164);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 199);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.signUpLinkLabel1);
             this.Controls.Add(this.signInButton1);
             this.Controls.Add(this.passwordTextbox1);
@@ -129,7 +119,6 @@
         private System.Windows.Forms.Label passwordLabel1;
         private System.Windows.Forms.TextBox passwordTextbox1;
         private System.Windows.Forms.LinkLabel signUpLinkLabel1;
-        private System.Windows.Forms.Button button1;
     }
 }
 

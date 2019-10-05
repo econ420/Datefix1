@@ -76,6 +76,13 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewContact.Designer.cs">
+      <DependentUpon>NewContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Password.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sign_Up.cs">
@@ -90,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewContact.resx">
+      <DependentUpon>NewContact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
