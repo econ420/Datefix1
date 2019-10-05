@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataTableExtensions.cs" />
     <Compile Include="DateFix.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +77,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\User.cs" />
     <Compile Include="NewContact.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,7 +93,7 @@
     <Compile Include="Sign_Up.Designer.cs">
       <DependentUpon>Sign_Up.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQL_Query.cs" />
+    <Compile Include="SqlQuery.cs" />
     <EmbeddedResource Include="DateFix.resx">
       <DependentUpon>DateFix.cs</DependentUpon>
     </EmbeddedResource>

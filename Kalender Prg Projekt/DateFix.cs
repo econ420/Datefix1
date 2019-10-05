@@ -1,48 +1,51 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Linq;
 
 namespace Kalender_Prg_Projekt
 {
-
     public partial class DateFix : Form
     {
-        public int activeUserID = 0; //wenn der wert auf Null ist, ist kein nutzer eingeloggt. Sobald sich ein Nutzer einloggt wird der Wert auf die Nutzer ID Gesetzt
-        string query = "";
+        private Models.User user;
+
+        public Models.User User
+        {
+            get => user;
+            set
+            {
+                if (this.user != value)
+                {
+                    user = value;
+
+                    if (this.User != null)
+                    {
+                        string query = $@"SELECT 'Username','Firstname','Lastname','Birthdate','E-mail'
+                              FROM tbl_users
+                              WHERE userId = '{this.User.Id}'";
+
+                        dataGridView1.DataSource = SqlQuery.getDataSource(query).GetBinding();
+                    }
+                }
+
+
+            }
+        }
 
         public DateFix()
         {
             InitializeComponent();
             string query1 = $"SELECT Birthdate FROM tbl_user WHERE tbl_user.ID = '{3}'";
-            query = SQL_Query.Query_String(query1).Substring(0, 10);
-            var split = query.Split('.');
-            int year, month, day;
+            MessageBox.Show(SqlQuery.getDateTime(query1).ToShortDateString());
 
-            int.TryParse(split[0], out day);
-            int.TryParse(split[1], out month);
-            int.TryParse(split[2], out year);
-
-
-            //MessageBox.Show(SQL_Query.Query_String(query));
             appointmentsAppointmentsTextBox1.Text = "Du hast keine Termine in nächster Zeit.";
             birthdayAppointmentsTextBox2.Text = "In nächster Zeit hat keiner Geburstag.";
-            query = $@"SELECT 'Username','Firstname','Lastname','Birthdate','E-mail'
-                              FROM tbl_users
-                              WHERE userId = '{activeUserID}'";
-            if (activeUserID == 0)
+
+            if (this.User == null)
             {
                 accountInformationsPanel1.Hide();
             }
 
-
-            SQL_Query.Query_DataGridview(query, dataGridView1);
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -55,36 +58,32 @@ namespace Kalender_Prg_Projekt
         {
             accountLoginPanel1.Hide();
             accountInformationsPanel1.Show();
-            this.query = $"SELECT Username FROM tbl_user WHERE tbl_user.ID = '{this.activeUserID}'";
-            usernameInformationTextBox1.Text = SQL_Query.Query_String(query);
-            this.query = $"SELECT Firstname FROM tbl_user WHERE tbl_user.ID = '{this.activeUserID}'";
-            firstnameInformationTextBox1.Text = SQL_Query.Query_String(query);
-            this.query = $"SELECT Lastname FROM tbl_user WHERE tbl_user.ID = '{this.activeUserID}'";
-            lastnameInforamtionTextBox1.Text = SQL_Query.Query_String(query);
-            this.query = $"SELECT Birthdate FROM tbl_user WHERE tbl_user.ID = '{this.activeUserID}'";
-            birthdateInformationTextBox1.Text = SQL_Query.Query_String(query);
-        }
-
-        public void setActiveUserID(int dummy)
-        {
-            activeUserID = dummy;
+            usernameInformationTextBox1.Text = this.User.Username;
+            firstnameInformationTextBox1.Text = this.User.Firstname;
+            lastnameInforamtionTextBox1.Text = this.User.Lastname;
+            birthdateInformationTextBox1.Text = this.User.Birthday.ToShortDateString();
         }
 
         private void SignInAccountButton1_Click(object sender, EventArgs e)
         {
-            this.query = $"SELECT * FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
-            if (SQL_Query.Query_Compare(query))
+            string query = $"SELECT * FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
+            if (SqlQuery.exists(query))
             {
                 if (Password.checkHashedPassword(passwordAccountTextbox1.Text, usernameAccountTextbox1.Text))
                 {
-                    Console.Write("Sign In successfull");
                     query = $"SELECT ID FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
-                    setActiveUserID(SQL_Query.Query_Int(query));
+                    int id = SqlQuery.getInt(query);
+                    Models.User user = new Models.User();
+                    user.Birthday = SqlQuery.getDateTime($"SELECT Birthdate FROM tbl_user WHERE tbl_user.ID = '{id}'");
+                    user.Firstname = SqlQuery.getString($"SELECT Firstname FROM tbl_user WHERE tbl_user.ID = '{id}'");
+                    user.Lastname = SqlQuery.getString($"SELECT Lastname FROM tbl_user WHERE tbl_user.ID = '{id}'");
+                    user.Username = SqlQuery.getString($"SELECT Username FROM tbl_user WHERE tbl_user.ID = '{id}'");
+                    this.User = user;
                     showAccountInformation();
                 }
                 else
                 {
-                    MessageBox.Show("False");
+                    MessageBox.Show("Password is wrong");
                 }
             }
             else
@@ -105,7 +104,6 @@ namespace Kalender_Prg_Projekt
         private void SignUpAccountLinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Sign_Up signup = new Sign_Up();
-            //this.Hide();
             signup.ShowDialog();
         }
     }

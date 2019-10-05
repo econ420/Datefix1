@@ -13,7 +13,7 @@ namespace Kalender_Prg_Projekt
         private void signInButton1_Click(object sender, EventArgs e)
         {
             string query = $"SELECT Password FROM tbl_user WHERE tbl_user.Username = '{usernameTextbox1.Text}'";
-            if(SQL_Query.Query_String(query) == passwordTextbox1.Text)
+            if(SqlQuery.getString(query) == passwordTextbox1.Text)
             {
                 MessageBox.Show("True");
             }

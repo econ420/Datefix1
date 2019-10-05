@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 
 namespace Kalender_Prg_Projekt
 {
-    class Password
+    public static class Password
     {
         public static string passwordHash(string password)
         {
@@ -31,7 +31,7 @@ namespace Kalender_Prg_Projekt
             bool passwordEqual = true;
 
             string query = $"SELECT Password FROM tbl_user WHERE tbl_user.Username = '{Username}'";
-            string savedPasswordHash = SQL_Query.Query_String(query);
+            string savedPasswordHash = SqlQuery.getString(query);
 
             byte[] hashBytes = Convert.FromBase64String(savedPasswordHash);
             byte[] salt = new byte[16];

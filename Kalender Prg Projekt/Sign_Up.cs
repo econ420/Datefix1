@@ -26,7 +26,7 @@ namespace Kalender_Prg_Projekt
         private void Sign_UpButton1_Click(object sender, EventArgs e)
         {
             this.query = $"SELECT * FROM tbl_user WHERE tbl_user.Username = '{usernameTextbox1.Text}'";
-            if (SQL_Query.Query_Compare(query))
+            if (SqlQuery.exists(query))
             {
                 MessageBox.Show("Username Vergeben");
             }
@@ -35,7 +35,7 @@ namespace Kalender_Prg_Projekt
                 if (passwordTextbox1.Text == passwordConfirmTextbox1.Text && passwordTextbox1.Text != "")
                 {
                     this.query = $"INSERT INTO tbl_user (`ID` , `Firstname` , `Lastname`, `Username`, `Password`) VALUES (NULL, '{firstnameTextbox1.Text}', '{lastnameTextbox1.Text}', '{usernameTextbox1.Text}', '{Password.passwordHash(passwordTextbox1.Text)}')";
-                    SQL_Query.Query_Insert(query);
+                    SqlQuery.insert(query);
                     MessageBox.Show("Nutzer Angelegt");
                 }
                 else
