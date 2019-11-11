@@ -36,7 +36,7 @@ namespace Kalender_Prg_Projekt
         {
             InitializeComponent();
             string query1 = $"SELECT Birthdate FROM tbl_user WHERE tbl_user.ID = '{3}'";
-            MessageBox.Show(SqlQuery.getDateTime(query1).ToShortDateString());
+            MessageBox.Show(SqlQuery.getDateTime(query1).ToShortDateString() + "HAusDummy");
 
             appointmentsAppointmentsTextBox1.Text = "Du hast keine Termine in nächster Zeit.";
             birthdayAppointmentsTextBox2.Text = "In nächster Zeit hat keiner Geburstag.";
