@@ -41,6 +41,8 @@ namespace Kalender_Prg_Projekt
             appointmentsAppointmentsTextBox1.Text = "Du hast keine Termine in nächster Zeit.";
             birthdayAppointmentsTextBox2.Text = "In nächster Zeit hat keiner Geburstag.";
 
+            GetNextBirthdays();
+
             if (this.User == null)
             {
                 accountInformationsPanel1.Hide();
@@ -106,5 +108,16 @@ namespace Kalender_Prg_Projekt
             Sign_Up signup = new Sign_Up();
             signup.ShowDialog();
         }
+
+
+        private void GetNextBirthdays()
+        {
+            string query = "SELECT Username, Birthdate FROM tbl_user WHERE MONTH(Birthdate) = MONTH(NOW())";
+            
+
+            birthdayAppointmentsTextBox2.Text = SqlQuery.getRowString(query);
+
+        }
+
     }
 }
