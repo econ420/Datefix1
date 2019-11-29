@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DateFix));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.calendarTabPage1 = new System.Windows.Forms.TabPage();
+            this.calendarPanel2 = new System.Windows.Forms.Panel();
+            this.monthNameLabel1 = new System.Windows.Forms.Label();
             this.contactsTabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -61,6 +63,8 @@
             this.firstnameInformationLabel1 = new System.Windows.Forms.Label();
             this.usernameInformationLabel1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
+            this.calendarTabPage1.SuspendLayout();
+            this.calendarPanel2.SuspendLayout();
             this.contactsTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -81,18 +85,39 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 450);
+            this.tabControl1.Size = new System.Drawing.Size(800, 451);
             this.tabControl1.TabIndex = 7;
             // 
             // calendarTabPage1
             // 
+            this.calendarTabPage1.Controls.Add(this.calendarPanel2);
             this.calendarTabPage1.Location = new System.Drawing.Point(4, 22);
             this.calendarTabPage1.Name = "calendarTabPage1";
             this.calendarTabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.calendarTabPage1.Size = new System.Drawing.Size(792, 424);
+            this.calendarTabPage1.Size = new System.Drawing.Size(792, 425);
             this.calendarTabPage1.TabIndex = 0;
             this.calendarTabPage1.Text = "Kalendar";
             this.calendarTabPage1.UseVisualStyleBackColor = true;
+            // 
+            // calendarPanel2
+            // 
+            this.calendarPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.calendarPanel2.Controls.Add(this.monthNameLabel1);
+            this.calendarPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.calendarPanel2.Location = new System.Drawing.Point(3, 3);
+            this.calendarPanel2.Name = "calendarPanel2";
+            this.calendarPanel2.Size = new System.Drawing.Size(786, 419);
+            this.calendarPanel2.TabIndex = 2;
+            // 
+            // monthNameLabel1
+            // 
+            this.monthNameLabel1.AutoSize = true;
+            this.monthNameLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthNameLabel1.Location = new System.Drawing.Point(343, 0);
+            this.monthNameLabel1.Name = "monthNameLabel1";
+            this.monthNameLabel1.Size = new System.Drawing.Size(68, 31);
+            this.monthNameLabel1.TabIndex = 0;
+            this.monthNameLabel1.Text = "April";
             // 
             // contactsTabPage1
             // 
@@ -100,7 +125,7 @@
             this.contactsTabPage1.Controls.Add(this.panel1);
             this.contactsTabPage1.Location = new System.Drawing.Point(4, 22);
             this.contactsTabPage1.Name = "contactsTabPage1";
-            this.contactsTabPage1.Size = new System.Drawing.Size(792, 424);
+            this.contactsTabPage1.Size = new System.Drawing.Size(792, 425);
             this.contactsTabPage1.TabIndex = 4;
             this.contactsTabPage1.Text = "Kontakte";
             this.contactsTabPage1.UseVisualStyleBackColor = true;
@@ -111,7 +136,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 28);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(792, 396);
+            this.dataGridView1.Size = new System.Drawing.Size(792, 397);
             this.dataGridView1.TabIndex = 1;
             // 
             // panel1
@@ -143,7 +168,7 @@
             this.appointmentTabPage1.Location = new System.Drawing.Point(4, 22);
             this.appointmentTabPage1.Name = "appointmentTabPage1";
             this.appointmentTabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.appointmentTabPage1.Size = new System.Drawing.Size(792, 424);
+            this.appointmentTabPage1.Size = new System.Drawing.Size(792, 425);
             this.appointmentTabPage1.TabIndex = 1;
             this.appointmentTabPage1.Text = "Termine";
             this.appointmentTabPage1.UseVisualStyleBackColor = true;
@@ -195,7 +220,7 @@
             // 
             this.taskTabPage1.Location = new System.Drawing.Point(4, 22);
             this.taskTabPage1.Name = "taskTabPage1";
-            this.taskTabPage1.Size = new System.Drawing.Size(792, 424);
+            this.taskTabPage1.Size = new System.Drawing.Size(792, 425);
             this.taskTabPage1.TabIndex = 2;
             this.taskTabPage1.Text = "Aufgaben";
             this.taskTabPage1.UseVisualStyleBackColor = true;
@@ -206,7 +231,7 @@
             this.accountTabPage1.Controls.Add(this.accountInformationsPanel1);
             this.accountTabPage1.Location = new System.Drawing.Point(4, 22);
             this.accountTabPage1.Name = "accountTabPage1";
-            this.accountTabPage1.Size = new System.Drawing.Size(792, 424);
+            this.accountTabPage1.Size = new System.Drawing.Size(792, 425);
             this.accountTabPage1.TabIndex = 3;
             this.accountTabPage1.Text = "Konto";
             this.accountTabPage1.UseVisualStyleBackColor = true;
@@ -223,7 +248,7 @@
             this.accountLoginPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.accountLoginPanel1.Location = new System.Drawing.Point(396, 0);
             this.accountLoginPanel1.Name = "accountLoginPanel1";
-            this.accountLoginPanel1.Size = new System.Drawing.Size(396, 424);
+            this.accountLoginPanel1.Size = new System.Drawing.Size(396, 425);
             this.accountLoginPanel1.TabIndex = 14;
             // 
             // titleAccountSignInLabel1
@@ -302,7 +327,7 @@
             this.accountInformationsPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accountInformationsPanel1.Location = new System.Drawing.Point(0, 0);
             this.accountInformationsPanel1.Name = "accountInformationsPanel1";
-            this.accountInformationsPanel1.Size = new System.Drawing.Size(396, 424);
+            this.accountInformationsPanel1.Size = new System.Drawing.Size(396, 425);
             this.accountInformationsPanel1.TabIndex = 13;
             // 
             // birthdateInformationTextBox1
@@ -377,12 +402,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 451);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DateFix";
             this.Text = "DateFix";
             this.tabControl1.ResumeLayout(false);
+            this.calendarTabPage1.ResumeLayout(false);
+            this.calendarPanel2.ResumeLayout(false);
+            this.calendarPanel2.PerformLayout();
             this.contactsTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -430,5 +458,7 @@
         private System.Windows.Forms.TextBox lastnameInforamtionTextBox1;
         private System.Windows.Forms.TextBox firstnameInformationTextBox1;
         private System.Windows.Forms.TextBox usernameInformationTextBox1;
+        private System.Windows.Forms.Panel calendarPanel2;
+        private System.Windows.Forms.Label monthNameLabel1;
     }
 }
