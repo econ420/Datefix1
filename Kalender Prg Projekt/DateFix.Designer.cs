@@ -159,18 +159,19 @@
             this.titelAppointmentsAppointmentsLabel1.AutoSize = true;
             this.titelAppointmentsAppointmentsLabel1.Location = new System.Drawing.Point(384, 17);
             this.titelAppointmentsAppointmentsLabel1.Name = "titelAppointmentsAppointmentsLabel1";
-            this.titelAppointmentsAppointmentsLabel1.Size = new System.Drawing.Size(153, 13);
+            this.titelAppointmentsAppointmentsLabel1.Size = new System.Drawing.Size(119, 13);
             this.titelAppointmentsAppointmentsLabel1.TabIndex = 3;
-            this.titelAppointmentsAppointmentsLabel1.Text = "Termine der nächsten 14 Tage";
+            this.titelAppointmentsAppointmentsLabel1.Text = "Termine dieses Monats ";
             // 
             // titelBirthdayAppointmentsLabel2
             // 
             this.titelBirthdayAppointmentsLabel2.AutoSize = true;
             this.titelBirthdayAppointmentsLabel2.Location = new System.Drawing.Point(384, 207);
             this.titelBirthdayAppointmentsLabel2.Name = "titelBirthdayAppointmentsLabel2";
-            this.titelBirthdayAppointmentsLabel2.Size = new System.Drawing.Size(189, 13);
+            this.titelBirthdayAppointmentsLabel2.Size = new System.Drawing.Size(152, 13);
             this.titelBirthdayAppointmentsLabel2.TabIndex = 2;
-            this.titelBirthdayAppointmentsLabel2.Text = "Die Geburstage der nächsten 14 Tage";
+            this.titelBirthdayAppointmentsLabel2.Text = "Die Geburstage dieses Monats";
+            this.titelBirthdayAppointmentsLabel2.Click += new System.EventHandler(this.TitelBirthdayAppointmentsLabel2_Click);
             // 
             // birthdayAppointmentsTextBox2
             // 

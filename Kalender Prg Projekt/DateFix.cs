@@ -112,12 +112,17 @@ namespace Kalender_Prg_Projekt
 
         private void GetNextBirthdays()
         {
-            string query = "SELECT Username, Birthdate FROM tbl_user WHERE MONTH(Birthdate) = MONTH(NOW())";
-            
+            string query = "SELECT Username,' ', Birthdate FROM tbl_user WHERE MONTH(Birthdate) = MONTH(NOW())";
 
-            birthdayAppointmentsTextBox2.Text = SqlQuery.getRowString(query);
+
+            birthdayAppointmentsTextBox2.Text = SqlQuery.getRowString(query).Replace(" 00:00:00","\r\n");
 
         }
 
+        private void TitelBirthdayAppointmentsLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+    
