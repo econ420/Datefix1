@@ -2,11 +2,14 @@
 using System.Data;
 using System.Windows.Forms;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Kalender_Prg_Projekt
 {
     public partial class DateFix : Form
     {
+        List<string> monthnames = new List<string>();
+        
         private Models.User user;
 
         public Models.User User
@@ -47,9 +50,7 @@ namespace Kalender_Prg_Projekt
             {
                 accountInformationsPanel1.Hide();
             }
-
-
-
+            GenerateCalendar();
 
         }
 
@@ -125,7 +126,21 @@ namespace Kalender_Prg_Projekt
 
         private void GenerateCalendar()
         {
+            monthnames.Add("Januar");
+            monthnames.Add("Februar");
+            monthnames.Add("März");
+            monthnames.Add("April");
+            monthnames.Add("Mai");
+            monthnames.Add("Juni");
+            monthnames.Add("Juli");
+            monthnames.Add("August");
+            monthnames.Add("September");
+            monthnames.Add("Oktober");
+            monthnames.Add("November");
+            monthnames.Add("Dezember");
 
+            DateTime date = DateTime.Now;
+            monthNameLabel1.Text = monthnames[date.Month - 1];
         }
 
     }

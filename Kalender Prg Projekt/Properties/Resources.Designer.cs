@@ -83,6 +83,26 @@ namespace Kalender_Prg_Projekt.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baseline_keyboard_arrow_left_black_18dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_keyboard_arrow_left_black_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_keyboard_arrow_right_black_18dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_keyboard_arrow_right_black_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap baseline_vpn_key_black_18dp {
             get {
                 object obj = ResourceManager.GetObject("baseline_vpn_key_black_18dp", resourceCulture);

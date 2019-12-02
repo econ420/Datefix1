@@ -142,5 +142,10 @@
   <ItemGroup>
     <None Include="Resources\baseline_account_box_black_18dp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow left.ico" />
+    <Content Include="Resources\baseline_keyboard_arrow_left_black_18dp.png" />
+    <Content Include="Resources\baseline_keyboard_arrow_right_black_18dp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

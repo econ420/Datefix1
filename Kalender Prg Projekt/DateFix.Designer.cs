@@ -62,6 +62,9 @@
             this.lastnameInforamtionLabel1 = new System.Windows.Forms.Label();
             this.firstnameInformationLabel1 = new System.Windows.Forms.Label();
             this.usernameInformationLabel1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.prevMonthButton1 = new System.Windows.Forms.Button();
+            this.nextMonthButton1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.calendarTabPage1.SuspendLayout();
             this.calendarPanel2.SuspendLayout();
@@ -72,6 +75,7 @@
             this.accountTabPage1.SuspendLayout();
             this.accountLoginPanel1.SuspendLayout();
             this.accountInformationsPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -102,7 +106,7 @@
             // calendarPanel2
             // 
             this.calendarPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.calendarPanel2.Controls.Add(this.monthNameLabel1);
+            this.calendarPanel2.Controls.Add(this.panel2);
             this.calendarPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calendarPanel2.Location = new System.Drawing.Point(3, 3);
             this.calendarPanel2.Name = "calendarPanel2";
@@ -113,11 +117,12 @@
             // 
             this.monthNameLabel1.AutoSize = true;
             this.monthNameLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthNameLabel1.Location = new System.Drawing.Point(343, 0);
+            this.monthNameLabel1.Location = new System.Drawing.Point(344, 0);
             this.monthNameLabel1.Name = "monthNameLabel1";
             this.monthNameLabel1.Size = new System.Drawing.Size(68, 31);
             this.monthNameLabel1.TabIndex = 0;
             this.monthNameLabel1.Text = "April";
+            this.monthNameLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // contactsTabPage1
             // 
@@ -398,6 +403,37 @@
             this.usernameInformationLabel1.TabIndex = 0;
             this.usernameInformationLabel1.Text = "Benutzername";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.nextMonthButton1);
+            this.panel2.Controls.Add(this.prevMonthButton1);
+            this.panel2.Controls.Add(this.monthNameLabel1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(786, 34);
+            this.panel2.TabIndex = 1;
+            // 
+            // prevMonthButton1
+            // 
+            this.prevMonthButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.prevMonthButton1.Image = global::Kalender_Prg_Projekt.Properties.Resources.baseline_keyboard_arrow_left_black_18dp;
+            this.prevMonthButton1.Location = new System.Drawing.Point(0, 0);
+            this.prevMonthButton1.Name = "prevMonthButton1";
+            this.prevMonthButton1.Size = new System.Drawing.Size(75, 34);
+            this.prevMonthButton1.TabIndex = 1;
+            this.prevMonthButton1.UseVisualStyleBackColor = true;
+            // 
+            // nextMonthButton1
+            // 
+            this.nextMonthButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.nextMonthButton1.Image = global::Kalender_Prg_Projekt.Properties.Resources.baseline_keyboard_arrow_right_black_18dp;
+            this.nextMonthButton1.Location = new System.Drawing.Point(711, 0);
+            this.nextMonthButton1.Name = "nextMonthButton1";
+            this.nextMonthButton1.Size = new System.Drawing.Size(75, 34);
+            this.nextMonthButton1.TabIndex = 2;
+            this.nextMonthButton1.UseVisualStyleBackColor = true;
+            // 
             // DateFix
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,7 +446,6 @@
             this.tabControl1.ResumeLayout(false);
             this.calendarTabPage1.ResumeLayout(false);
             this.calendarPanel2.ResumeLayout(false);
-            this.calendarPanel2.PerformLayout();
             this.contactsTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -421,6 +456,8 @@
             this.accountLoginPanel1.PerformLayout();
             this.accountInformationsPanel1.ResumeLayout(false);
             this.accountInformationsPanel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -460,5 +497,8 @@
         private System.Windows.Forms.TextBox usernameInformationTextBox1;
         private System.Windows.Forms.Panel calendarPanel2;
         private System.Windows.Forms.Label monthNameLabel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button nextMonthButton1;
+        private System.Windows.Forms.Button prevMonthButton1;
     }
 }
