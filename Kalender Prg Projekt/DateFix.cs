@@ -9,7 +9,8 @@ namespace Kalender_Prg_Projekt
     public partial class DateFix : Form
     {
         List<string> monthnames = new List<string>();
-        
+        int monthSelector = 0;
+
         private Models.User user;
 
         public Models.User User
@@ -141,7 +142,41 @@ namespace Kalender_Prg_Projekt
 
             DateTime date = DateTime.Now;
             monthNameLabel1.Text = monthnames[date.Month - 1];
+            monthSelector = date.Month - 1;
+
+            //TODO erweiterung des Kalenders um die Funktion des anzeigens der Tage
+
+            int days = DateTime.DaysInMonth(date.Year, monthSelector + 1);
+            label1.Text = days.ToString();
+
         }
 
+        private void prevMonthButton1_Click(object sender, EventArgs e)
+        {
+            monthSelector--;
+            if(monthSelector < 0)
+            {
+                monthSelector = 11;
+            }
+            monthNameLabel1.Text = monthnames[monthSelector];
+
+            DateTime date = DateTime.Now;
+            int days = DateTime.DaysInMonth(date.Year, monthSelector + 1);
+            label1.Text = days.ToString();
+        }
+
+        private void nextMonthButton1_Click(object sender, EventArgs e)
+        {
+            monthSelector++;
+            if (monthSelector > 11)
+            {
+                monthSelector = 0;
+            }
+            monthNameLabel1.Text = monthnames[monthSelector];
+
+            DateTime date = DateTime.Now;
+            int days = DateTime.DaysInMonth(date.Year, monthSelector + 1);
+            label1.Text = days.ToString();
+        }
     }
 }
