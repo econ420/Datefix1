@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Linq;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace Kalender_Prg_Projekt
 {
@@ -10,6 +11,7 @@ namespace Kalender_Prg_Projekt
     {
         List<string> monthnames = new List<string>();
         int monthSelector = 0;
+        int yearSelector = 0;
 
         private Models.User user;
 
@@ -52,6 +54,9 @@ namespace Kalender_Prg_Projekt
                 accountInformationsPanel1.Hide();
             }
             GenerateCalendar();
+
+            //Set min size
+            this.MinimumSize = new Size(816, 490);
 
         }
 
@@ -143,10 +148,11 @@ namespace Kalender_Prg_Projekt
             DateTime date = DateTime.Now;
             monthNameLabel1.Text = monthnames[date.Month - 1];
             monthSelector = date.Month - 1;
+            yearSelector = date.Year;
 
             //TODO erweiterung des Kalenders um die Funktion des anzeigens der Tage
 
-            int days = DateTime.DaysInMonth(date.Year, monthSelector + 1);
+            int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
             label1.Text = days.ToString();
 
         }
@@ -157,11 +163,12 @@ namespace Kalender_Prg_Projekt
             if(monthSelector < 0)
             {
                 monthSelector = 11;
+                yearSelector--;
             }
             monthNameLabel1.Text = monthnames[monthSelector];
 
             DateTime date = DateTime.Now;
-            int days = DateTime.DaysInMonth(date.Year, monthSelector + 1);
+            int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
             label1.Text = days.ToString();
         }
 
@@ -171,11 +178,12 @@ namespace Kalender_Prg_Projekt
             if (monthSelector > 11)
             {
                 monthSelector = 0;
+                yearSelector++;
             }
             monthNameLabel1.Text = monthnames[monthSelector];
 
             DateTime date = DateTime.Now;
-            int days = DateTime.DaysInMonth(date.Year, monthSelector + 1);
+            int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
             label1.Text = days.ToString();
         }
     }
