@@ -106,7 +106,7 @@ namespace Kalender_Prg_Projekt
 
 
             birthdayAppointmentsTextBox2.Text = SqlQuery.getRowString(query).Replace(" 00:00:00","\r\n");
-
+            
         }
     }
 }
