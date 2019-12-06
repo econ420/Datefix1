@@ -31,7 +31,6 @@ namespace Kalender_Prg_Projekt
 
             }
         }
-
         public DateFix()
         {
             InitializeComponent();
@@ -45,13 +44,33 @@ namespace Kalender_Prg_Projekt
             {
                 accountInformationsPanel1.Hide();
             }
+            loadDatagrid();
 
         }
-
-        private void Button1_Click(object sender, EventArgs e)
+        private void loadDatagrid()
         {
-            var popupNewContact = new NewContact();
-            popupNewContact.ShowDialog();
+            string query = $@"SELECT 'Username','Firstname','Lastname','Birthdate','E-mail'
+                              FROM tbl_user";
+            dataGridView1.DataSource = SqlQuery.getDataSource(query).GetBinding();
+            
+            ////SqlQuery.getDataSource(query);
+            DataGridViewColumn username = new DataGridViewTextBoxColumn();
+            DataGridViewColumn firstname = new DataGridViewTextBoxColumn();
+            DataGridViewColumn lastname = new DataGridViewTextBoxColumn();
+            DataGridViewColumn birthdate = new DataGridViewTextBoxColumn();
+            DataGridViewColumn email = new DataGridViewTextBoxColumn();
+            username.HeaderText = "Benutzername";
+            firstname.HeaderText = "Vorname";
+            lastname.HeaderText = "Nachname";
+            birthdate.HeaderText = "Geburtstag";
+            email.HeaderText = "E-mail";
+            dataGridView1.Update();
+        }
+        private void NewContactButton1_Click(object sender, EventArgs e)
+        {
+            var popupNewContact = new NewContact(user.Id);
+            popupNewContact.Show();
+
         }
 
         public void showAccountInformation()
@@ -74,6 +93,7 @@ namespace Kalender_Prg_Projekt
                     query = $"SELECT ID FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
                     int id = SqlQuery.getInt(query);
                     Models.User user = new Models.User();
+                    user.Id = id;
                     user.Birthday = SqlQuery.getDateTime($"SELECT Birthdate FROM tbl_user WHERE tbl_user.ID = '{id}'");
                     user.Firstname = SqlQuery.getString($"SELECT Firstname FROM tbl_user WHERE tbl_user.ID = '{id}'");
                     user.Lastname = SqlQuery.getString($"SELECT Lastname FROM tbl_user WHERE tbl_user.ID = '{id}'");

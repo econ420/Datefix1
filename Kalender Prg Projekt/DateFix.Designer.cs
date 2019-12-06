@@ -108,10 +108,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 32);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(792, 396);
+            this.dataGridView1.Size = new System.Drawing.Size(792, 392);
             this.dataGridView1.TabIndex = 1;
             // 
             // panel1
@@ -131,7 +131,7 @@
             this.NewUserContactsButton.TabIndex = 0;
             this.NewUserContactsButton.Text = "Neu";
             this.NewUserContactsButton.UseVisualStyleBackColor = true;
-            this.NewUserContactsButton.Click += new System.EventHandler(this.Button1_Click);
+            this.NewUserContactsButton.Click += new System.EventHandler(this.NewContactButton1_Click);
             // 
             // appointmentTabPage1
             // 

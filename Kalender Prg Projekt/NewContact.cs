@@ -12,34 +12,50 @@ namespace Kalender_Prg_Projekt
 {
     public partial class NewContact : Form
     {
+        int loggedInID = 0;
         public NewContact()
         {
             InitializeComponent();
         }
 
-        private void Label1_Click(object sender, EventArgs e)
+        public NewContact(int Id)
         {
-
+            InitializeComponent();
+            loggedInID = Id;
         }
 
-        private void Label3_Click(object sender, EventArgs e)
+        private void Speichern_Click_1(object sender, EventArgs e)
         {
+            if (txtBoxFirstname.Text == "" || txtBoxFirstname.Text == null)
+            {
+                labError.Visible = true;
+            }
+            else if (txtBoxLastname.Text == "" || txtBoxLastname.Text == null)
+            {
+                labError.Visible = true;
+            }
+            else if (txtBoxUsername.Text == "" || txtBoxUsername.Text == null)
+            {
+                labError.Visible = true;
 
-        }
+            }
+            else if (txtBoxEmail.Text == "" || txtBoxEmail.Text == null)
+            {
+                labError.Visible = true;
 
-        private void Label4_Click(object sender, EventArgs e)
-        {
+            }
+            else if (txtBoxAdresse.Text == "" || txtBoxAdresse.Text == null)
+            {
+                labError.Visible = true;
 
-        }
-
-        private void TextBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label7_Click(object sender, EventArgs e)
-        {
-
+            }
+            else
+            {
+                Utilities utilities = new Utilities();
+                string query = $"INSERT INTO tbl_contacts (`ID`, `UID` , `Firstname` , `Lastname`, `Username`, `Birthdate`,`E-Mail`,`Address`) VALUES (NULL,'{loggedInID}','{txtBoxFirstname.Text}', '{txtBoxLastname.Text}', '{txtBoxUsername.Text}','{utilities.formatdate(birthdateDateTimePicker1.Value.ToString())}', '{txtBoxEmail.Text}','{txtBoxAdresse.Text}')";
+                SqlQuery.insert(query);
+                MessageBox.Show("Nutzer Angelegt");
+            }
         }
     }
 }

@@ -94,6 +94,7 @@
       <DependentUpon>Sign_Up.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlQuery.cs" />
+    <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="DateFix.resx">
       <DependentUpon>DateFix.cs</DependentUpon>
     </EmbeddedResource>
