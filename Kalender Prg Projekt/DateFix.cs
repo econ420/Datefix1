@@ -41,6 +41,7 @@ namespace Kalender_Prg_Projekt
         public DateFix()
         {
             InitializeComponent();
+            resizeCalendar();
             string query1 = $"SELECT Birthdate FROM tbl_user WHERE tbl_user.ID = '{3}'";
             ////MessageBox.Show(SqlQuery.getDateTime(query1).ToShortDateString());
 
@@ -185,6 +186,36 @@ namespace Kalender_Prg_Projekt
             DateTime date = DateTime.Now;
             int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
             label1.Text = days.ToString();
+        }
+
+        private void resizeCalendar()
+        {
+            double factor = 0;
+
+            int maxSize = calendarPanel2.Width;
+
+            factor = 100.0 / 7.0;
+            factor = factor / 100.0;
+            sundayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
+            mondayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
+            tuesdayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
+            wednesdayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
+            thursdayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
+            fridayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
+            saturdayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
+        }
+
+        private void DateFix_Resize(object sender, EventArgs e)
+        {
+            if(this.WindowState == FormWindowState.Maximized)
+            {
+                resizeCalendar();
+            }
+        }
+
+        private void DateFix_ResizeEnd(object sender, EventArgs e)
+        {
+            resizeCalendar();
         }
     }
 }
