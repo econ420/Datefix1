@@ -35,12 +35,10 @@ namespace Kalender_Prg_Projekt
         public DateFix()
         {
             InitializeComponent();
-            string query1 = $"SELECT Birthdate FROM tbl_user WHERE tbl_user.ID = '{3}'";
-            MessageBox.Show(SqlQuery.getDateTime(query1).ToShortDateString());
             
             appointmentsAppointmentsTextBox1.Text = "Du hast keine Termine in nächster Zeit.";
             birthdayAppointmentsTextBox2.Text = "In nächster Zeit hat keiner Geburstag.";
-            //commit
+
             GetNextBirthdays();
 
             if (this.User == null)
@@ -95,14 +93,6 @@ namespace Kalender_Prg_Projekt
         }
 
 
-        private void AppointmentstextBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void BirthdaytextBox2_TextChanged(object sender, EventArgs e)
-        {
-        }
-
         private void SignUpAccountLinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Sign_Up signup = new Sign_Up();
@@ -116,11 +106,6 @@ namespace Kalender_Prg_Projekt
 
 
             birthdayAppointmentsTextBox2.Text = SqlQuery.getRowString(query).Replace(" 00:00:00","\r\n");
-
-        }
-
-        private void TitelBirthdayAppointmentsLabel2_Click(object sender, EventArgs e)
-        {
 
         }
     }

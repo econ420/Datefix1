@@ -171,7 +171,6 @@
             this.titelBirthdayAppointmentsLabel2.Size = new System.Drawing.Size(152, 13);
             this.titelBirthdayAppointmentsLabel2.TabIndex = 2;
             this.titelBirthdayAppointmentsLabel2.Text = "Die Geburstage dieses Monats";
-            this.titelBirthdayAppointmentsLabel2.Click += new System.EventHandler(this.TitelBirthdayAppointmentsLabel2_Click);
             // 
             // birthdayAppointmentsTextBox2
             // 
@@ -180,7 +179,6 @@
             this.birthdayAppointmentsTextBox2.Name = "birthdayAppointmentsTextBox2";
             this.birthdayAppointmentsTextBox2.Size = new System.Drawing.Size(400, 150);
             this.birthdayAppointmentsTextBox2.TabIndex = 1;
-            this.birthdayAppointmentsTextBox2.TextChanged += new System.EventHandler(this.BirthdaytextBox2_TextChanged);
             // 
             // appointmentsAppointmentsTextBox1
             // 
@@ -190,7 +188,6 @@
             this.appointmentsAppointmentsTextBox1.Size = new System.Drawing.Size(400, 150);
             this.appointmentsAppointmentsTextBox1.TabIndex = 0;
             this.appointmentsAppointmentsTextBox1.Text = "\r\n\r\n";
-            this.appointmentsAppointmentsTextBox1.TextChanged += new System.EventHandler(this.AppointmentstextBox1_TextChanged);
             // 
             // taskTabPage1
             // 
