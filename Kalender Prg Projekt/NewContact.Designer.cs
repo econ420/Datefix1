@@ -182,7 +182,6 @@
             this.labError.TabIndex = 16;
             this.labError.Text = "Bitte füllen Sie alle Felder aus";
             this.labError.Visible = false;
-            this.labError.Click += new System.EventHandler(this.Label7_Click);
             // 
             // NewContact
             // 

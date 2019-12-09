@@ -60,6 +60,7 @@
             this.lastnameInforamtionLabel1 = new System.Windows.Forms.Label();
             this.firstnameInformationLabel1 = new System.Windows.Forms.Label();
             this.usernameInformationLabel1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.contactsTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,6 +69,7 @@
             this.accountTabPage1.SuspendLayout();
             this.accountLoginPanel1.SuspendLayout();
             this.accountInformationsPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -96,8 +98,7 @@
             // 
             // contactsTabPage1
             // 
-            this.contactsTabPage1.Controls.Add(this.dataGridView1);
-            this.contactsTabPage1.Controls.Add(this.panel1);
+            this.contactsTabPage1.Controls.Add(this.panel2);
             this.contactsTabPage1.Location = new System.Drawing.Point(4, 22);
             this.contactsTabPage1.Name = "contactsTabPage1";
             this.contactsTabPage1.Size = new System.Drawing.Size(792, 424);
@@ -107,11 +108,17 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 32);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
+            this.dataGridView1.MaximumSize = new System.Drawing.Size(8000, 500);
+            this.dataGridView1.MinimumSize = new System.Drawing.Size(792, 396);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(792, 392);
+            this.dataGridView1.Size = new System.Drawing.Size(792, 396);
             this.dataGridView1.TabIndex = 1;
             // 
             // panel1
@@ -125,9 +132,11 @@
             // 
             // NewUserContactsButton
             // 
-            this.NewUserContactsButton.Location = new System.Drawing.Point(709, 3);
+            this.NewUserContactsButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.NewUserContactsButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.NewUserContactsButton.Location = new System.Drawing.Point(717, 0);
             this.NewUserContactsButton.Name = "NewUserContactsButton";
-            this.NewUserContactsButton.Size = new System.Drawing.Size(75, 23);
+            this.NewUserContactsButton.Size = new System.Drawing.Size(75, 28);
             this.NewUserContactsButton.TabIndex = 0;
             this.NewUserContactsButton.Text = "Neu";
             this.NewUserContactsButton.UseVisualStyleBackColor = true;
@@ -373,6 +382,16 @@
             this.usernameInformationLabel1.TabIndex = 0;
             this.usernameInformationLabel1.Text = "Benutzername";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(792, 424);
+            this.panel2.TabIndex = 9;
+            // 
             // DateFix
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,6 +412,7 @@
             this.accountLoginPanel1.PerformLayout();
             this.accountInformationsPanel1.ResumeLayout(false);
             this.accountInformationsPanel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -430,5 +450,6 @@
         private System.Windows.Forms.TextBox lastnameInforamtionTextBox1;
         private System.Windows.Forms.TextBox firstnameInformationTextBox1;
         private System.Windows.Forms.TextBox usernameInformationTextBox1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

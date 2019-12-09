@@ -45,26 +45,24 @@ namespace Kalender_Prg_Projekt
                 accountInformationsPanel1.Hide();
             }
             loadDatagrid();
-
         }
+
         private void loadDatagrid()
         {
-            string query = $@"SELECT 'Username','Firstname','Lastname','Birthdate','E-mail'
-                              FROM tbl_user";
-            dataGridView1.DataSource = SqlQuery.getDataSource(query).GetBinding();
-            
-            ////SqlQuery.getDataSource(query);
-            DataGridViewColumn username = new DataGridViewTextBoxColumn();
-            DataGridViewColumn firstname = new DataGridViewTextBoxColumn();
-            DataGridViewColumn lastname = new DataGridViewTextBoxColumn();
-            DataGridViewColumn birthdate = new DataGridViewTextBoxColumn();
-            DataGridViewColumn email = new DataGridViewTextBoxColumn();
-            username.HeaderText = "Benutzername";
-            firstname.HeaderText = "Vorname";
-            lastname.HeaderText = "Nachname";
-            birthdate.HeaderText = "Geburtstag";
-            email.HeaderText = "E-mail";
-            dataGridView1.Update();
+            if (this.User == null)
+            {
+                panel2.Hide();
+            }
+            //string testquery = "SELECT Birthdate FROM tbl_contacts";
+            //var dummy = SqlQuery.getDataSource(testquery);
+            else
+            {
+                panel2.Show();
+                string query = $"SELECT ID, Firstname, Lastname, Username, EMail, Address FROM tbl_contacts WHERE UID= '{6}' ";
+                dataGridView1.DataSource = SqlQuery.getDataSource(query).GetBinding();
+            }
+
+
         }
         private void NewContactButton1_Click(object sender, EventArgs e)
         {
@@ -81,6 +79,7 @@ namespace Kalender_Prg_Projekt
             firstnameInformationTextBox1.Text = this.User.Firstname;
             lastnameInforamtionTextBox1.Text = this.User.Lastname;
             birthdateInformationTextBox1.Text = this.User.Birthday.ToShortDateString();
+            loadDatagrid();
         }
 
         private void SignInAccountButton1_Click(object sender, EventArgs e)
@@ -126,5 +125,7 @@ namespace Kalender_Prg_Projekt
             Sign_Up signup = new Sign_Up();
             signup.ShowDialog();
         }
+
+
     }
 }

@@ -8,7 +8,7 @@ namespace Kalender_Prg_Projekt
     public static class SqlQuery
     {
         private const int DefaultCommandTimeout = 60;
-        public static string MySqlConnectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=calendar";
+        public static string MySqlConnectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=calendar;Convert Zero Datetime=True;Allow Zero Datetime=True";
 
 
         public static void insert(string query)
