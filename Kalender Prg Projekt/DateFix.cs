@@ -131,6 +131,10 @@ namespace Kalender_Prg_Projekt
         }
 
 
+        private void GenerateDaysFromMonth()
+        {
+        }
+
         private void GenerateCalendar()
         {
             monthnames.Add("Januar");
@@ -208,6 +212,8 @@ namespace Kalender_Prg_Projekt
             maxSize = sundayMonthDayPanel2.Height;
             factor = 100.0 / 6.0;
             factor = factor / 100.0;
+
+
             sunday1.Height = Convert.ToInt32(maxSize * factor);
             sunday2.Height = Convert.ToInt32(maxSize * factor);
             sunday3.Height = Convert.ToInt32(maxSize * factor);
@@ -229,6 +235,33 @@ namespace Kalender_Prg_Projekt
             tuesday5.Height = Convert.ToInt32(maxSize * factor);
             tuesday6.Height = Convert.ToInt32(maxSize * factor);
 
+            wednesday1.Height = Convert.ToInt32(maxSize * factor);
+            wednesday2.Height = Convert.ToInt32(maxSize * factor);
+            wednesday3.Height = Convert.ToInt32(maxSize * factor);
+            wednesday4.Height = Convert.ToInt32(maxSize * factor);
+            wednesday5.Height = Convert.ToInt32(maxSize * factor);
+            wednesday6.Height = Convert.ToInt32(maxSize * factor);
+
+            thursday1.Height = Convert.ToInt32(maxSize * factor);
+            thursday2.Height = Convert.ToInt32(maxSize * factor);
+            thursday3.Height = Convert.ToInt32(maxSize * factor);
+            thursday4.Height = Convert.ToInt32(maxSize * factor);
+            thursday5.Height = Convert.ToInt32(maxSize * factor);
+            thursday6.Height = Convert.ToInt32(maxSize * factor);
+
+            friday1.Height = Convert.ToInt32(maxSize * factor);
+            friday2.Height = Convert.ToInt32(maxSize * factor);
+            friday3.Height = Convert.ToInt32(maxSize * factor);
+            friday4.Height = Convert.ToInt32(maxSize * factor);
+            friday5.Height = Convert.ToInt32(maxSize * factor);
+            friday6.Height = Convert.ToInt32(maxSize * factor);
+
+            saturday1.Height = Convert.ToInt32(maxSize * factor);
+            saturday2.Height = Convert.ToInt32(maxSize * factor);
+            saturday3.Height = Convert.ToInt32(maxSize * factor);
+            saturday4.Height = Convert.ToInt32(maxSize * factor);
+            saturday5.Height = Convert.ToInt32(maxSize * factor);
+            saturday6.Height = Convert.ToInt32(maxSize * factor);
         }
 
         private void DateFix_Resize(object sender, EventArgs e)
