@@ -33,26 +33,32 @@
             this.calendarTabPage1 = new System.Windows.Forms.TabPage();
             this.calendarPanel2 = new System.Windows.Forms.Panel();
             this.saturdayMonthDayPanel1 = new System.Windows.Forms.Panel();
+            this.saturdayMonthDayPanel2 = new System.Windows.Forms.Panel();
             this.saturdayMonthDayLabel1 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.fridayMonthDayPanel1 = new System.Windows.Forms.Panel();
+            this.fridayMonthDayPanel2 = new System.Windows.Forms.Panel();
             this.fridayMonthDayLabel1 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.thursdayMonthDayPanel1 = new System.Windows.Forms.Panel();
+            this.thursdayMonthDayPanel2 = new System.Windows.Forms.Panel();
             this.thursdayMonthDayLabel1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.wednesdayMonthDayPanel1 = new System.Windows.Forms.Panel();
+            this.wednesdayMonthDayPanel2 = new System.Windows.Forms.Panel();
             this.wednesdayMonthDayLabel1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.tuesdayMonthDayPanel1 = new System.Windows.Forms.Panel();
+            this.tuesdayMonthDayPanel2 = new System.Windows.Forms.Panel();
             this.tuesdayMonthDayLabel1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.mondayMonthDayPanel1 = new System.Windows.Forms.Panel();
+            this.mondayMonthDayPanel2 = new System.Windows.Forms.Panel();
             this.mondayMonthDayLabel1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.sundayMonthDayPanel1 = new System.Windows.Forms.Panel();
+            this.sundayMonthDayPanel2 = new System.Windows.Forms.Panel();
+            this.sunday1 = new System.Windows.Forms.Label();
+            this.sunday2 = new System.Windows.Forms.Label();
+            this.sunday3 = new System.Windows.Forms.Label();
+            this.sunday4 = new System.Windows.Forms.Label();
+            this.sunday5 = new System.Windows.Forms.Label();
+            this.sunday6 = new System.Windows.Forms.Label();
             this.sundayMonthDayLabel1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.monthSelectorPanel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.monthNameLabel1 = new System.Windows.Forms.Label();
@@ -87,6 +93,18 @@
             this.lastnameInforamtionLabel1 = new System.Windows.Forms.Label();
             this.firstnameInformationLabel1 = new System.Windows.Forms.Label();
             this.usernameInformationLabel1 = new System.Windows.Forms.Label();
+            this.monday1 = new System.Windows.Forms.Label();
+            this.monday2 = new System.Windows.Forms.Label();
+            this.monday3 = new System.Windows.Forms.Label();
+            this.monday4 = new System.Windows.Forms.Label();
+            this.monday5 = new System.Windows.Forms.Label();
+            this.monday6 = new System.Windows.Forms.Label();
+            this.tuesday6 = new System.Windows.Forms.Label();
+            this.tuesday5 = new System.Windows.Forms.Label();
+            this.tuesday4 = new System.Windows.Forms.Label();
+            this.tuesday3 = new System.Windows.Forms.Label();
+            this.tuesday2 = new System.Windows.Forms.Label();
+            this.tuesday1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.calendarTabPage1.SuspendLayout();
             this.calendarPanel2.SuspendLayout();
@@ -95,8 +113,11 @@
             this.thursdayMonthDayPanel1.SuspendLayout();
             this.wednesdayMonthDayPanel1.SuspendLayout();
             this.tuesdayMonthDayPanel1.SuspendLayout();
+            this.tuesdayMonthDayPanel2.SuspendLayout();
             this.mondayMonthDayPanel1.SuspendLayout();
+            this.mondayMonthDayPanel2.SuspendLayout();
             this.sundayMonthDayPanel1.SuspendLayout();
+            this.sundayMonthDayPanel2.SuspendLayout();
             this.monthSelectorPanel1.SuspendLayout();
             this.contactsTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -152,7 +173,7 @@
             // 
             // saturdayMonthDayPanel1
             // 
-            this.saturdayMonthDayPanel1.Controls.Add(this.panel7);
+            this.saturdayMonthDayPanel1.Controls.Add(this.saturdayMonthDayPanel2);
             this.saturdayMonthDayPanel1.Controls.Add(this.saturdayMonthDayLabel1);
             this.saturdayMonthDayPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.saturdayMonthDayPanel1.Location = new System.Drawing.Point(655, 34);
@@ -160,10 +181,18 @@
             this.saturdayMonthDayPanel1.Size = new System.Drawing.Size(131, 385);
             this.saturdayMonthDayPanel1.TabIndex = 14;
             // 
+            // saturdayMonthDayPanel2
+            // 
+            this.saturdayMonthDayPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.saturdayMonthDayPanel2.Location = new System.Drawing.Point(0, 28);
+            this.saturdayMonthDayPanel2.Name = "saturdayMonthDayPanel2";
+            this.saturdayMonthDayPanel2.Size = new System.Drawing.Size(131, 357);
+            this.saturdayMonthDayPanel2.TabIndex = 9;
+            // 
             // saturdayMonthDayLabel1
             // 
             this.saturdayMonthDayLabel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.saturdayMonthDayLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saturdayMonthDayLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saturdayMonthDayLabel1.Location = new System.Drawing.Point(0, 0);
             this.saturdayMonthDayLabel1.Name = "saturdayMonthDayLabel1";
             this.saturdayMonthDayLabel1.Size = new System.Drawing.Size(131, 28);
@@ -171,17 +200,9 @@
             this.saturdayMonthDayLabel1.Text = "Samstag";
             this.saturdayMonthDayLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel7
-            // 
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(0, 28);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(131, 357);
-            this.panel7.TabIndex = 9;
-            // 
             // fridayMonthDayPanel1
             // 
-            this.fridayMonthDayPanel1.Controls.Add(this.panel8);
+            this.fridayMonthDayPanel1.Controls.Add(this.fridayMonthDayPanel2);
             this.fridayMonthDayPanel1.Controls.Add(this.fridayMonthDayLabel1);
             this.fridayMonthDayPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.fridayMonthDayPanel1.Location = new System.Drawing.Point(545, 34);
@@ -189,10 +210,18 @@
             this.fridayMonthDayPanel1.Size = new System.Drawing.Size(110, 385);
             this.fridayMonthDayPanel1.TabIndex = 15;
             // 
+            // fridayMonthDayPanel2
+            // 
+            this.fridayMonthDayPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fridayMonthDayPanel2.Location = new System.Drawing.Point(0, 28);
+            this.fridayMonthDayPanel2.Name = "fridayMonthDayPanel2";
+            this.fridayMonthDayPanel2.Size = new System.Drawing.Size(110, 357);
+            this.fridayMonthDayPanel2.TabIndex = 8;
+            // 
             // fridayMonthDayLabel1
             // 
             this.fridayMonthDayLabel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fridayMonthDayLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fridayMonthDayLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fridayMonthDayLabel1.Location = new System.Drawing.Point(0, 0);
             this.fridayMonthDayLabel1.Name = "fridayMonthDayLabel1";
             this.fridayMonthDayLabel1.Size = new System.Drawing.Size(110, 28);
@@ -200,17 +229,9 @@
             this.fridayMonthDayLabel1.Text = "Freitag";
             this.fridayMonthDayLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel8
-            // 
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(0, 28);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(110, 357);
-            this.panel8.TabIndex = 8;
-            // 
             // thursdayMonthDayPanel1
             // 
-            this.thursdayMonthDayPanel1.Controls.Add(this.panel6);
+            this.thursdayMonthDayPanel1.Controls.Add(this.thursdayMonthDayPanel2);
             this.thursdayMonthDayPanel1.Controls.Add(this.thursdayMonthDayLabel1);
             this.thursdayMonthDayPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.thursdayMonthDayPanel1.Location = new System.Drawing.Point(416, 34);
@@ -218,10 +239,18 @@
             this.thursdayMonthDayPanel1.Size = new System.Drawing.Size(129, 385);
             this.thursdayMonthDayPanel1.TabIndex = 13;
             // 
+            // thursdayMonthDayPanel2
+            // 
+            this.thursdayMonthDayPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.thursdayMonthDayPanel2.Location = new System.Drawing.Point(0, 28);
+            this.thursdayMonthDayPanel2.Name = "thursdayMonthDayPanel2";
+            this.thursdayMonthDayPanel2.Size = new System.Drawing.Size(129, 357);
+            this.thursdayMonthDayPanel2.TabIndex = 7;
+            // 
             // thursdayMonthDayLabel1
             // 
             this.thursdayMonthDayLabel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.thursdayMonthDayLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thursdayMonthDayLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thursdayMonthDayLabel1.Location = new System.Drawing.Point(0, 0);
             this.thursdayMonthDayLabel1.Name = "thursdayMonthDayLabel1";
             this.thursdayMonthDayLabel1.Size = new System.Drawing.Size(129, 28);
@@ -229,17 +258,9 @@
             this.thursdayMonthDayLabel1.Text = "Donnerstag";
             this.thursdayMonthDayLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel6
-            // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 28);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(129, 357);
-            this.panel6.TabIndex = 7;
-            // 
             // wednesdayMonthDayPanel1
             // 
-            this.wednesdayMonthDayPanel1.Controls.Add(this.panel5);
+            this.wednesdayMonthDayPanel1.Controls.Add(this.wednesdayMonthDayPanel2);
             this.wednesdayMonthDayPanel1.Controls.Add(this.wednesdayMonthDayLabel1);
             this.wednesdayMonthDayPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.wednesdayMonthDayPanel1.Location = new System.Drawing.Point(296, 34);
@@ -247,10 +268,18 @@
             this.wednesdayMonthDayPanel1.Size = new System.Drawing.Size(120, 385);
             this.wednesdayMonthDayPanel1.TabIndex = 12;
             // 
+            // wednesdayMonthDayPanel2
+            // 
+            this.wednesdayMonthDayPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wednesdayMonthDayPanel2.Location = new System.Drawing.Point(0, 28);
+            this.wednesdayMonthDayPanel2.Name = "wednesdayMonthDayPanel2";
+            this.wednesdayMonthDayPanel2.Size = new System.Drawing.Size(120, 357);
+            this.wednesdayMonthDayPanel2.TabIndex = 6;
+            // 
             // wednesdayMonthDayLabel1
             // 
             this.wednesdayMonthDayLabel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.wednesdayMonthDayLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wednesdayMonthDayLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wednesdayMonthDayLabel1.Location = new System.Drawing.Point(0, 0);
             this.wednesdayMonthDayLabel1.Name = "wednesdayMonthDayLabel1";
             this.wednesdayMonthDayLabel1.Size = new System.Drawing.Size(120, 28);
@@ -258,17 +287,9 @@
             this.wednesdayMonthDayLabel1.Text = "Mittwoch";
             this.wednesdayMonthDayLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel5
-            // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 28);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(120, 357);
-            this.panel5.TabIndex = 6;
-            // 
             // tuesdayMonthDayPanel1
             // 
-            this.tuesdayMonthDayPanel1.Controls.Add(this.panel4);
+            this.tuesdayMonthDayPanel1.Controls.Add(this.tuesdayMonthDayPanel2);
             this.tuesdayMonthDayPanel1.Controls.Add(this.tuesdayMonthDayLabel1);
             this.tuesdayMonthDayPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tuesdayMonthDayPanel1.Location = new System.Drawing.Point(193, 34);
@@ -276,10 +297,24 @@
             this.tuesdayMonthDayPanel1.Size = new System.Drawing.Size(103, 385);
             this.tuesdayMonthDayPanel1.TabIndex = 11;
             // 
+            // tuesdayMonthDayPanel2
+            // 
+            this.tuesdayMonthDayPanel2.Controls.Add(this.tuesday1);
+            this.tuesdayMonthDayPanel2.Controls.Add(this.tuesday2);
+            this.tuesdayMonthDayPanel2.Controls.Add(this.tuesday3);
+            this.tuesdayMonthDayPanel2.Controls.Add(this.tuesday4);
+            this.tuesdayMonthDayPanel2.Controls.Add(this.tuesday5);
+            this.tuesdayMonthDayPanel2.Controls.Add(this.tuesday6);
+            this.tuesdayMonthDayPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tuesdayMonthDayPanel2.Location = new System.Drawing.Point(0, 28);
+            this.tuesdayMonthDayPanel2.Name = "tuesdayMonthDayPanel2";
+            this.tuesdayMonthDayPanel2.Size = new System.Drawing.Size(103, 357);
+            this.tuesdayMonthDayPanel2.TabIndex = 5;
+            // 
             // tuesdayMonthDayLabel1
             // 
             this.tuesdayMonthDayLabel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tuesdayMonthDayLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tuesdayMonthDayLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tuesdayMonthDayLabel1.Location = new System.Drawing.Point(0, 0);
             this.tuesdayMonthDayLabel1.Name = "tuesdayMonthDayLabel1";
             this.tuesdayMonthDayLabel1.Size = new System.Drawing.Size(103, 28);
@@ -287,17 +322,9 @@
             this.tuesdayMonthDayLabel1.Text = "Dienstag";
             this.tuesdayMonthDayLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 28);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(103, 357);
-            this.panel4.TabIndex = 5;
-            // 
             // mondayMonthDayPanel1
             // 
-            this.mondayMonthDayPanel1.Controls.Add(this.panel3);
+            this.mondayMonthDayPanel1.Controls.Add(this.mondayMonthDayPanel2);
             this.mondayMonthDayPanel1.Controls.Add(this.mondayMonthDayLabel1);
             this.mondayMonthDayPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.mondayMonthDayPanel1.Location = new System.Drawing.Point(103, 34);
@@ -305,10 +332,24 @@
             this.mondayMonthDayPanel1.Size = new System.Drawing.Size(90, 385);
             this.mondayMonthDayPanel1.TabIndex = 10;
             // 
+            // mondayMonthDayPanel2
+            // 
+            this.mondayMonthDayPanel2.Controls.Add(this.monday1);
+            this.mondayMonthDayPanel2.Controls.Add(this.monday2);
+            this.mondayMonthDayPanel2.Controls.Add(this.monday3);
+            this.mondayMonthDayPanel2.Controls.Add(this.monday4);
+            this.mondayMonthDayPanel2.Controls.Add(this.monday5);
+            this.mondayMonthDayPanel2.Controls.Add(this.monday6);
+            this.mondayMonthDayPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mondayMonthDayPanel2.Location = new System.Drawing.Point(0, 28);
+            this.mondayMonthDayPanel2.Name = "mondayMonthDayPanel2";
+            this.mondayMonthDayPanel2.Size = new System.Drawing.Size(90, 357);
+            this.mondayMonthDayPanel2.TabIndex = 4;
+            // 
             // mondayMonthDayLabel1
             // 
             this.mondayMonthDayLabel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mondayMonthDayLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mondayMonthDayLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mondayMonthDayLabel1.Location = new System.Drawing.Point(0, 0);
             this.mondayMonthDayLabel1.Name = "mondayMonthDayLabel1";
             this.mondayMonthDayLabel1.Size = new System.Drawing.Size(90, 28);
@@ -316,17 +357,9 @@
             this.mondayMonthDayLabel1.Text = "Montag";
             this.mondayMonthDayLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 28);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(90, 357);
-            this.panel3.TabIndex = 4;
-            // 
             // sundayMonthDayPanel1
             // 
-            this.sundayMonthDayPanel1.Controls.Add(this.panel2);
+            this.sundayMonthDayPanel1.Controls.Add(this.sundayMonthDayPanel2);
             this.sundayMonthDayPanel1.Controls.Add(this.sundayMonthDayLabel1);
             this.sundayMonthDayPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.sundayMonthDayPanel1.Location = new System.Drawing.Point(0, 34);
@@ -334,24 +367,96 @@
             this.sundayMonthDayPanel1.Size = new System.Drawing.Size(103, 385);
             this.sundayMonthDayPanel1.TabIndex = 9;
             // 
+            // sundayMonthDayPanel2
+            // 
+            this.sundayMonthDayPanel2.Controls.Add(this.sunday1);
+            this.sundayMonthDayPanel2.Controls.Add(this.sunday2);
+            this.sundayMonthDayPanel2.Controls.Add(this.sunday3);
+            this.sundayMonthDayPanel2.Controls.Add(this.sunday4);
+            this.sundayMonthDayPanel2.Controls.Add(this.sunday5);
+            this.sundayMonthDayPanel2.Controls.Add(this.sunday6);
+            this.sundayMonthDayPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sundayMonthDayPanel2.Location = new System.Drawing.Point(0, 28);
+            this.sundayMonthDayPanel2.Name = "sundayMonthDayPanel2";
+            this.sundayMonthDayPanel2.Size = new System.Drawing.Size(103, 357);
+            this.sundayMonthDayPanel2.TabIndex = 3;
+            // 
+            // sunday1
+            // 
+            this.sunday1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sunday1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sunday1.Location = new System.Drawing.Point(0, 155);
+            this.sunday1.Name = "sunday1";
+            this.sunday1.Size = new System.Drawing.Size(103, 202);
+            this.sunday1.TabIndex = 4;
+            this.sunday1.Text = "label6";
+            this.sunday1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sunday2
+            // 
+            this.sunday2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sunday2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sunday2.Location = new System.Drawing.Point(0, 124);
+            this.sunday2.Name = "sunday2";
+            this.sunday2.Size = new System.Drawing.Size(103, 31);
+            this.sunday2.TabIndex = 3;
+            this.sunday2.Text = "label5";
+            this.sunday2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sunday3
+            // 
+            this.sunday3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sunday3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sunday3.Location = new System.Drawing.Point(0, 93);
+            this.sunday3.Name = "sunday3";
+            this.sunday3.Size = new System.Drawing.Size(103, 31);
+            this.sunday3.TabIndex = 2;
+            this.sunday3.Text = "label4";
+            this.sunday3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sunday4
+            // 
+            this.sunday4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sunday4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sunday4.Location = new System.Drawing.Point(0, 62);
+            this.sunday4.Name = "sunday4";
+            this.sunday4.Size = new System.Drawing.Size(103, 31);
+            this.sunday4.TabIndex = 1;
+            this.sunday4.Text = "label3";
+            this.sunday4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sunday5
+            // 
+            this.sunday5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sunday5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sunday5.Location = new System.Drawing.Point(0, 31);
+            this.sunday5.Name = "sunday5";
+            this.sunday5.Size = new System.Drawing.Size(103, 31);
+            this.sunday5.TabIndex = 0;
+            this.sunday5.Text = "label2";
+            this.sunday5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sunday6
+            // 
+            this.sunday6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sunday6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sunday6.Location = new System.Drawing.Point(0, 0);
+            this.sunday6.Name = "sunday6";
+            this.sunday6.Size = new System.Drawing.Size(103, 31);
+            this.sunday6.TabIndex = 5;
+            this.sunday6.Text = "label1";
+            this.sunday6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // sundayMonthDayLabel1
             // 
             this.sundayMonthDayLabel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.sundayMonthDayLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sundayMonthDayLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sundayMonthDayLabel1.Location = new System.Drawing.Point(0, 0);
             this.sundayMonthDayLabel1.Name = "sundayMonthDayLabel1";
             this.sundayMonthDayLabel1.Size = new System.Drawing.Size(103, 28);
             this.sundayMonthDayLabel1.TabIndex = 2;
             this.sundayMonthDayLabel1.Text = "Sonntag";
             this.sundayMonthDayLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 28);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(103, 357);
-            this.panel2.TabIndex = 3;
             // 
             // monthSelectorPanel1
             // 
@@ -687,6 +792,138 @@
             this.usernameInformationLabel1.TabIndex = 0;
             this.usernameInformationLabel1.Text = "Benutzername";
             // 
+            // monday1
+            // 
+            this.monday1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.monday1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monday1.Location = new System.Drawing.Point(0, 155);
+            this.monday1.Name = "monday1";
+            this.monday1.Size = new System.Drawing.Size(90, 202);
+            this.monday1.TabIndex = 0;
+            this.monday1.Text = "label6";
+            this.monday1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // monday2
+            // 
+            this.monday2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.monday2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monday2.Location = new System.Drawing.Point(0, 124);
+            this.monday2.Name = "monday2";
+            this.monday2.Size = new System.Drawing.Size(90, 31);
+            this.monday2.TabIndex = 1;
+            this.monday2.Text = "label5";
+            this.monday2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // monday3
+            // 
+            this.monday3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.monday3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monday3.Location = new System.Drawing.Point(0, 93);
+            this.monday3.Name = "monday3";
+            this.monday3.Size = new System.Drawing.Size(90, 31);
+            this.monday3.TabIndex = 2;
+            this.monday3.Text = "label4";
+            this.monday3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // monday4
+            // 
+            this.monday4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.monday4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monday4.Location = new System.Drawing.Point(0, 62);
+            this.monday4.Name = "monday4";
+            this.monday4.Size = new System.Drawing.Size(90, 31);
+            this.monday4.TabIndex = 3;
+            this.monday4.Text = "label3";
+            this.monday4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // monday5
+            // 
+            this.monday5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.monday5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monday5.Location = new System.Drawing.Point(0, 31);
+            this.monday5.Name = "monday5";
+            this.monday5.Size = new System.Drawing.Size(90, 31);
+            this.monday5.TabIndex = 4;
+            this.monday5.Text = "label2";
+            this.monday5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // monday6
+            // 
+            this.monday6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.monday6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monday6.Location = new System.Drawing.Point(0, 0);
+            this.monday6.Name = "monday6";
+            this.monday6.Size = new System.Drawing.Size(90, 31);
+            this.monday6.TabIndex = 5;
+            this.monday6.Text = "label1";
+            this.monday6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tuesday6
+            // 
+            this.tuesday6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tuesday6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tuesday6.Location = new System.Drawing.Point(0, 0);
+            this.tuesday6.Name = "tuesday6";
+            this.tuesday6.Size = new System.Drawing.Size(103, 31);
+            this.tuesday6.TabIndex = 0;
+            this.tuesday6.Text = "label1";
+            this.tuesday6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tuesday5
+            // 
+            this.tuesday5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tuesday5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tuesday5.Location = new System.Drawing.Point(0, 31);
+            this.tuesday5.Name = "tuesday5";
+            this.tuesday5.Size = new System.Drawing.Size(103, 31);
+            this.tuesday5.TabIndex = 1;
+            this.tuesday5.Text = "label2";
+            this.tuesday5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tuesday4
+            // 
+            this.tuesday4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tuesday4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tuesday4.Location = new System.Drawing.Point(0, 62);
+            this.tuesday4.Name = "tuesday4";
+            this.tuesday4.Size = new System.Drawing.Size(103, 31);
+            this.tuesday4.TabIndex = 2;
+            this.tuesday4.Text = "label3";
+            this.tuesday4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tuesday3
+            // 
+            this.tuesday3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tuesday3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tuesday3.Location = new System.Drawing.Point(0, 93);
+            this.tuesday3.Name = "tuesday3";
+            this.tuesday3.Size = new System.Drawing.Size(103, 31);
+            this.tuesday3.TabIndex = 3;
+            this.tuesday3.Text = "label4";
+            this.tuesday3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tuesday2
+            // 
+            this.tuesday2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tuesday2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tuesday2.Location = new System.Drawing.Point(0, 124);
+            this.tuesday2.Name = "tuesday2";
+            this.tuesday2.Size = new System.Drawing.Size(103, 31);
+            this.tuesday2.TabIndex = 4;
+            this.tuesday2.Text = "label5";
+            this.tuesday2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tuesday1
+            // 
+            this.tuesday1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tuesday1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tuesday1.Location = new System.Drawing.Point(0, 155);
+            this.tuesday1.Name = "tuesday1";
+            this.tuesday1.Size = new System.Drawing.Size(103, 202);
+            this.tuesday1.TabIndex = 5;
+            this.tuesday1.Text = "label6";
+            this.tuesday1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // DateFix
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -706,8 +943,11 @@
             this.thursdayMonthDayPanel1.ResumeLayout(false);
             this.wednesdayMonthDayPanel1.ResumeLayout(false);
             this.tuesdayMonthDayPanel1.ResumeLayout(false);
+            this.tuesdayMonthDayPanel2.ResumeLayout(false);
             this.mondayMonthDayPanel1.ResumeLayout(false);
+            this.mondayMonthDayPanel2.ResumeLayout(false);
             this.sundayMonthDayPanel1.ResumeLayout(false);
+            this.sundayMonthDayPanel2.ResumeLayout(false);
             this.monthSelectorPanel1.ResumeLayout(false);
             this.monthSelectorPanel1.PerformLayout();
             this.contactsTabPage1.ResumeLayout(false);
@@ -777,12 +1017,30 @@
         private System.Windows.Forms.Panel wednesdayMonthDayPanel1;
         private System.Windows.Forms.Panel tuesdayMonthDayPanel1;
         private System.Windows.Forms.Panel mondayMonthDayPanel1;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel saturdayMonthDayPanel2;
+        private System.Windows.Forms.Panel fridayMonthDayPanel2;
+        private System.Windows.Forms.Panel thursdayMonthDayPanel2;
+        private System.Windows.Forms.Panel wednesdayMonthDayPanel2;
+        private System.Windows.Forms.Panel tuesdayMonthDayPanel2;
+        private System.Windows.Forms.Panel mondayMonthDayPanel2;
+        private System.Windows.Forms.Panel sundayMonthDayPanel2;
+        private System.Windows.Forms.Label sunday1;
+        private System.Windows.Forms.Label sunday2;
+        private System.Windows.Forms.Label sunday3;
+        private System.Windows.Forms.Label sunday4;
+        private System.Windows.Forms.Label sunday5;
+        private System.Windows.Forms.Label sunday6;
+        private System.Windows.Forms.Label monday1;
+        private System.Windows.Forms.Label monday2;
+        private System.Windows.Forms.Label monday3;
+        private System.Windows.Forms.Label monday4;
+        private System.Windows.Forms.Label monday5;
+        private System.Windows.Forms.Label monday6;
+        private System.Windows.Forms.Label tuesday1;
+        private System.Windows.Forms.Label tuesday2;
+        private System.Windows.Forms.Label tuesday3;
+        private System.Windows.Forms.Label tuesday4;
+        private System.Windows.Forms.Label tuesday5;
+        private System.Windows.Forms.Label tuesday6;
     }
 }

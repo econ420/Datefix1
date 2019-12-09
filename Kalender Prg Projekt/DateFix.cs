@@ -203,6 +203,32 @@ namespace Kalender_Prg_Projekt
             thursdayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
             fridayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
             saturdayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
+
+            
+            maxSize = sundayMonthDayPanel2.Height;
+            factor = 100.0 / 6.0;
+            factor = factor / 100.0;
+            sunday1.Height = Convert.ToInt32(maxSize * factor);
+            sunday2.Height = Convert.ToInt32(maxSize * factor);
+            sunday3.Height = Convert.ToInt32(maxSize * factor);
+            sunday4.Height = Convert.ToInt32(maxSize * factor);
+            sunday5.Height = Convert.ToInt32(maxSize * factor);
+            sunday6.Height = Convert.ToInt32(maxSize * factor);
+
+            monday1.Height = Convert.ToInt32(maxSize * factor);
+            monday2.Height = Convert.ToInt32(maxSize * factor);
+            monday3.Height = Convert.ToInt32(maxSize * factor);
+            monday4.Height = Convert.ToInt32(maxSize * factor);
+            monday5.Height = Convert.ToInt32(maxSize * factor);
+            monday6.Height = Convert.ToInt32(maxSize * factor);
+
+            tuesday1.Height = Convert.ToInt32(maxSize * factor);
+            tuesday2.Height = Convert.ToInt32(maxSize * factor);
+            tuesday3.Height = Convert.ToInt32(maxSize * factor);
+            tuesday4.Height = Convert.ToInt32(maxSize * factor);
+            tuesday5.Height = Convert.ToInt32(maxSize * factor);
+            tuesday6.Height = Convert.ToInt32(maxSize * factor);
+
         }
 
         private void DateFix_Resize(object sender, EventArgs e)
