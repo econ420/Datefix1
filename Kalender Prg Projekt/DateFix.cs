@@ -31,6 +31,7 @@ namespace Kalender_Prg_Projekt
 
             }
         }
+        
 
         public DateFix()
         {
@@ -39,6 +40,7 @@ namespace Kalender_Prg_Projekt
             appointmentsAppointmentsTextBox1.Text = "Du hast keine Termine in nächster Zeit.";
             birthdayAppointmentsTextBox2.Text = "In nächster Zeit hat keiner Geburstag.";
 
+            Getnextevents();
             GetNextBirthdays();
 
             if (this.User == null)
@@ -108,6 +110,15 @@ namespace Kalender_Prg_Projekt
             birthdayAppointmentsTextBox2.Text = SqlQuery.getRowString(query).Replace(" 00:00:00","\r\n");
 
         }
+
+
+        private void Getnextevents()
+        {
+            string query = "SELECT eventDescription,' ', eventDate From,' - ', eventDeadline tbl_events WHERE MONTH(eventDate) = MONTH (NOW())";
+
+            appointmentsAppointmentsTextBox1.Text = SqlQuery.getRowString(query);
+        }
+
     }
 }
     

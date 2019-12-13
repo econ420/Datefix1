@@ -36,11 +36,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.NewUserContactsButton = new System.Windows.Forms.Button();
             this.appointmentTabPage1 = new System.Windows.Forms.TabPage();
-            this.appointmentsCalenderAppointmentsMonthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.titelAppointmentsAppointmentsLabel1 = new System.Windows.Forms.Label();
-            this.titelBirthdayAppointmentsLabel2 = new System.Windows.Forms.Label();
-            this.birthdayAppointmentsTextBox2 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.appointmentsAppointmentsTextBox1 = new System.Windows.Forms.TextBox();
+            this.titelAppointmentsAppointmentsLabel1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.birthdayAppointmentsTextBox2 = new System.Windows.Forms.TextBox();
+            this.titelBirthdayAppointmentsLabel2 = new System.Windows.Forms.Label();
             this.taskTabPage1 = new System.Windows.Forms.TabPage();
             this.accountTabPage1 = new System.Windows.Forms.TabPage();
             this.accountLoginPanel1 = new System.Windows.Forms.Panel();
@@ -65,6 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.appointmentTabPage1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.accountTabPage1.SuspendLayout();
             this.accountLoginPanel1.SuspendLayout();
             this.accountInformationsPanel1.SuspendLayout();
@@ -135,11 +138,8 @@
             // 
             // appointmentTabPage1
             // 
-            this.appointmentTabPage1.Controls.Add(this.appointmentsCalenderAppointmentsMonthCalendar1);
-            this.appointmentTabPage1.Controls.Add(this.titelAppointmentsAppointmentsLabel1);
-            this.appointmentTabPage1.Controls.Add(this.titelBirthdayAppointmentsLabel2);
-            this.appointmentTabPage1.Controls.Add(this.birthdayAppointmentsTextBox2);
-            this.appointmentTabPage1.Controls.Add(this.appointmentsAppointmentsTextBox1);
+            this.appointmentTabPage1.Controls.Add(this.panel3);
+            this.appointmentTabPage1.Controls.Add(this.panel2);
             this.appointmentTabPage1.Location = new System.Drawing.Point(4, 22);
             this.appointmentTabPage1.Name = "appointmentTabPage1";
             this.appointmentTabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -148,46 +148,63 @@
             this.appointmentTabPage1.Text = "Termine";
             this.appointmentTabPage1.UseVisualStyleBackColor = true;
             // 
-            // appointmentsCalenderAppointmentsMonthCalendar1
+            // panel3
             // 
-            this.appointmentsCalenderAppointmentsMonthCalendar1.Location = new System.Drawing.Point(9, 21);
-            this.appointmentsCalenderAppointmentsMonthCalendar1.Name = "appointmentsCalenderAppointmentsMonthCalendar1";
-            this.appointmentsCalenderAppointmentsMonthCalendar1.TabIndex = 4;
+            this.panel3.Controls.Add(this.appointmentsAppointmentsTextBox1);
+            this.panel3.Controls.Add(this.titelAppointmentsAppointmentsLabel1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(786, 188);
+            this.panel3.TabIndex = 6;
+            // 
+            // appointmentsAppointmentsTextBox1
+            // 
+            this.appointmentsAppointmentsTextBox1.Location = new System.Drawing.Point(3, 27);
+            this.appointmentsAppointmentsTextBox1.Multiline = true;
+            this.appointmentsAppointmentsTextBox1.Name = "appointmentsAppointmentsTextBox1";
+            this.appointmentsAppointmentsTextBox1.Size = new System.Drawing.Size(394, 150);
+            this.appointmentsAppointmentsTextBox1.TabIndex = 0;
+            this.appointmentsAppointmentsTextBox1.Text = "\r\n\r\n";
             // 
             // titelAppointmentsAppointmentsLabel1
             // 
             this.titelAppointmentsAppointmentsLabel1.AutoSize = true;
-            this.titelAppointmentsAppointmentsLabel1.Location = new System.Drawing.Point(384, 17);
+            this.titelAppointmentsAppointmentsLabel1.Location = new System.Drawing.Point(3, 11);
             this.titelAppointmentsAppointmentsLabel1.Name = "titelAppointmentsAppointmentsLabel1";
             this.titelAppointmentsAppointmentsLabel1.Size = new System.Drawing.Size(119, 13);
             this.titelAppointmentsAppointmentsLabel1.TabIndex = 3;
             this.titelAppointmentsAppointmentsLabel1.Text = "Termine dieses Monats ";
             // 
+            // panel2
+            // 
+            this.panel2.AutoSize = true;
+            this.panel2.Controls.Add(this.birthdayAppointmentsTextBox2);
+            this.panel2.Controls.Add(this.titelBirthdayAppointmentsLabel2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(3, 257);
+            this.panel2.MaximumSize = new System.Drawing.Size(1000, 209);
+            this.panel2.MinimumSize = new System.Drawing.Size(500, 104);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(786, 164);
+            this.panel2.TabIndex = 5;
+            // 
+            // birthdayAppointmentsTextBox2
+            // 
+            this.birthdayAppointmentsTextBox2.Location = new System.Drawing.Point(3, 26);
+            this.birthdayAppointmentsTextBox2.Multiline = true;
+            this.birthdayAppointmentsTextBox2.Name = "birthdayAppointmentsTextBox2";
+            this.birthdayAppointmentsTextBox2.Size = new System.Drawing.Size(397, 135);
+            this.birthdayAppointmentsTextBox2.TabIndex = 1;
+            // 
             // titelBirthdayAppointmentsLabel2
             // 
             this.titelBirthdayAppointmentsLabel2.AutoSize = true;
-            this.titelBirthdayAppointmentsLabel2.Location = new System.Drawing.Point(384, 207);
+            this.titelBirthdayAppointmentsLabel2.Location = new System.Drawing.Point(3, 10);
             this.titelBirthdayAppointmentsLabel2.Name = "titelBirthdayAppointmentsLabel2";
             this.titelBirthdayAppointmentsLabel2.Size = new System.Drawing.Size(152, 13);
             this.titelBirthdayAppointmentsLabel2.TabIndex = 2;
             this.titelBirthdayAppointmentsLabel2.Text = "Die Geburstage dieses Monats";
-            // 
-            // birthdayAppointmentsTextBox2
-            // 
-            this.birthdayAppointmentsTextBox2.Location = new System.Drawing.Point(384, 223);
-            this.birthdayAppointmentsTextBox2.Multiline = true;
-            this.birthdayAppointmentsTextBox2.Name = "birthdayAppointmentsTextBox2";
-            this.birthdayAppointmentsTextBox2.Size = new System.Drawing.Size(400, 150);
-            this.birthdayAppointmentsTextBox2.TabIndex = 1;
-            // 
-            // appointmentsAppointmentsTextBox1
-            // 
-            this.appointmentsAppointmentsTextBox1.Location = new System.Drawing.Point(384, 33);
-            this.appointmentsAppointmentsTextBox1.Multiline = true;
-            this.appointmentsAppointmentsTextBox1.Name = "appointmentsAppointmentsTextBox1";
-            this.appointmentsAppointmentsTextBox1.Size = new System.Drawing.Size(400, 150);
-            this.appointmentsAppointmentsTextBox1.TabIndex = 0;
-            this.appointmentsAppointmentsTextBox1.Text = "\r\n\r\n";
             // 
             // taskTabPage1
             // 
@@ -386,6 +403,10 @@
             this.panel1.ResumeLayout(false);
             this.appointmentTabPage1.ResumeLayout(false);
             this.appointmentTabPage1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.accountTabPage1.ResumeLayout(false);
             this.accountLoginPanel1.ResumeLayout(false);
             this.accountLoginPanel1.PerformLayout();
@@ -407,7 +428,6 @@
         private System.Windows.Forms.TextBox birthdayAppointmentsTextBox2;
         private System.Windows.Forms.Label titelBirthdayAppointmentsLabel2;
         private System.Windows.Forms.Label titelAppointmentsAppointmentsLabel1;
-        private System.Windows.Forms.MonthCalendar appointmentsCalenderAppointmentsMonthCalendar1;
         private System.Windows.Forms.Panel accountLoginPanel1;
         private System.Windows.Forms.Label titleAccountSignInLabel1;
         private System.Windows.Forms.LinkLabel signUpAccountLinkLabel1;
@@ -428,5 +448,7 @@
         private System.Windows.Forms.TextBox lastnameInforamtionTextBox1;
         private System.Windows.Forms.TextBox firstnameInformationTextBox1;
         private System.Windows.Forms.TextBox usernameInformationTextBox1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
     }
 }
