@@ -9,7 +9,7 @@ namespace Kalender_Prg_Projekt
 {
     public partial class DateFix : Form
     {
-        List<string> monthnames = new List<string>();
+        List<Label> labels = new List<Label>();
         int monthSelector = 0;
         int yearSelector = 0;
 
@@ -172,7 +172,7 @@ namespace Kalender_Prg_Projekt
 
         private void GenerateCalendar()
         {
-
+            addLabelstoList();
             DateTime date = DateTime.Now;
             monthSelector = date.Month - 1;
             yearSelector = date.Year;
@@ -187,6 +187,9 @@ namespace Kalender_Prg_Projekt
             GenerateDaysFromMonth(date.ToString("dddd"), days);
 
         }
+
+
+
 
         private void prevMonthButton1_Click(object sender, EventArgs e)
         {
@@ -302,6 +305,57 @@ namespace Kalender_Prg_Projekt
         private void DateFix_ResizeEnd(object sender, EventArgs e)
         {
             resizeCalendar();
+        }
+
+        private void addLabelstoList()
+        {
+            labels.Add(sunday1);
+            labels.Add(monday1);
+            labels.Add(tuesday1);
+            labels.Add(wednesday1);
+            labels.Add(thursday1);
+            labels.Add(friday1);
+            labels.Add(saturday1);
+
+            labels.Add(sunday2);
+            labels.Add(monday2);
+            labels.Add(tuesday2);
+            labels.Add(wednesday2);
+            labels.Add(thursday2);
+            labels.Add(friday2);
+            labels.Add(saturday2);
+
+            labels.Add(sunday3);
+            labels.Add(monday3);
+            labels.Add(tuesday3);
+            labels.Add(wednesday3);
+            labels.Add(thursday3);
+            labels.Add(friday3);
+            labels.Add(saturday3);
+
+            labels.Add(sunday4);
+            labels.Add(monday4);
+            labels.Add(tuesday4);
+            labels.Add(wednesday4);
+            labels.Add(thursday4);
+            labels.Add(friday4);
+            labels.Add(saturday4);
+
+            labels.Add(sunday5);
+            labels.Add(monday5);
+            labels.Add(tuesday5);
+            labels.Add(wednesday5);
+            labels.Add(thursday5);
+            labels.Add(friday5);
+            labels.Add(saturday5);
+
+            labels.Add(sunday6);
+            labels.Add(monday6);
+            labels.Add(tuesday6);
+            labels.Add(wednesday6);
+            labels.Add(thursday6);
+            labels.Add(friday6);
+            labels.Add(saturday6);
         }
     }
 }
