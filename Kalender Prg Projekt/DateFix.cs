@@ -131,34 +131,60 @@ namespace Kalender_Prg_Projekt
         }
 
 
-        private void GenerateDaysFromMonth()
+        private void GenerateDaysFromMonth(string dayName,int dayCount)
         {
+            sunday1.Text = "0";
+            monday1.Text = "0";
+            tuesday1.Text = "0";
+            wednesday1.Text = "0";
+            thursday1.Text = "0";
+            friday1.Text = "0";
+            saturday1.Text = "0";
+            if (sundayMonthDayLabel1.Text == dayName)
+            {
+                sunday1.Text = "1";
+            }
+            else if (mondayMonthDayLabel1.Text == dayName)
+            {
+                monday1.Text = "1";
+            }
+            else if (tuesdayMonthDayLabel1.Text == dayName)
+            {
+                tuesday1.Text = "1";
+            }
+            else if (wednesdayMonthDayLabel1.Text == dayName)
+            {
+                wednesday1.Text = "1";
+            }
+            else if (thursdayMonthDayLabel1.Text == dayName)
+            {
+                thursday1.Text = "1";
+            }
+            else if (fridayMonthDayLabel1.Text == dayName)
+            {
+                friday1.Text = "1";
+            }
+            else if (saturdayMonthDayLabel1.Text == dayName)
+            {
+                saturday1.Text = "1";
+            }
         }
 
         private void GenerateCalendar()
         {
-            monthnames.Add("Januar");
-            monthnames.Add("Februar");
-            monthnames.Add("März");
-            monthnames.Add("April");
-            monthnames.Add("Mai");
-            monthnames.Add("Juni");
-            monthnames.Add("Juli");
-            monthnames.Add("August");
-            monthnames.Add("September");
-            monthnames.Add("Oktober");
-            monthnames.Add("November");
-            monthnames.Add("Dezember");
 
             DateTime date = DateTime.Now;
-            monthNameLabel1.Text = monthnames[date.Month - 1];
             monthSelector = date.Month - 1;
             yearSelector = date.Year;
+            date = new DateTime(yearSelector, monthSelector + 1, 1);
+            monthNameLabel1.Text = date.ToString("MMMMMMMMMMMMM") + " " + yearSelector;
 
             //TODO erweiterung des Kalenders um die Funktion des anzeigens der Tage
 
             int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
             label1.Text = days.ToString();
+
+            GenerateDaysFromMonth(date.ToString("dddd"), days);
 
         }
 
@@ -170,11 +196,11 @@ namespace Kalender_Prg_Projekt
                 monthSelector = 11;
                 yearSelector--;
             }
-            monthNameLabel1.Text = monthnames[monthSelector];
-
-            DateTime date = DateTime.Now;
+            DateTime date = new DateTime(yearSelector, monthSelector + 1, 1);
+            monthNameLabel1.Text = date.ToString("MMMMMMMMMMMMM") + " " + yearSelector;
             int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
             label1.Text = days.ToString();
+            GenerateDaysFromMonth(date.ToString("dddd"), days);
         }
 
         private void nextMonthButton1_Click(object sender, EventArgs e)
@@ -185,11 +211,12 @@ namespace Kalender_Prg_Projekt
                 monthSelector = 0;
                 yearSelector++;
             }
-            monthNameLabel1.Text = monthnames[monthSelector];
 
-            DateTime date = DateTime.Now;
+            DateTime date = new DateTime(yearSelector, monthSelector + 1, 1);
+            monthNameLabel1.Text = date.ToString("MMMMMMMMMMMMM") + " " + yearSelector;
             int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
             label1.Text = days.ToString();
+            GenerateDaysFromMonth(date.ToString("dddd"), days);
         }
 
         private void resizeCalendar()
@@ -214,54 +241,54 @@ namespace Kalender_Prg_Projekt
             factor = factor / 100.0;
 
 
-            sunday1.Height = Convert.ToInt32(maxSize * factor);
-            sunday2.Height = Convert.ToInt32(maxSize * factor);
-            sunday3.Height = Convert.ToInt32(maxSize * factor);
-            sunday4.Height = Convert.ToInt32(maxSize * factor);
-            sunday5.Height = Convert.ToInt32(maxSize * factor);
             sunday6.Height = Convert.ToInt32(maxSize * factor);
+            sunday5.Height = Convert.ToInt32(maxSize * factor);
+            sunday4.Height = Convert.ToInt32(maxSize * factor);
+            sunday3.Height = Convert.ToInt32(maxSize * factor);
+            sunday2.Height = Convert.ToInt32(maxSize * factor);
+            sunday1.Height = Convert.ToInt32(maxSize * factor);
 
-            monday1.Height = Convert.ToInt32(maxSize * factor);
-            monday2.Height = Convert.ToInt32(maxSize * factor);
-            monday3.Height = Convert.ToInt32(maxSize * factor);
-            monday4.Height = Convert.ToInt32(maxSize * factor);
-            monday5.Height = Convert.ToInt32(maxSize * factor);
             monday6.Height = Convert.ToInt32(maxSize * factor);
+            monday5.Height = Convert.ToInt32(maxSize * factor);
+            monday4.Height = Convert.ToInt32(maxSize * factor);
+            monday3.Height = Convert.ToInt32(maxSize * factor);
+            monday2.Height = Convert.ToInt32(maxSize * factor);
+            monday1.Height = Convert.ToInt32(maxSize * factor);
 
-            tuesday1.Height = Convert.ToInt32(maxSize * factor);
-            tuesday2.Height = Convert.ToInt32(maxSize * factor);
-            tuesday3.Height = Convert.ToInt32(maxSize * factor);
-            tuesday4.Height = Convert.ToInt32(maxSize * factor);
-            tuesday5.Height = Convert.ToInt32(maxSize * factor);
             tuesday6.Height = Convert.ToInt32(maxSize * factor);
+            tuesday5.Height = Convert.ToInt32(maxSize * factor);
+            tuesday4.Height = Convert.ToInt32(maxSize * factor);
+            tuesday3.Height = Convert.ToInt32(maxSize * factor);
+            tuesday2.Height = Convert.ToInt32(maxSize * factor);
+            tuesday1.Height = Convert.ToInt32(maxSize * factor);
 
-            wednesday1.Height = Convert.ToInt32(maxSize * factor);
-            wednesday2.Height = Convert.ToInt32(maxSize * factor);
-            wednesday3.Height = Convert.ToInt32(maxSize * factor);
-            wednesday4.Height = Convert.ToInt32(maxSize * factor);
-            wednesday5.Height = Convert.ToInt32(maxSize * factor);
             wednesday6.Height = Convert.ToInt32(maxSize * factor);
+            wednesday5.Height = Convert.ToInt32(maxSize * factor);
+            wednesday4.Height = Convert.ToInt32(maxSize * factor);
+            wednesday3.Height = Convert.ToInt32(maxSize * factor);
+            wednesday2.Height = Convert.ToInt32(maxSize * factor);
+            wednesday1.Height = Convert.ToInt32(maxSize * factor);
 
-            thursday1.Height = Convert.ToInt32(maxSize * factor);
-            thursday2.Height = Convert.ToInt32(maxSize * factor);
-            thursday3.Height = Convert.ToInt32(maxSize * factor);
-            thursday4.Height = Convert.ToInt32(maxSize * factor);
-            thursday5.Height = Convert.ToInt32(maxSize * factor);
             thursday6.Height = Convert.ToInt32(maxSize * factor);
+            thursday5.Height = Convert.ToInt32(maxSize * factor);
+            thursday4.Height = Convert.ToInt32(maxSize * factor);
+            thursday3.Height = Convert.ToInt32(maxSize * factor);
+            thursday2.Height = Convert.ToInt32(maxSize * factor);
+            thursday1.Height = Convert.ToInt32(maxSize * factor);
 
-            friday1.Height = Convert.ToInt32(maxSize * factor);
-            friday2.Height = Convert.ToInt32(maxSize * factor);
-            friday3.Height = Convert.ToInt32(maxSize * factor);
-            friday4.Height = Convert.ToInt32(maxSize * factor);
-            friday5.Height = Convert.ToInt32(maxSize * factor);
             friday6.Height = Convert.ToInt32(maxSize * factor);
+            friday5.Height = Convert.ToInt32(maxSize * factor);
+            friday4.Height = Convert.ToInt32(maxSize * factor);
+            friday3.Height = Convert.ToInt32(maxSize * factor);
+            friday2.Height = Convert.ToInt32(maxSize * factor);
+            friday1.Height = Convert.ToInt32(maxSize * factor);
 
-            saturday1.Height = Convert.ToInt32(maxSize * factor);
-            saturday2.Height = Convert.ToInt32(maxSize * factor);
-            saturday3.Height = Convert.ToInt32(maxSize * factor);
-            saturday4.Height = Convert.ToInt32(maxSize * factor);
-            saturday5.Height = Convert.ToInt32(maxSize * factor);
             saturday6.Height = Convert.ToInt32(maxSize * factor);
+            saturday5.Height = Convert.ToInt32(maxSize * factor);
+            saturday4.Height = Convert.ToInt32(maxSize * factor);
+            saturday3.Height = Convert.ToInt32(maxSize * factor);
+            saturday2.Height = Convert.ToInt32(maxSize * factor);
+            saturday1.Height = Convert.ToInt32(maxSize * factor);
         }
 
         private void DateFix_Resize(object sender, EventArgs e)
