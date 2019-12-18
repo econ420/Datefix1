@@ -169,6 +169,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(800, 451);
             this.tabControl1.TabIndex = 7;
+            this.tabControl1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.loginEnter_KeyDown_Tabcontrol);
             // 
             // calendarTabPage1
             // 
