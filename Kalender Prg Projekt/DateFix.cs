@@ -10,6 +10,9 @@ namespace Kalender_Prg_Projekt
     public partial class DateFix : Form
     {
         List<Label> labels = new List<Label>();
+        List<Label> CalendarDays = new List<Label>();
+        Label label = new Label();
+        Point daysLocation = new Point(0, 34);
         int monthSelector = 0;
         int yearSelector = 0;
 
@@ -185,6 +188,26 @@ namespace Kalender_Prg_Projekt
             label1.Text = days.ToString();
 
             GenerateDaysFromMonth(date.ToString("dddd"), days);
+
+            List<string> dayNames = new List<string>();
+            dayNames.Add("Sonntag");
+            dayNames.Add("Montag");
+            dayNames.Add("Dienstag");
+            dayNames.Add("Mittwoch");
+            dayNames.Add("Donnerstag");
+            dayNames.Add("Freitag");
+            dayNames.Add("Samstag");
+
+            for (int i = 0; i < 49; i++)
+            {
+                label = new Label();
+                if(i < 7)
+                {
+                    label.Location = daysLocation;
+
+                }
+            }
+
 
         }
 
