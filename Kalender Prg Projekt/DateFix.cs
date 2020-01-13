@@ -12,7 +12,7 @@ namespace Kalender_Prg_Projekt
         List<Label> labels = new List<Label>();
         List<Label> CalendarDays = new List<Label>();
         Label label = new Label();
-        Point daysLocation = new Point(0, 34);
+        Point daysLocation = new Point(0, 0);
         int monthSelector = 0;
         int yearSelector = 0;
 
@@ -44,7 +44,6 @@ namespace Kalender_Prg_Projekt
         public DateFix()
         {
             InitializeComponent();
-            resizeCalendar();
             string query1 = $"SELECT Birthdate FROM tbl_user WHERE tbl_user.ID = '{3}'";
             ////MessageBox.Show(SqlQuery.getDateTime(query1).ToShortDateString());
 
@@ -134,44 +133,7 @@ namespace Kalender_Prg_Projekt
         }
 
 
-        private void GenerateDaysFromMonth(string dayName,int dayCount)
-        {
-            sunday1.Text = "0";
-            monday1.Text = "0";
-            tuesday1.Text = "0";
-            wednesday1.Text = "0";
-            thursday1.Text = "0";
-            friday1.Text = "0";
-            saturday1.Text = "0";
-            if (sundayMonthDayLabel1.Text == dayName)
-            {
-                sunday1.Text = "1";
-            }
-            else if (mondayMonthDayLabel1.Text == dayName)
-            {
-                monday1.Text = "1";
-            }
-            else if (tuesdayMonthDayLabel1.Text == dayName)
-            {
-                tuesday1.Text = "1";
-            }
-            else if (wednesdayMonthDayLabel1.Text == dayName)
-            {
-                wednesday1.Text = "1";
-            }
-            else if (thursdayMonthDayLabel1.Text == dayName)
-            {
-                thursday1.Text = "1";
-            }
-            else if (fridayMonthDayLabel1.Text == dayName)
-            {
-                friday1.Text = "1";
-            }
-            else if (saturdayMonthDayLabel1.Text == dayName)
-            {
-                saturday1.Text = "1";
-            }
-        }
+        
 
         private void GenerateCalendar()
         {
@@ -187,7 +149,7 @@ namespace Kalender_Prg_Projekt
             int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
             label1.Text = days.ToString();
 
-            GenerateDaysFromMonth(date.ToString("dddd"), days);
+            //GenerateDaysFromMonth(date.ToString("dddd"), days);
 
             List<string> dayNames = new List<string>();
             dayNames.Add("Sonntag");
@@ -201,18 +163,39 @@ namespace Kalender_Prg_Projekt
             double factor = 0;
             factor = 100.0 / 7.0;
             factor = factor / 100.0;
-            Size labelSize = new Size(Convert.ToInt32(calendarDaysPanel1.Width * factor), Convert.ToInt32(calendarDaysPanel1.Height * 100 / 6.0 / 100));
+            Size labelSize = new Size(Convert.ToInt32(calendarDaysPanel1.Width * factor), Convert.ToInt32(calendarDaysPanel1.Height * 100 / 7 / 100));
             string dummy = "labelDays";
             int row = 0;
+            int colum = Convert.ToInt32(calendarDaysPanel1.Width * factor);
 
+
+            //TODO Richtige Nummerierung der Tage im Monat
+            for (int i = 0; i < 7; i++)
+            {
+                if (date.ToString("dddd") == dayNames[i])
+                {
+                    //i = i;
+                }
+            }
             for (int i = 0; i < 49; i++)
             {
-                if(i == 7)
+                if(i%7 == 0 && i!= 0)
                 {
-                    row = row + calendarDaysPanel1.Height;
+                    row += calendarDaysPanel1.Height/7;
+                    daysLocation = new Point(0, row);
                 }
+
                 label = new Label();
-                if(i < 7)
+                label.Font = new Font("Serif", 12);
+                if (i % 2 == 0)
+                {
+                    label.BackColor = System.Drawing.Color.LightGray;
+                }
+                else
+                {
+                    label.BackColor = System.Drawing.Color.Transparent;
+                }
+                if (i < 7)
                 {
                     label.Location = daysLocation;
                     label.Size = labelSize;
@@ -223,14 +206,14 @@ namespace Kalender_Prg_Projekt
                 }
                 else
                 {
+                    label.Location = daysLocation;
                     label.Size = labelSize;
-                    label.Text = i.ToString();
+                    label.Text = (i-6).ToString();
                     label.Name = dummy + i;
-                    
                     labels.Add(label);
                     calendarDaysPanel1.Controls.Add(label);
                 }
-                daysLocation.Offset(row, Convert.ToInt32(calendarDaysPanel1.Width * factor));
+                daysLocation.Offset(colum, 0);
             }
 
 
@@ -251,7 +234,7 @@ namespace Kalender_Prg_Projekt
             monthNameLabel1.Text = date.ToString("MMMMMMMMMMMMM") + " " + yearSelector;
             int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
             label1.Text = days.ToString();
-            GenerateDaysFromMonth(date.ToString("dddd"), days);
+            //GenerateDaysFromMonth(date.ToString("dddd"), days);
         }
 
         private void nextMonthButton1_Click(object sender, EventArgs e)
@@ -267,143 +250,23 @@ namespace Kalender_Prg_Projekt
             monthNameLabel1.Text = date.ToString("MMMMMMMMMMMMM") + " " + yearSelector;
             int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
             label1.Text = days.ToString();
-            GenerateDaysFromMonth(date.ToString("dddd"), days);
+            //GenerateDaysFromMonth(date.ToString("dddd"), days);
         }
 
-        private void resizeCalendar()
-        {
-            double factor = 0;
-
-            int maxSize = calendarPanel2.Width;
-
-            factor = 100.0 / 7.0;
-            factor = factor / 100.0;
-            sundayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
-            mondayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
-            tuesdayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
-            wednesdayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
-            thursdayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
-            fridayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
-            saturdayMonthDayPanel1.Width = Convert.ToInt32(maxSize * factor);
-
-            
-            maxSize = sundayMonthDayPanel2.Height;
-            factor = 100.0 / 6.0;
-            factor = factor / 100.0;
-
-
-            sunday6.Height = Convert.ToInt32(maxSize * factor);
-            sunday5.Height = Convert.ToInt32(maxSize * factor);
-            sunday4.Height = Convert.ToInt32(maxSize * factor);
-            sunday3.Height = Convert.ToInt32(maxSize * factor);
-            sunday2.Height = Convert.ToInt32(maxSize * factor);
-            sunday1.Height = Convert.ToInt32(maxSize * factor);
-
-            monday6.Height = Convert.ToInt32(maxSize * factor);
-            monday5.Height = Convert.ToInt32(maxSize * factor);
-            monday4.Height = Convert.ToInt32(maxSize * factor);
-            monday3.Height = Convert.ToInt32(maxSize * factor);
-            monday2.Height = Convert.ToInt32(maxSize * factor);
-            monday1.Height = Convert.ToInt32(maxSize * factor);
-
-            tuesday6.Height = Convert.ToInt32(maxSize * factor);
-            tuesday5.Height = Convert.ToInt32(maxSize * factor);
-            tuesday4.Height = Convert.ToInt32(maxSize * factor);
-            tuesday3.Height = Convert.ToInt32(maxSize * factor);
-            tuesday2.Height = Convert.ToInt32(maxSize * factor);
-            tuesday1.Height = Convert.ToInt32(maxSize * factor);
-
-            wednesday6.Height = Convert.ToInt32(maxSize * factor);
-            wednesday5.Height = Convert.ToInt32(maxSize * factor);
-            wednesday4.Height = Convert.ToInt32(maxSize * factor);
-            wednesday3.Height = Convert.ToInt32(maxSize * factor);
-            wednesday2.Height = Convert.ToInt32(maxSize * factor);
-            wednesday1.Height = Convert.ToInt32(maxSize * factor);
-
-            thursday6.Height = Convert.ToInt32(maxSize * factor);
-            thursday5.Height = Convert.ToInt32(maxSize * factor);
-            thursday4.Height = Convert.ToInt32(maxSize * factor);
-            thursday3.Height = Convert.ToInt32(maxSize * factor);
-            thursday2.Height = Convert.ToInt32(maxSize * factor);
-            thursday1.Height = Convert.ToInt32(maxSize * factor);
-
-            friday6.Height = Convert.ToInt32(maxSize * factor);
-            friday5.Height = Convert.ToInt32(maxSize * factor);
-            friday4.Height = Convert.ToInt32(maxSize * factor);
-            friday3.Height = Convert.ToInt32(maxSize * factor);
-            friday2.Height = Convert.ToInt32(maxSize * factor);
-            friday1.Height = Convert.ToInt32(maxSize * factor);
-
-            saturday6.Height = Convert.ToInt32(maxSize * factor);
-            saturday5.Height = Convert.ToInt32(maxSize * factor);
-            saturday4.Height = Convert.ToInt32(maxSize * factor);
-            saturday3.Height = Convert.ToInt32(maxSize * factor);
-            saturday2.Height = Convert.ToInt32(maxSize * factor);
-            saturday1.Height = Convert.ToInt32(maxSize * factor);
-        }
 
         private void DateFix_Resize(object sender, EventArgs e)
         {
             if(this.WindowState == FormWindowState.Maximized)
             {
-                resizeCalendar();
+                //resizeCalendar();
             }
         }
 
         private void DateFix_ResizeEnd(object sender, EventArgs e)
         {
-            resizeCalendar();
+            //resizeCalendar();
         }
 
-        private void addLabelstoList()
-        {
-            labels.Add(sunday1);
-            labels.Add(monday1);
-            labels.Add(tuesday1);
-            labels.Add(wednesday1);
-            labels.Add(thursday1);
-            labels.Add(friday1);
-            labels.Add(saturday1);
-
-            labels.Add(sunday2);
-            labels.Add(monday2);
-            labels.Add(tuesday2);
-            labels.Add(wednesday2);
-            labels.Add(thursday2);
-            labels.Add(friday2);
-            labels.Add(saturday2);
-
-            labels.Add(sunday3);
-            labels.Add(monday3);
-            labels.Add(tuesday3);
-            labels.Add(wednesday3);
-            labels.Add(thursday3);
-            labels.Add(friday3);
-            labels.Add(saturday3);
-
-            labels.Add(sunday4);
-            labels.Add(monday4);
-            labels.Add(tuesday4);
-            labels.Add(wednesday4);
-            labels.Add(thursday4);
-            labels.Add(friday4);
-            labels.Add(saturday4);
-
-            labels.Add(sunday5);
-            labels.Add(monday5);
-            labels.Add(tuesday5);
-            labels.Add(wednesday5);
-            labels.Add(thursday5);
-            labels.Add(friday5);
-            labels.Add(saturday5);
-
-            labels.Add(sunday6);
-            labels.Add(monday6);
-            labels.Add(tuesday6);
-            labels.Add(wednesday6);
-            labels.Add(thursday6);
-            labels.Add(friday6);
-            labels.Add(saturday6);
-        }
+       
     }
 }
