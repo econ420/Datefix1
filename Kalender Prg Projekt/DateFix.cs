@@ -7,6 +7,8 @@ namespace Kalender_Prg_Projekt
 {
     public partial class DateFix : Form
     {
+        int selectedRow=0;
+
         private Models.User user;
 
         public Models.User User
@@ -35,7 +37,7 @@ namespace Kalender_Prg_Projekt
         {
             InitializeComponent();
             string query1 = $"SELECT Birthdate FROM tbl_user WHERE tbl_user.ID = '{3}'";
-            MessageBox.Show(SqlQuery.getDateTime(query1).ToShortDateString());
+            //MessageBox.Show(SqlQuery.getDateTime(query1).ToShortDateString());
 
             appointmentsAppointmentsTextBox1.Text = "Du hast keine Termine in nächster Zeit.";
             birthdayAppointmentsTextBox2.Text = "In nächster Zeit hat keiner Geburstag.";
@@ -58,7 +60,7 @@ namespace Kalender_Prg_Projekt
             else
             {
                 panel2.Show();
-                string query = $"SELECT ID, Firstname, Lastname, Username, EMail, Address FROM tbl_contacts WHERE UID= '{6}' ";
+                string query = $"SELECT ID, Firstname, Lastname, Username, EMail, Address FROM tbl_contacts WHERE UID= '{this.User.Id}' ";
                 dataGridView1.DataSource = SqlQuery.getDataSource(query).GetBinding();
             }
 
@@ -126,6 +128,49 @@ namespace Kalender_Prg_Projekt
             signup.ShowDialog();
         }
 
+        private void DeleteContactButton_Click(object sender, EventArgs e)
+        {
+            //int zeilenAuswahl = Convert.ToInt32(row.Cells["ID"].Value);
+            if (MessageBox.Show("Möchten Sie diesen Artikel wirklich unwiderruflich löschen?", "Artikel löschen", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                string query = $"SELECT count(*) FROM tbl_contacts WHERE articleID = {selectedRow}";
+                query = $"DELETE FROM article WHERE id = {selectedRow}";
+                SqlQuery.delete(query);
+                loadDatagrid();
+            }
+        }
 
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.RowIndex == 0)
+                {
+                    try
+                    {
+                        DataGridViewRow row = this.dataGridView1.Rows[0];
+                        this.selectedRow = Convert.ToInt32(row.Cells["Nummer"].Value);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.Write(ex.ToString());
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                        this.selectedRow = Convert.ToInt32(row.Cells["Nummer"].Value);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.Write(ex.ToString());
+                    }
+                }
+                loadDatagrid();
+            }
+        }
     }
 }

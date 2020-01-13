@@ -32,9 +32,11 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.calendarTabPage1 = new System.Windows.Forms.TabPage();
             this.contactsTabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DeleteContactButton = new System.Windows.Forms.Button();
             this.NewUserContactsButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.appointmentTabPage1 = new System.Windows.Forms.TabPage();
             this.appointmentsCalenderAppointmentsMonthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.titelAppointmentsAppointmentsLabel1 = new System.Windows.Forms.Label();
@@ -60,16 +62,15 @@
             this.lastnameInforamtionLabel1 = new System.Windows.Forms.Label();
             this.firstnameInformationLabel1 = new System.Windows.Forms.Label();
             this.usernameInformationLabel1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.contactsTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.appointmentTabPage1.SuspendLayout();
             this.accountTabPage1.SuspendLayout();
             this.accountLoginPanel1.SuspendLayout();
             this.accountInformationsPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -106,6 +107,49 @@
             this.contactsTabPage1.Text = "Kontakte";
             this.contactsTabPage1.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(792, 424);
+            this.panel2.TabIndex = 9;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.DeleteContactButton);
+            this.panel1.Controls.Add(this.NewUserContactsButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(792, 28);
+            this.panel1.TabIndex = 8;
+            // 
+            // DeleteContactButton
+            // 
+            this.DeleteContactButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.DeleteContactButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteContactButton.Image")));
+            this.DeleteContactButton.Location = new System.Drawing.Point(636, 0);
+            this.DeleteContactButton.Name = "DeleteContactButton";
+            this.DeleteContactButton.Size = new System.Drawing.Size(75, 28);
+            this.DeleteContactButton.TabIndex = 1;
+            this.DeleteContactButton.UseVisualStyleBackColor = true;
+            this.DeleteContactButton.Click += new System.EventHandler(this.DeleteContactButton_Click);
+            // 
+            // NewUserContactsButton
+            // 
+            this.NewUserContactsButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.NewUserContactsButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.NewUserContactsButton.Image = ((System.Drawing.Image)(resources.GetObject("NewUserContactsButton.Image")));
+            this.NewUserContactsButton.Location = new System.Drawing.Point(717, 0);
+            this.NewUserContactsButton.Name = "NewUserContactsButton";
+            this.NewUserContactsButton.Size = new System.Drawing.Size(75, 28);
+            this.NewUserContactsButton.TabIndex = 0;
+            this.NewUserContactsButton.UseVisualStyleBackColor = true;
+            this.NewUserContactsButton.Click += new System.EventHandler(this.NewContactButton1_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -120,27 +164,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(792, 396);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.NewUserContactsButton);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(792, 28);
-            this.panel1.TabIndex = 8;
-            // 
-            // NewUserContactsButton
-            // 
-            this.NewUserContactsButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.NewUserContactsButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.NewUserContactsButton.Location = new System.Drawing.Point(717, 0);
-            this.NewUserContactsButton.Name = "NewUserContactsButton";
-            this.NewUserContactsButton.Size = new System.Drawing.Size(75, 28);
-            this.NewUserContactsButton.TabIndex = 0;
-            this.NewUserContactsButton.Text = "Neu";
-            this.NewUserContactsButton.UseVisualStyleBackColor = true;
-            this.NewUserContactsButton.Click += new System.EventHandler(this.NewContactButton1_Click);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // appointmentTabPage1
             // 
@@ -382,16 +406,6 @@
             this.usernameInformationLabel1.TabIndex = 0;
             this.usernameInformationLabel1.Text = "Benutzername";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(792, 424);
-            this.panel2.TabIndex = 9;
-            // 
             // DateFix
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,8 +417,9 @@
             this.Text = "DateFix";
             this.tabControl1.ResumeLayout(false);
             this.contactsTabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.appointmentTabPage1.ResumeLayout(false);
             this.appointmentTabPage1.PerformLayout();
             this.accountTabPage1.ResumeLayout(false);
@@ -412,7 +427,6 @@
             this.accountLoginPanel1.PerformLayout();
             this.accountInformationsPanel1.ResumeLayout(false);
             this.accountInformationsPanel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -451,5 +465,6 @@
         private System.Windows.Forms.TextBox firstnameInformationTextBox1;
         private System.Windows.Forms.TextBox usernameInformationTextBox1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button DeleteContactButton;
     }
 }

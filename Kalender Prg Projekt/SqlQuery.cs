@@ -30,6 +30,25 @@ namespace Kalender_Prg_Projekt
             }
         }
 
+        public static void delete(string query)
+        {
+            using (MySqlConnection databaseConnection = new MySqlConnection(MySqlConnectionString))
+            {
+                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                commandDatabase.CommandTimeout = DefaultCommandTimeout;
+
+                try
+                {
+                    databaseConnection.Open();
+                    MySqlDataReader myReader = commandDatabase.ExecuteReader();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Query error " + ex.Message);
+                }
+            }
+        }
+
 
         public static string getString(string query)
         {
