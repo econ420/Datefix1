@@ -175,7 +175,7 @@ namespace Kalender_Prg_Projekt
 
         private void GenerateCalendar()
         {
-            addLabelstoList();
+            //addLabelstoList();
             DateTime date = DateTime.Now;
             monthSelector = date.Month - 1;
             yearSelector = date.Year;
@@ -198,14 +198,39 @@ namespace Kalender_Prg_Projekt
             dayNames.Add("Freitag");
             dayNames.Add("Samstag");
 
+            double factor = 0;
+            factor = 100.0 / 7.0;
+            factor = factor / 100.0;
+            Size labelSize = new Size(Convert.ToInt32(calendarDaysPanel1.Width * factor), Convert.ToInt32(calendarDaysPanel1.Height * 100 / 6.0 / 100));
+            string dummy = "labelDays";
+            int row = 0;
+
             for (int i = 0; i < 49; i++)
             {
+                if(i == 7)
+                {
+                    row = row + calendarDaysPanel1.Height;
+                }
                 label = new Label();
                 if(i < 7)
                 {
                     label.Location = daysLocation;
-
+                    label.Size = labelSize;
+                    label.Text = dayNames[i];
+                    label.Name = dummy + i;
+                    labels.Add(label);
+                    calendarDaysPanel1.Controls.Add(label);
                 }
+                else
+                {
+                    label.Size = labelSize;
+                    label.Text = i.ToString();
+                    label.Name = dummy + i;
+                    
+                    labels.Add(label);
+                    calendarDaysPanel1.Controls.Add(label);
+                }
+                daysLocation.Offset(row, Convert.ToInt32(calendarDaysPanel1.Width * factor));
             }
 
 
