@@ -37,6 +37,8 @@ namespace Kalender_Prg_Projekt
         {
             InitializeComponent();
             
+            appointmentsAppointmentsTextBox1.Text = "Du hast keine Termine in nächster Zeit.";
+            birthdayAppointmentsTextBox2.Text = "In nächster Zeit hat keiner Geburstag.";
 
             Getnextevents();
             GetNextBirthdays();
@@ -129,7 +131,7 @@ namespace Kalender_Prg_Projekt
 
         private void NewEventButton1_Click(object sender, EventArgs e)    
         {
-
+            
         }
     }
 }
