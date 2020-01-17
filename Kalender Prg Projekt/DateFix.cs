@@ -127,7 +127,7 @@ namespace Kalender_Prg_Projekt
 
         }
 
-        private void NewEventButton1_Click(object sender, EventArgs e)
+        private void NewEventButton1_Click(object sender, EventArgs e)    
         {
 
         }
