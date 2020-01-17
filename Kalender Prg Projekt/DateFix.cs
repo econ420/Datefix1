@@ -10,6 +10,10 @@ namespace Kalender_Prg_Projekt
     public partial class DateFix : Form
     {
         List<Label> labels = new List<Label>();
+        List<Label> CalendarDays = new List<Label>();
+        Label label = new Label();
+        Point daysLocation = new Point(0, 0);
+
         int monthSelector = 0;
         int yearSelector = 0;
 
@@ -163,7 +167,6 @@ namespace Kalender_Prg_Projekt
             label1.Text = days.ToString();
 
             //GenerateDaysFromMonth(date.ToString("dddd"), days);
-
             List<string> dayNames = new List<string>();
             dayNames.Add("Sonntag");
             dayNames.Add("Montag");
@@ -172,6 +175,7 @@ namespace Kalender_Prg_Projekt
             dayNames.Add("Donnerstag");
             dayNames.Add("Freitag");
             dayNames.Add("Samstag");
+
 
             double factor = 0;
             factor = 100.0 / 7.0;
@@ -182,14 +186,9 @@ namespace Kalender_Prg_Projekt
             int colum = Convert.ToInt32(calendarDaysPanel1.Width * factor);
 
 
+
             //TODO Richtige Nummerierung der Tage im Monat
-            for (int i = 0; i < 7; i++)
-            {
-                if (date.ToString("dddd") == dayNames[i])
-                {
-                    //i = i;
-                }
-            }
+
             for (int i = 0; i < 49; i++)
             {
                 if(i%7 == 0 && i!= 0)
@@ -230,9 +229,84 @@ namespace Kalender_Prg_Projekt
             }
 
 
+           
+            
+            setValueForDay(GetStartdateofMonth(date.ToString("dddd")), days, GetDaysPrevMonth(monthSelector, yearSelector));
+
+
         }
 
 
+        private int GetStartdateofMonth(string dayName)
+        {
+            List<string> dayNames = new List<string>();
+            dayNames.Add("Sonntag");
+            dayNames.Add("Montag");
+            dayNames.Add("Dienstag");
+            dayNames.Add("Mittwoch");
+            dayNames.Add("Donnerstag");
+            dayNames.Add("Freitag");
+            dayNames.Add("Samstag");
+
+            int dummy = 0;
+
+            for (int i = 0; i < 7; i++)
+            {
+                if (dayName == dayNames[i])
+                {
+                    dummy = i;
+                }
+            }
+            return dummy;
+        }
+
+
+        private int GetDaysPrevMonth(int monthSelector, int yearSelector)
+        {
+            int daysPrevMonth = 0;
+            if (monthSelector - 1 < 0)
+            {
+                daysPrevMonth = DateTime.DaysInMonth(yearSelector - 1, 11) + 1;
+            }
+            else
+            {
+                daysPrevMonth = DateTime.DaysInMonth(yearSelector, monthSelector);
+            }
+            return daysPrevMonth;
+        }
+
+        private void setValueForDay(int startDay, int numberOfDays, int daysPrevMonth)
+        {
+            bool firstRun = true;
+            for (int i = 7; i < 49; i++)
+            {
+
+                if (firstRun == true)
+                {
+                    i += startDay;
+                }
+                if(startDay != 0)
+                {
+                    int x = 0;
+                    for (int j = startDay; j > 0; j--)
+                    {
+                        labels[j + 6].Text = (daysPrevMonth - x).ToString();
+                        x++;
+                    }
+                }
+                if ((i - startDay - 7 + 1) <= numberOfDays)
+                {
+                    labels[i].Text = (i - startDay - 7 + 1).ToString();
+                }
+                else
+                {
+                    labels[i].Text = (i - startDay - 7 + 1 - numberOfDays).ToString();
+                }
+
+
+                firstRun = false;
+            }
+        }
 
 
         private void prevMonthButton1_Click(object sender, EventArgs e)
@@ -247,6 +321,8 @@ namespace Kalender_Prg_Projekt
             monthNameLabel1.Text = date.ToString("MMMMMMMMMMMMM") + " " + yearSelector;
             int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
             label1.Text = days.ToString();
+
+            setValueForDay(GetStartdateofMonth(date.ToString("dddd")), days, GetDaysPrevMonth(monthSelector, yearSelector));
             //GenerateDaysFromMonth(date.ToString("dddd"), days);
         }
 
@@ -263,6 +339,8 @@ namespace Kalender_Prg_Projekt
             monthNameLabel1.Text = date.ToString("MMMMMMMMMMMMM") + " " + yearSelector;
             int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
             label1.Text = days.ToString();
+
+            setValueForDay(GetStartdateofMonth(date.ToString("dddd")), days, GetDaysPrevMonth(monthSelector, yearSelector));
             //GenerateDaysFromMonth(date.ToString("dddd"), days);
         }
 
