@@ -43,10 +43,6 @@ namespace Kalender_Prg_Projekt
                     MessageBox.Show("Passwort Falsch");
                 }
             }
-
-
-
-            
             
         }
 
