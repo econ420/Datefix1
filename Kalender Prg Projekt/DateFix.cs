@@ -37,8 +37,6 @@ namespace Kalender_Prg_Projekt
         {
             InitializeComponent();
             
-            appointmentsAppointmentsTextBox1.Text = "Du hast keine Termine in nächster Zeit.";
-            birthdayAppointmentsTextBox2.Text = "In nächster Zeit hat keiner Geburstag.";
 
             Getnextevents();
             GetNextBirthdays();
@@ -104,10 +102,10 @@ namespace Kalender_Prg_Projekt
 
         private void GetNextBirthdays()
         {
-            string query = "SELECT Username,' ', Birthdate FROM tbl_user WHERE MONTH(Birthdate) = MONTH(NOW())";
+            string query = "SELECT Username,' ', Birthdate FROM tbl_user WHERE MONTH(Birthdate) = MONTH(NOW())";    //Auslesen der Geburstage dieses Monats 
 
 
-            birthdayAppointmentsTextBox2.Text = SqlQuery.getRowString(query).Replace(" 00:00:00","\r\n");
+            birthdayAppointmentsTextBox2.Text = SqlQuery.getRowString(query).Replace(" 00:00:00","\r\n");       //Löschung der Uhrzeit weil das sonst dämlich aussieht 
 
         }
 
@@ -115,10 +113,24 @@ namespace Kalender_Prg_Projekt
         private void Getnextevents()
         {
             string query = "SELECT eventDescription,' ', eventDate From,' - ', eventDeadline tbl_events WHERE MONTH(eventDate) = MONTH (NOW())";
+            appointmentsAppointmentsTextBox1.Text = SqlQuery.getRowString(query);    //Hier soll er die Daten vom Tabelle Event in der Box Angeben die in diesen Monat sind 
 
-            appointmentsAppointmentsTextBox1.Text = SqlQuery.getRowString(query);
         }
 
+        private void EventCreatelinklabe1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void DateFix_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NewEventButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     

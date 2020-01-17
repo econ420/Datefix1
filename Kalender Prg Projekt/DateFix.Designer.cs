@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DateFix));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.calendarTabPage1 = new System.Windows.Forms.TabPage();
@@ -37,12 +39,14 @@
             this.NewUserContactsButton = new System.Windows.Forms.Button();
             this.appointmentTabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.newEventButton1 = new System.Windows.Forms.Button();
             this.appointmentsAppointmentsTextBox1 = new System.Windows.Forms.TextBox();
             this.titelAppointmentsAppointmentsLabel1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.birthdayAppointmentsTextBox2 = new System.Windows.Forms.TextBox();
             this.titelBirthdayAppointmentsLabel2 = new System.Windows.Forms.Label();
             this.taskTabPage1 = new System.Windows.Forms.TabPage();
+            this.eventCreatelinklabe1 = new System.Windows.Forms.LinkLabel();
             this.accountTabPage1 = new System.Windows.Forms.TabPage();
             this.accountLoginPanel1 = new System.Windows.Forms.Panel();
             this.titleAccountSignInLabel1 = new System.Windows.Forms.Label();
@@ -68,6 +72,7 @@
             this.appointmentTabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.taskTabPage1.SuspendLayout();
             this.accountTabPage1.SuspendLayout();
             this.accountLoginPanel1.SuspendLayout();
             this.accountInformationsPanel1.SuspendLayout();
@@ -84,7 +89,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 450);
+            this.tabControl1.Size = new System.Drawing.Size(737, 410);
             this.tabControl1.TabIndex = 7;
             // 
             // calendarTabPage1
@@ -92,7 +97,7 @@
             this.calendarTabPage1.Location = new System.Drawing.Point(4, 22);
             this.calendarTabPage1.Name = "calendarTabPage1";
             this.calendarTabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.calendarTabPage1.Size = new System.Drawing.Size(792, 424);
+            this.calendarTabPage1.Size = new System.Drawing.Size(729, 384);
             this.calendarTabPage1.TabIndex = 0;
             this.calendarTabPage1.Text = "Kalendar";
             this.calendarTabPage1.UseVisualStyleBackColor = true;
@@ -103,18 +108,34 @@
             this.contactsTabPage1.Controls.Add(this.panel1);
             this.contactsTabPage1.Location = new System.Drawing.Point(4, 22);
             this.contactsTabPage1.Name = "contactsTabPage1";
-            this.contactsTabPage1.Size = new System.Drawing.Size(792, 424);
+            this.contactsTabPage1.Size = new System.Drawing.Size(729, 384);
             this.contactsTabPage1.TabIndex = 4;
             this.contactsTabPage1.Text = "Kontakte";
             this.contactsTabPage1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 28);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(792, 396);
+            this.dataGridView1.Size = new System.Drawing.Size(729, 356);
             this.dataGridView1.TabIndex = 1;
             // 
             // panel1
@@ -123,7 +144,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(792, 28);
+            this.panel1.Size = new System.Drawing.Size(729, 28);
             this.panel1.TabIndex = 8;
             // 
             // NewUserContactsButton
@@ -143,27 +164,39 @@
             this.appointmentTabPage1.Location = new System.Drawing.Point(4, 22);
             this.appointmentTabPage1.Name = "appointmentTabPage1";
             this.appointmentTabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.appointmentTabPage1.Size = new System.Drawing.Size(792, 424);
+            this.appointmentTabPage1.Size = new System.Drawing.Size(729, 384);
             this.appointmentTabPage1.TabIndex = 1;
             this.appointmentTabPage1.Text = "Termine";
             this.appointmentTabPage1.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.newEventButton1);
             this.panel3.Controls.Add(this.appointmentsAppointmentsTextBox1);
             this.panel3.Controls.Add(this.titelAppointmentsAppointmentsLabel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(786, 188);
+            this.panel3.Size = new System.Drawing.Size(723, 188);
             this.panel3.TabIndex = 6;
+            // 
+            // newEventButton1
+            // 
+            this.newEventButton1.Location = new System.Drawing.Point(483, 27);
+            this.newEventButton1.Name = "newEventButton1";
+            this.newEventButton1.Size = new System.Drawing.Size(103, 38);
+            this.newEventButton1.TabIndex = 4;
+            this.newEventButton1.Text = "Neuer Termin";
+            this.newEventButton1.UseVisualStyleBackColor = true;
+            this.newEventButton1.Click += new System.EventHandler(this.NewEventButton1_Click);
             // 
             // appointmentsAppointmentsTextBox1
             // 
             this.appointmentsAppointmentsTextBox1.Location = new System.Drawing.Point(3, 27);
+            this.appointmentsAppointmentsTextBox1.MinimumSize = new System.Drawing.Size(397, 135);
             this.appointmentsAppointmentsTextBox1.Multiline = true;
             this.appointmentsAppointmentsTextBox1.Name = "appointmentsAppointmentsTextBox1";
-            this.appointmentsAppointmentsTextBox1.Size = new System.Drawing.Size(394, 150);
+            this.appointmentsAppointmentsTextBox1.Size = new System.Drawing.Size(397, 135);
             this.appointmentsAppointmentsTextBox1.TabIndex = 0;
             this.appointmentsAppointmentsTextBox1.Text = "\r\n\r\n";
             // 
@@ -182,16 +215,17 @@
             this.panel2.Controls.Add(this.birthdayAppointmentsTextBox2);
             this.panel2.Controls.Add(this.titelBirthdayAppointmentsLabel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 257);
-            this.panel2.MaximumSize = new System.Drawing.Size(1000, 209);
+            this.panel2.Location = new System.Drawing.Point(3, 217);
+            this.panel2.MaximumSize = new System.Drawing.Size(2000, 209);
             this.panel2.MinimumSize = new System.Drawing.Size(500, 104);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(786, 164);
+            this.panel2.Size = new System.Drawing.Size(723, 164);
             this.panel2.TabIndex = 5;
             // 
             // birthdayAppointmentsTextBox2
             // 
             this.birthdayAppointmentsTextBox2.Location = new System.Drawing.Point(3, 26);
+            this.birthdayAppointmentsTextBox2.MinimumSize = new System.Drawing.Size(397, 135);
             this.birthdayAppointmentsTextBox2.Multiline = true;
             this.birthdayAppointmentsTextBox2.Name = "birthdayAppointmentsTextBox2";
             this.birthdayAppointmentsTextBox2.Size = new System.Drawing.Size(397, 135);
@@ -208,12 +242,27 @@
             // 
             // taskTabPage1
             // 
+            this.taskTabPage1.Controls.Add(this.eventCreatelinklabe1);
             this.taskTabPage1.Location = new System.Drawing.Point(4, 22);
             this.taskTabPage1.Name = "taskTabPage1";
-            this.taskTabPage1.Size = new System.Drawing.Size(792, 424);
+            this.taskTabPage1.Size = new System.Drawing.Size(729, 384);
             this.taskTabPage1.TabIndex = 2;
             this.taskTabPage1.Text = "Aufgaben";
             this.taskTabPage1.UseVisualStyleBackColor = true;
+            // 
+            // eventCreatelinklabe1
+            // 
+            this.eventCreatelinklabe1.ActiveLinkColor = System.Drawing.Color.Black;
+            this.eventCreatelinklabe1.AutoSize = true;
+            this.eventCreatelinklabe1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.eventCreatelinklabe1.Location = new System.Drawing.Point(3, 157);
+            this.eventCreatelinklabe1.Name = "eventCreatelinklabe1";
+            this.eventCreatelinklabe1.Size = new System.Drawing.Size(89, 13);
+            this.eventCreatelinklabe1.TabIndex = 0;
+            this.eventCreatelinklabe1.TabStop = true;
+            this.eventCreatelinklabe1.Text = "Aufgabe erstellen";
+            this.eventCreatelinklabe1.VisitedLinkColor = System.Drawing.Color.Green;
+            this.eventCreatelinklabe1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.EventCreatelinklabe1_LinkClicked);
             // 
             // accountTabPage1
             // 
@@ -221,7 +270,7 @@
             this.accountTabPage1.Controls.Add(this.accountInformationsPanel1);
             this.accountTabPage1.Location = new System.Drawing.Point(4, 22);
             this.accountTabPage1.Name = "accountTabPage1";
-            this.accountTabPage1.Size = new System.Drawing.Size(792, 424);
+            this.accountTabPage1.Size = new System.Drawing.Size(729, 384);
             this.accountTabPage1.TabIndex = 3;
             this.accountTabPage1.Text = "Konto";
             this.accountTabPage1.UseVisualStyleBackColor = true;
@@ -238,7 +287,7 @@
             this.accountLoginPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.accountLoginPanel1.Location = new System.Drawing.Point(396, 0);
             this.accountLoginPanel1.Name = "accountLoginPanel1";
-            this.accountLoginPanel1.Size = new System.Drawing.Size(396, 424);
+            this.accountLoginPanel1.Size = new System.Drawing.Size(333, 384);
             this.accountLoginPanel1.TabIndex = 14;
             // 
             // titleAccountSignInLabel1
@@ -317,7 +366,7 @@
             this.accountInformationsPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accountInformationsPanel1.Location = new System.Drawing.Point(0, 0);
             this.accountInformationsPanel1.Name = "accountInformationsPanel1";
-            this.accountInformationsPanel1.Size = new System.Drawing.Size(396, 424);
+            this.accountInformationsPanel1.Size = new System.Drawing.Size(396, 384);
             this.accountInformationsPanel1.TabIndex = 13;
             // 
             // birthdateInformationTextBox1
@@ -392,11 +441,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(737, 410);
             this.Controls.Add(this.tabControl1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DateFix";
             this.Text = "DateFix";
+            this.Load += new System.EventHandler(this.DateFix_Load);
             this.tabControl1.ResumeLayout(false);
             this.contactsTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -407,6 +459,8 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.taskTabPage1.ResumeLayout(false);
+            this.taskTabPage1.PerformLayout();
             this.accountTabPage1.ResumeLayout(false);
             this.accountLoginPanel1.ResumeLayout(false);
             this.accountLoginPanel1.PerformLayout();
@@ -450,5 +504,7 @@
         private System.Windows.Forms.TextBox usernameInformationTextBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.LinkLabel eventCreatelinklabe1;
+        private System.Windows.Forms.Button newEventButton1;
     }
 }

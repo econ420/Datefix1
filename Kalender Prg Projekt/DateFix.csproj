@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="createEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createEvent.Designer.cs">
+      <DependentUpon>createEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataTableExtensions.cs" />
     <Compile Include="DateFix.cs">
       <SubType>Form</SubType>
@@ -94,6 +100,9 @@
       <DependentUpon>Sign_Up.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlQuery.cs" />
+    <EmbeddedResource Include="createEvent.resx">
+      <DependentUpon>createEvent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DateFix.resx">
       <DependentUpon>DateFix.cs</DependentUpon>
     </EmbeddedResource>
