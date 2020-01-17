@@ -10,9 +10,6 @@ namespace Kalender_Prg_Projekt
     public partial class DateFix : Form
     {
         List<Label> labels = new List<Label>();
-        List<Label> CalendarDays = new List<Label>();
-        Label label = new Label();
-        Point daysLocation = new Point(0, 0);
         int monthSelector = 0;
         int yearSelector = 0;
 
@@ -79,7 +76,23 @@ namespace Kalender_Prg_Projekt
             birthdateInformationTextBox1.Text = this.User.Birthday.ToShortDateString();
         }
 
+        private void loginEnter_KeyDown_Tabcontrol(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyData == Keys.Enter) && (tabControl1.SelectedTab == accountTabPage1) && (passwordAccountTextbox1.Focused || usernameAccountTextbox1.Focused))
+            {
+                userLogin();
+
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
+
         private void SignInAccountButton1_Click(object sender, EventArgs e)
+        {
+            userLogin();
+        }
+
+        private void userLogin()
         {
             string query = $"SELECT * FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
             if (SqlQuery.exists(query))
@@ -264,7 +277,6 @@ namespace Kalender_Prg_Projekt
 
         private void DateFix_ResizeEnd(object sender, EventArgs e)
         {
-            //resizeCalendar();
         }
 
        
