@@ -34,7 +34,6 @@
             this.calendarPanel2 = new System.Windows.Forms.Panel();
             this.calendarDaysPanel1 = new System.Windows.Forms.Panel();
             this.monthSelectorPanel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.monthNameLabel1 = new System.Windows.Forms.Label();
             this.nextMonthButton1 = new System.Windows.Forms.Button();
             this.prevMonthButton1 = new System.Windows.Forms.Button();
@@ -129,7 +128,6 @@
             // 
             // monthSelectorPanel1
             // 
-            this.monthSelectorPanel1.Controls.Add(this.label1);
             this.monthSelectorPanel1.Controls.Add(this.monthNameLabel1);
             this.monthSelectorPanel1.Controls.Add(this.nextMonthButton1);
             this.monthSelectorPanel1.Controls.Add(this.prevMonthButton1);
@@ -138,16 +136,6 @@
             this.monthSelectorPanel1.Name = "monthSelectorPanel1";
             this.monthSelectorPanel1.Size = new System.Drawing.Size(786, 34);
             this.monthSelectorPanel1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(105, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
             // 
             // monthNameLabel1
             // 
@@ -467,16 +455,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 451);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DateFix";
             this.Text = "DateFix";
-            this.ResizeEnd += new System.EventHandler(this.DateFix_ResizeEnd);
-            this.Resize += new System.EventHandler(this.DateFix_Resize);
             this.tabControl1.ResumeLayout(false);
             this.calendarTabPage1.ResumeLayout(false);
             this.calendarPanel2.ResumeLayout(false);
             this.monthSelectorPanel1.ResumeLayout(false);
-            this.monthSelectorPanel1.PerformLayout();
             this.contactsTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -529,7 +515,6 @@
         private System.Windows.Forms.Panel monthSelectorPanel1;
         private System.Windows.Forms.Button nextMonthButton1;
         private System.Windows.Forms.Button prevMonthButton1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel calendarDaysPanel1;
     }
 }

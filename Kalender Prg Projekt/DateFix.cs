@@ -164,7 +164,6 @@ namespace Kalender_Prg_Projekt
             //TODO erweiterung des Kalenders um die Funktion des anzeigens der Tage
 
             int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
-            label1.Text = days.ToString();
 
             //GenerateDaysFromMonth(date.ToString("dddd"), days);
             List<string> dayNames = new List<string>();
@@ -227,13 +226,7 @@ namespace Kalender_Prg_Projekt
                 }
                 daysLocation.Offset(colum, 0);
             }
-
-
-           
-            
             setValueForDay(GetStartdateofMonth(date.ToString("dddd")), days, GetDaysPrevMonth(monthSelector, yearSelector));
-
-
         }
 
 
@@ -320,10 +313,8 @@ namespace Kalender_Prg_Projekt
             DateTime date = new DateTime(yearSelector, monthSelector + 1, 1);
             monthNameLabel1.Text = date.ToString("MMMMMMMMMMMMM") + " " + yearSelector;
             int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
-            label1.Text = days.ToString();
 
             setValueForDay(GetStartdateofMonth(date.ToString("dddd")), days, GetDaysPrevMonth(monthSelector, yearSelector));
-            //GenerateDaysFromMonth(date.ToString("dddd"), days);
         }
 
         private void nextMonthButton1_Click(object sender, EventArgs e)
@@ -338,23 +329,8 @@ namespace Kalender_Prg_Projekt
             DateTime date = new DateTime(yearSelector, monthSelector + 1, 1);
             monthNameLabel1.Text = date.ToString("MMMMMMMMMMMMM") + " " + yearSelector;
             int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
-            label1.Text = days.ToString();
 
             setValueForDay(GetStartdateofMonth(date.ToString("dddd")), days, GetDaysPrevMonth(monthSelector, yearSelector));
-            //GenerateDaysFromMonth(date.ToString("dddd"), days);
-        }
-
-
-        private void DateFix_Resize(object sender, EventArgs e)
-        {
-            if(this.WindowState == FormWindowState.Maximized)
-            {
-                //resizeCalendar();
-            }
-        }
-
-        private void DateFix_ResizeEnd(object sender, EventArgs e)
-        {
         }
 
        
