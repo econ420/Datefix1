@@ -39,7 +39,7 @@
             this.prevMonthButton1 = new System.Windows.Forms.Button();
             this.contactsTabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.contactsToolBarPanel1 = new System.Windows.Forms.Panel();
             this.NewUserContactsButton = new System.Windows.Forms.Button();
             this.appointmentTabPage1 = new System.Windows.Forms.TabPage();
             this.appointmentsCalenderAppointmentsMonthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -72,7 +72,7 @@
             this.monthSelectorPanel1.SuspendLayout();
             this.contactsTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.contactsToolBarPanel1.SuspendLayout();
             this.appointmentTabPage1.SuspendLayout();
             this.accountTabPage1.SuspendLayout();
             this.accountLoginPanel1.SuspendLayout();
@@ -173,7 +173,7 @@
             // contactsTabPage1
             // 
             this.contactsTabPage1.Controls.Add(this.dataGridView1);
-            this.contactsTabPage1.Controls.Add(this.panel1);
+            this.contactsTabPage1.Controls.Add(this.contactsToolBarPanel1);
             this.contactsTabPage1.Location = new System.Drawing.Point(4, 22);
             this.contactsTabPage1.Name = "contactsTabPage1";
             this.contactsTabPage1.Size = new System.Drawing.Size(792, 425);
@@ -190,14 +190,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(792, 397);
             this.dataGridView1.TabIndex = 1;
             // 
-            // panel1
+            // contactsToolBarPanel1
             // 
-            this.panel1.Controls.Add(this.NewUserContactsButton);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(792, 28);
-            this.panel1.TabIndex = 8;
+            this.contactsToolBarPanel1.Controls.Add(this.NewUserContactsButton);
+            this.contactsToolBarPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.contactsToolBarPanel1.Location = new System.Drawing.Point(0, 0);
+            this.contactsToolBarPanel1.Name = "contactsToolBarPanel1";
+            this.contactsToolBarPanel1.Size = new System.Drawing.Size(792, 28);
+            this.contactsToolBarPanel1.TabIndex = 8;
             // 
             // NewUserContactsButton
             // 
@@ -465,7 +465,7 @@
             this.monthSelectorPanel1.ResumeLayout(false);
             this.contactsTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.contactsToolBarPanel1.ResumeLayout(false);
             this.appointmentTabPage1.ResumeLayout(false);
             this.appointmentTabPage1.PerformLayout();
             this.accountTabPage1.ResumeLayout(false);
@@ -500,7 +500,7 @@
         private System.Windows.Forms.Label usernameAccountLabel1;
         private System.Windows.Forms.Button NewUserContactsButton;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel contactsToolBarPanel1;
         private System.Windows.Forms.Panel accountInformationsPanel1;
         private System.Windows.Forms.Label birthdateInformationLabel1;
         private System.Windows.Forms.Label lastnameInforamtionLabel1;
