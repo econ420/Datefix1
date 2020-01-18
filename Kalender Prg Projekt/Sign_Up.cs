@@ -43,7 +43,6 @@ namespace Kalender_Prg_Projekt
                     MessageBox.Show("Passwort Falsch");
                 }
             }
-
         }
 
         private void PasswordConfirmationCorrect_Textchanged(object sender, EventArgs e)

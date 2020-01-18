@@ -5,10 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MySql.Data.MySqlClient;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Windows.Forms;
 
 namespace Kalender_Prg_Projekt
 {
@@ -113,64 +109,6 @@ namespace Kalender_Prg_Projekt
             return dummy;
         }
 
-        public static int Query_Int(string abfrage)
-        {
-            int dummy = 0;
 
-            MySqlConnection databaseConnection = new MySqlConnection(MySQLConnectionString);
-
-            MySqlCommand commandDatabase = new MySqlCommand(abfrage, databaseConnection);
-            commandDatabase.CommandTimeout = 60;
-
-            try
-            {
-                databaseConnection.Open();
-                MySqlDataReader myReader = commandDatabase.ExecuteReader();
-
-                if (myReader.HasRows)
-                {
-                    while (myReader.Read())
-                    {
-                        dummy = Convert.ToInt32(myReader.GetString(0));
-                        return dummy;
-                    }
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Query error " + ex.Message);
-                return dummy;
-            }
-            return 0;
-        }
-        //Automatische Erstellung aus der Datenbank in die DataGirdView
-        public static void Query_DataGridview(string abfrage, DataGridView dataGridView)
-        {
-            MySqlConnection databaseConnection = new MySqlConnection(MySQLConnectionString);
-
-            MySqlCommand commandDatabase = new MySqlCommand(abfrage, databaseConnection);
-            commandDatabase.CommandTimeout = 60;
-
-            try
-            {
-                MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = commandDatabase;
-                DataTable dbdataset = new DataTable();
-                sda.Fill(dbdataset);
-                BindingSource bSource = new BindingSource();
-
-                bSource.DataSource = dbdataset;
-                dataGridView.DataSource = bSource;
-                sda.Update(dbdataset);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Query error " + ex.Message);
-            }
-        }
     }
 }
