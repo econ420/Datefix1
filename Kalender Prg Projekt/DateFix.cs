@@ -60,7 +60,7 @@ namespace Kalender_Prg_Projekt
             else
             {
                 panel2.Show();
-                string query = $"SELECT ID, Firstname, Lastname, Username, EMail, Address FROM tbl_contacts WHERE UID= '{this.User.Id}' ";
+                string query = $"SELECT ID, Firstname, Lastname, Username, E_Mail, Address FROM tbl_contacts WHERE UID= '{this.User.Id}' ";
                 dataGridView1.DataSource = SqlQuery.getDataSource(query).GetBinding();
             }
 
@@ -130,11 +130,12 @@ namespace Kalender_Prg_Projekt
 
         private void DeleteContactButton_Click(object sender, EventArgs e)
         {
-            //int zeilenAuswahl = Convert.ToInt32(row.Cells["ID"].Value);
             if (MessageBox.Show("Möchten Sie diesen Artikel wirklich unwiderruflich löschen?", "Artikel löschen", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                string query = $"SELECT count(*) FROM tbl_contacts WHERE articleID = {selectedRow}";
-                query = $"DELETE FROM article WHERE id = {selectedRow}";
+                DataGridViewRow row = this.dataGridView1.Rows[0];
+                int selectedRow = Convert.ToInt32(row.Cells["ID"].Value);
+                //string query = $"SELECT count(*) FROM tbl_contacts WHERE ID = {selectedRow}";
+                string query = $"DELETE FROM tbl_contacts WHERE ID = {selectedRow}";
                 SqlQuery.delete(query);
                 loadDatagrid();
             }
