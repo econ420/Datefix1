@@ -79,6 +79,40 @@ namespace Kalender_Prg_Projekt
             }
         }
 
+        public static string getRowString(string query)
+        {
+            using (MySqlConnection databaseConnection = new MySqlConnection(MySqlConnectionString))
+            {
+                MySqlCommand command = new MySqlCommand(query, databaseConnection);
+                command.CommandTimeout = DefaultCommandTimeout;
+
+                try
+                {
+                    databaseConnection.Open();
+                    MySqlDataReader myReader = command.ExecuteReader();
+
+                    if (myReader.HasRows)
+                    {
+                        string dummy = "";
+                        while (myReader.Read())
+                        {
+                            for(int i = 0; i < myReader.FieldCount; i++)
+                            {
+                                dummy += myReader.GetString(i);
+                            }
+                        }
+                        return dummy;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Query error " + ex.Message);
+                }
+
+                return string.Empty;
+            }
+        }
+
         public static DateTime getDateTime(string query)
         {
             using (MySqlConnection databaseConnection = new MySqlConnection(MySqlConnectionString))

@@ -164,7 +164,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(792, 396);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // appointmentTabPage1
             // 
@@ -192,18 +194,18 @@
             this.titelAppointmentsAppointmentsLabel1.AutoSize = true;
             this.titelAppointmentsAppointmentsLabel1.Location = new System.Drawing.Point(384, 17);
             this.titelAppointmentsAppointmentsLabel1.Name = "titelAppointmentsAppointmentsLabel1";
-            this.titelAppointmentsAppointmentsLabel1.Size = new System.Drawing.Size(153, 13);
+            this.titelAppointmentsAppointmentsLabel1.Size = new System.Drawing.Size(119, 13);
             this.titelAppointmentsAppointmentsLabel1.TabIndex = 3;
-            this.titelAppointmentsAppointmentsLabel1.Text = "Termine der nächsten 14 Tage";
+            this.titelAppointmentsAppointmentsLabel1.Text = "Termine dieses Monats ";
             // 
             // titelBirthdayAppointmentsLabel2
             // 
             this.titelBirthdayAppointmentsLabel2.AutoSize = true;
             this.titelBirthdayAppointmentsLabel2.Location = new System.Drawing.Point(384, 207);
             this.titelBirthdayAppointmentsLabel2.Name = "titelBirthdayAppointmentsLabel2";
-            this.titelBirthdayAppointmentsLabel2.Size = new System.Drawing.Size(189, 13);
+            this.titelBirthdayAppointmentsLabel2.Size = new System.Drawing.Size(152, 13);
             this.titelBirthdayAppointmentsLabel2.TabIndex = 2;
-            this.titelBirthdayAppointmentsLabel2.Text = "Die Geburstage der nächsten 14 Tage";
+            this.titelBirthdayAppointmentsLabel2.Text = "Die Geburstage dieses Monats";
             // 
             // birthdayAppointmentsTextBox2
             // 
@@ -212,7 +214,6 @@
             this.birthdayAppointmentsTextBox2.Name = "birthdayAppointmentsTextBox2";
             this.birthdayAppointmentsTextBox2.Size = new System.Drawing.Size(400, 150);
             this.birthdayAppointmentsTextBox2.TabIndex = 1;
-            this.birthdayAppointmentsTextBox2.TextChanged += new System.EventHandler(this.BirthdaytextBox2_TextChanged);
             // 
             // appointmentsAppointmentsTextBox1
             // 
@@ -222,7 +223,6 @@
             this.appointmentsAppointmentsTextBox1.Size = new System.Drawing.Size(400, 150);
             this.appointmentsAppointmentsTextBox1.TabIndex = 0;
             this.appointmentsAppointmentsTextBox1.Text = "\r\n\r\n";
-            this.appointmentsAppointmentsTextBox1.TextChanged += new System.EventHandler(this.AppointmentstextBox1_TextChanged);
             // 
             // taskTabPage1
             // 

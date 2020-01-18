@@ -42,6 +42,8 @@ namespace Kalender_Prg_Projekt
             appointmentsAppointmentsTextBox1.Text = "Du hast keine Termine in nächster Zeit.";
             birthdayAppointmentsTextBox2.Text = "In nächster Zeit hat keiner Geburstag.";
 
+            GetNextBirthdays();
+
             if (this.User == null)
             {
                 accountInformationsPanel1.Hide();
@@ -114,26 +116,28 @@ namespace Kalender_Prg_Projekt
         }
 
 
-        private void AppointmentstextBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void BirthdaytextBox2_TextChanged(object sender, EventArgs e)
-        {
-        }
-
         private void SignUpAccountLinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Sign_Up signup = new Sign_Up();
             signup.ShowDialog();
         }
 
+
+        private void GetNextBirthdays()
+        {
+            string query = "SELECT Username,' ', Birthdate FROM tbl_user WHERE MONTH(Birthdate) = MONTH(NOW())";
+
+
+            birthdayAppointmentsTextBox2.Text = SqlQuery.getRowString(query).Replace(" 00:00:00","\r\n");
+            
+        }
+
         private void DeleteContactButton_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Möchten Sie diesen Artikel wirklich unwiderruflich löschen?", "Artikel löschen", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("Möchten Sie diesen Kontakte wirklich unwiderruflich löschen?", "Kontakte löschen", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                DataGridViewRow row = this.dataGridView1.Rows[0];
-                int selectedRow = Convert.ToInt32(row.Cells["ID"].Value);
+                //DataGridViewRow row = this.dataGridView1.Rows[0];
+                //int selectedRow = Convert.ToInt32(row.Cells["ID"].Value);
                 string query = $"DELETE FROM tbl_contacts WHERE ID = {selectedRow}";
                 SqlQuery.delete(query);
                 loadDatagrid();
@@ -150,7 +154,7 @@ namespace Kalender_Prg_Projekt
                     try
                     {
                         DataGridViewRow row = this.dataGridView1.Rows[0];
-                        this.selectedRow = Convert.ToInt32(row.Cells["Nummer"].Value);
+                        this.selectedRow = Convert.ToInt32(row.Cells["ID"].Value);
                     }
                     catch (Exception ex)
                     {
@@ -162,15 +166,16 @@ namespace Kalender_Prg_Projekt
                     try
                     {
                         DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-                        this.selectedRow = Convert.ToInt32(row.Cells["Nummer"].Value);
+                        this.selectedRow = Convert.ToInt32(row.Cells["ID"].Value);
                     }
                     catch (Exception ex)
                     {
                         Console.Write(ex.ToString());
                     }
                 }
-                loadDatagrid();
+                //loadDatagrid();
             }
         }
     }
 }
+    
