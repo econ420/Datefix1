@@ -154,18 +154,13 @@ namespace Kalender_Prg_Projekt
 
         private void GenerateCalendar()
         {
-            //addLabelstoList();
             DateTime date = DateTime.Now;
             monthSelector = date.Month - 1;
             yearSelector = date.Year;
             date = new DateTime(yearSelector, monthSelector + 1, 1);
             monthNameLabel1.Text = date.ToString("MMMMMMMMMMMMM") + " " + yearSelector;
 
-            //TODO erweiterung des Kalenders um die Funktion des anzeigens der Tage
-
             int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
-
-            //GenerateDaysFromMonth(date.ToString("dddd"), days);
             List<string> dayNames = new List<string>();
             dayNames.Add("Sonntag");
             dayNames.Add("Montag");
@@ -185,8 +180,6 @@ namespace Kalender_Prg_Projekt
             int colum = Convert.ToInt32(calendarDaysPanel1.Width * factor);
 
 
-
-            //TODO Richtige Nummerierung der Tage im Monat
 
             for (int i = 0; i < 49; i++)
             {
