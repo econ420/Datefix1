@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DateFix));
             this.accountTabPage1 = new System.Windows.Forms.TabPage();
             this.accountLoginPanel1 = new System.Windows.Forms.Panel();
@@ -62,15 +62,16 @@
             this.contactsPanel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contactsToolBarPanel1 = new System.Windows.Forms.Panel();
+            this.DeleteContactButton = new System.Windows.Forms.Button();
+            this.NewUserContactsButton = new System.Windows.Forms.Button();
             this.calendarTabPage1 = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.calendarPanel2 = new System.Windows.Forms.Panel();
             this.monthSelectorPanel1 = new System.Windows.Forms.Panel();
             this.monthNameLabel1 = new System.Windows.Forms.Label();
             this.nextMonthButton1 = new System.Windows.Forms.Button();
             this.prevMonthButton1 = new System.Windows.Forms.Button();
-            this.DeleteContactButton = new System.Windows.Forms.Button();
-            this.NewUserContactsButton = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.calendarDaysPanel1 = new System.Windows.Forms.Panel();
             this.accountTabPage1.SuspendLayout();
             this.accountLoginPanel1.SuspendLayout();
             this.accountInformationsPanel1.SuspendLayout();
@@ -82,9 +83,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contactsToolBarPanel1.SuspendLayout();
             this.calendarTabPage1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
             this.calendarPanel2.SuspendLayout();
             this.monthSelectorPanel1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // accountTabPage1
@@ -367,34 +368,34 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 28);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Size = new System.Drawing.Size(729, 356);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
@@ -411,6 +412,28 @@
             this.contactsToolBarPanel1.Size = new System.Drawing.Size(729, 28);
             this.contactsToolBarPanel1.TabIndex = 8;
             // 
+            // DeleteContactButton
+            // 
+            this.DeleteContactButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.DeleteContactButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteContactButton.Image")));
+            this.DeleteContactButton.Location = new System.Drawing.Point(579, 0);
+            this.DeleteContactButton.Name = "DeleteContactButton";
+            this.DeleteContactButton.Size = new System.Drawing.Size(75, 28);
+            this.DeleteContactButton.TabIndex = 1;
+            this.DeleteContactButton.UseVisualStyleBackColor = true;
+            this.DeleteContactButton.Click += new System.EventHandler(this.DeleteContactButton_Click);
+            // 
+            // NewUserContactsButton
+            // 
+            this.NewUserContactsButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.NewUserContactsButton.Image = ((System.Drawing.Image)(resources.GetObject("NewUserContactsButton.Image")));
+            this.NewUserContactsButton.Location = new System.Drawing.Point(654, 0);
+            this.NewUserContactsButton.Name = "NewUserContactsButton";
+            this.NewUserContactsButton.Size = new System.Drawing.Size(75, 28);
+            this.NewUserContactsButton.TabIndex = 0;
+            this.NewUserContactsButton.UseVisualStyleBackColor = true;
+            this.NewUserContactsButton.Click += new System.EventHandler(this.NewContactButton1_Click);
+            // 
             // calendarTabPage1
             // 
             this.calendarTabPage1.Controls.Add(this.calendarPanel2);
@@ -422,21 +445,9 @@
             this.calendarTabPage1.Text = "Kalendar";
             this.calendarTabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.calendarTabPage1);
-            this.tabControl1.Controls.Add(this.contactsTabPage1);
-            this.tabControl1.Controls.Add(this.appointmentTabPage1);
-            this.tabControl1.Controls.Add(this.accountTabPage1);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(737, 410);
-            this.tabControl1.TabIndex = 7;
-            // 
             // calendarPanel2
             // 
+            this.calendarPanel2.Controls.Add(this.calendarDaysPanel1);
             this.calendarPanel2.Controls.Add(this.monthSelectorPanel1);
             this.calendarPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calendarPanel2.Location = new System.Drawing.Point(3, 3);
@@ -486,27 +497,26 @@
             this.prevMonthButton1.TabIndex = 1;
             this.prevMonthButton1.UseVisualStyleBackColor = true;
             // 
-            // DeleteContactButton
+            // tabControl1
             // 
-            this.DeleteContactButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.DeleteContactButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteContactButton.Image")));
-            this.DeleteContactButton.Location = new System.Drawing.Point(579, 0);
-            this.DeleteContactButton.Name = "DeleteContactButton";
-            this.DeleteContactButton.Size = new System.Drawing.Size(75, 28);
-            this.DeleteContactButton.TabIndex = 1;
-            this.DeleteContactButton.UseVisualStyleBackColor = true;
-            this.DeleteContactButton.Click += new System.EventHandler(this.DeleteContactButton_Click);
+            this.tabControl1.Controls.Add(this.calendarTabPage1);
+            this.tabControl1.Controls.Add(this.contactsTabPage1);
+            this.tabControl1.Controls.Add(this.appointmentTabPage1);
+            this.tabControl1.Controls.Add(this.accountTabPage1);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(737, 410);
+            this.tabControl1.TabIndex = 7;
             // 
-            // NewUserContactsButton
+            // calendarDaysPanel1
             // 
-            this.NewUserContactsButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.NewUserContactsButton.Image = ((System.Drawing.Image)(resources.GetObject("NewUserContactsButton.Image")));
-            this.NewUserContactsButton.Location = new System.Drawing.Point(654, 0);
-            this.NewUserContactsButton.Name = "NewUserContactsButton";
-            this.NewUserContactsButton.Size = new System.Drawing.Size(75, 28);
-            this.NewUserContactsButton.TabIndex = 0;
-            this.NewUserContactsButton.UseVisualStyleBackColor = true;
-            this.NewUserContactsButton.Click += new System.EventHandler(this.NewContactButton1_Click);
+            this.calendarDaysPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.calendarDaysPanel1.Location = new System.Drawing.Point(0, 36);
+            this.calendarDaysPanel1.Name = "calendarDaysPanel1";
+            this.calendarDaysPanel1.Size = new System.Drawing.Size(723, 342);
+            this.calendarDaysPanel1.TabIndex = 1;
             // 
             // DateFix
             // 
@@ -536,9 +546,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contactsToolBarPanel1.ResumeLayout(false);
             this.calendarTabPage1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
             this.calendarPanel2.ResumeLayout(false);
             this.monthSelectorPanel1.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -584,5 +594,6 @@
         private System.Windows.Forms.Label monthNameLabel1;
         private System.Windows.Forms.Button nextMonthButton1;
         private System.Windows.Forms.Button prevMonthButton1;
+        private System.Windows.Forms.Panel calendarDaysPanel1;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Kalender_Prg_Projekt
 {
-    partial class createEvent
+    partial class CreateEvent
     {
         /// <summary>
         /// Required designer variable.
@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.saveEvent = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // maskedTextBox1
@@ -102,11 +103,22 @@
             this.maskedTextBox4.Size = new System.Drawing.Size(100, 20);
             this.maskedTextBox4.TabIndex = 8;
             // 
-            // createEvent
+            // saveEvent
+            // 
+            this.saveEvent.Location = new System.Drawing.Point(17, 162);
+            this.saveEvent.Name = "saveEvent";
+            this.saveEvent.Size = new System.Drawing.Size(210, 23);
+            this.saveEvent.TabIndex = 9;
+            this.saveEvent.Text = "Speichern";
+            this.saveEvent.UseVisualStyleBackColor = true;
+            this.saveEvent.Click += new System.EventHandler(this.saveEvent_Click);
+            // 
+            // CreateEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(268, 226);
+            this.ClientSize = new System.Drawing.Size(248, 226);
+            this.Controls.Add(this.saveEvent);
             this.Controls.Add(this.maskedTextBox4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -115,7 +127,7 @@
             this.Controls.Add(this.maskedTextBox3);
             this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.maskedTextBox1);
-            this.Name = "createEvent";
+            this.Name = "CreateEvent";
             this.Text = "createEvent";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,5 +144,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.Button saveEvent;
     }
 }

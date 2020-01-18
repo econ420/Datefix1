@@ -60,6 +60,7 @@ namespace Kalender_Prg_Projekt
                 accountInformationsPanel1.Hide();
             }
             loadDatagrid();
+            GenerateCalendar();
         }
 
         private void loadDatagrid()
@@ -127,10 +128,6 @@ namespace Kalender_Prg_Projekt
 
         }
 
-        private void EventCreatelinklabe1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
 
         private void DateFix_Load(object sender, EventArgs e)
         {
@@ -139,7 +136,8 @@ namespace Kalender_Prg_Projekt
 
         private void NewEventButton1_Click(object sender, EventArgs e)    
         {
-            
+            CreateEvent createEvent = new CreateEvent();
+            createEvent.ShowDialog();
         }
 
         private void DeleteContactButton_Click(object sender, EventArgs e)
@@ -199,7 +197,6 @@ namespace Kalender_Prg_Projekt
         }
 
 
-
         private void userLogin()
         {
             string query = $"SELECT * FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
@@ -210,6 +207,7 @@ namespace Kalender_Prg_Projekt
                     query = $"SELECT ID FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
                     int id = SqlQuery.getInt(query);
                     Models.User user = new Models.User();
+                    user.Id = id;
                     user.Birthday = SqlQuery.getDateTime($"SELECT Birthdate FROM tbl_user WHERE tbl_user.ID = '{id}'");
                     user.Firstname = SqlQuery.getString($"SELECT Firstname FROM tbl_user WHERE tbl_user.ID = '{id}'");
                     user.Lastname = SqlQuery.getString($"SELECT Lastname FROM tbl_user WHERE tbl_user.ID = '{id}'");
@@ -228,8 +226,177 @@ namespace Kalender_Prg_Projekt
             }
         }
 
+        private void GenerateCalendar()
+        {
+            DateTime date = DateTime.Now;
+            monthSelector = date.Month - 1;
+            yearSelector = date.Year;
+            date = new DateTime(yearSelector, monthSelector + 1, 1);
+            monthNameLabel1.Text = date.ToString("MMMMMMMMMMMMM") + " " + yearSelector;
+
+            int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
+            List<string> dayNames = new List<string>();
+            dayNames.Add("Sonntag");
+            dayNames.Add("Montag");
+            dayNames.Add("Dienstag");
+            dayNames.Add("Mittwoch");
+            dayNames.Add("Donnerstag");
+            dayNames.Add("Freitag");
+            dayNames.Add("Samstag");
 
 
+            double factor = 0;
+            factor = 100.0 / 7.0;
+            factor = factor / 100.0;
+            Size labelSize = new Size(Convert.ToInt32(calendarDaysPanel1.Width * factor), Convert.ToInt32(calendarDaysPanel1.Height * 100 / 7 / 100));
+            string dummy = "labelDays";
+            int row = 0;
+            int colum = Convert.ToInt32(calendarDaysPanel1.Width * factor);
+
+
+
+            for (int i = 0; i < 49; i++)
+            {
+                if (i % 7 == 0 && i != 0)
+                {
+                    row += calendarDaysPanel1.Height / 7;
+                    daysLocation = new Point(0, row);
+                }
+
+                label = new Label();
+                label.Font = new Font("Serif", 12);
+                if (i % 2 == 0)
+                {
+                    label.BackColor = System.Drawing.Color.LightGray;
+                }
+                else
+                {
+                    label.BackColor = System.Drawing.Color.Transparent;
+                }
+                if (i < 7)
+                {
+                    label.Location = daysLocation;
+                    label.Size = labelSize;
+                    label.Text = dayNames[i];
+                    label.Name = dummy + i;
+                    labels.Add(label);
+                    calendarDaysPanel1.Controls.Add(label);
+                }
+                else
+                {
+                    label.Location = daysLocation;
+                    label.Size = labelSize;
+                    label.Text = (i - 6).ToString();
+                    label.Name = dummy + i;
+                    labels.Add(label);
+                    calendarDaysPanel1.Controls.Add(label);
+                }
+                daysLocation.Offset(colum, 0);
+            }
+            setValueForDay(GetStartdateofMonth(date.ToString("dddd")), days, GetDaysPrevMonth(monthSelector, yearSelector));
+        }
+
+
+        private int GetStartdateofMonth(string dayName)
+        {
+            List<string> dayNames = new List<string>();
+            dayNames.Add("Sonntag");
+            dayNames.Add("Montag");
+            dayNames.Add("Dienstag");
+            dayNames.Add("Mittwoch");
+            dayNames.Add("Donnerstag");
+            dayNames.Add("Freitag");
+            dayNames.Add("Samstag");
+
+            int dummy = 0;
+
+            for (int i = 0; i < 7; i++)
+            {
+                if (dayName == dayNames[i])
+                {
+                    dummy = i;
+                }
+            }
+            return dummy;
+        }
+
+        private int GetDaysPrevMonth(int monthSelector, int yearSelector)
+        {
+            int daysPrevMonth = 0;
+            if (monthSelector - 1 < 0)
+            {
+                daysPrevMonth = DateTime.DaysInMonth(yearSelector - 1, 11) + 1;
+            }
+            else
+            {
+                daysPrevMonth = DateTime.DaysInMonth(yearSelector, monthSelector);
+            }
+            return daysPrevMonth;
+        }
+
+        private void setValueForDay(int startDay, int numberOfDays, int daysPrevMonth)
+        {
+            bool firstRun = true;
+            for (int i = 7; i < 49; i++)
+            {
+
+                if (firstRun == true)
+                {
+                    i += startDay;
+                }
+                if (startDay != 0)
+                {
+                    int x = 0;
+                    for (int j = startDay; j > 0; j--)
+                    {
+                        labels[j + 6].Text = (daysPrevMonth - x).ToString();
+                        x++;
+                    }
+                }
+                if ((i - startDay - 7 + 1) <= numberOfDays)
+                {
+                    labels[i].Text = (i - startDay - 7 + 1).ToString();
+                }
+                else
+                {
+                    labels[i].Text = (i - startDay - 7 + 1 - numberOfDays).ToString();
+                }
+
+
+                firstRun = false;
+            }
+        }
+
+        private void prevMonthButton1_Click(object sender, EventArgs e)
+        {
+            monthSelector--;
+            if (monthSelector < 0)
+            {
+                monthSelector = 11;
+                yearSelector--;
+            }
+            DateTime date = new DateTime(yearSelector, monthSelector + 1, 1);
+            monthNameLabel1.Text = date.ToString("MMMMMMMMMMMMM") + " " + yearSelector;
+            int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
+
+            setValueForDay(GetStartdateofMonth(date.ToString("dddd")), days, GetDaysPrevMonth(monthSelector, yearSelector));
+        }
+
+        private void nextMonthButton1_Click(object sender, EventArgs e)
+        {
+            monthSelector++;
+            if (monthSelector > 11)
+            {
+                monthSelector = 0;
+                yearSelector++;
+            }
+
+            DateTime date = new DateTime(yearSelector, monthSelector + 1, 1);
+            monthNameLabel1.Text = date.ToString("MMMMMMMMMMMMM") + " " + yearSelector;
+            int days = DateTime.DaysInMonth(yearSelector, monthSelector + 1);
+
+            setValueForDay(GetStartdateofMonth(date.ToString("dddd")), days, GetDaysPrevMonth(monthSelector, yearSelector));
+        }
 
     }
 }
