@@ -2,14 +2,23 @@
 using System.Data;
 using System.Windows.Forms;
 using System.Linq;
+using System.Drawing;
+using System.Collections.Generic;
 
 namespace Kalender_Prg_Projekt
 {
     public partial class DateFix : Form
     {
-        int selectedRow=0;
+        List<Label> labels = new List<Label>();
+        List<Label> CalendarDays = new List<Label>();
+        Label label = new Label();
+        Point daysLocation = new Point(0, 0);
+
+        int monthSelector = 0;
+        int yearSelector = 0;
 
         private Models.User user;
+        int selectedRow=0;
 
         public Models.User User
         {
@@ -90,31 +99,7 @@ namespace Kalender_Prg_Projekt
 
         private void SignInAccountButton1_Click(object sender, EventArgs e)
         {
-            string query = $"SELECT * FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
-            if (SqlQuery.exists(query))
-            {
-                if (Password.checkHashedPassword(passwordAccountTextbox1.Text, usernameAccountTextbox1.Text))
-                {
-                    query = $"SELECT ID FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
-                    int id = SqlQuery.getInt(query);
-                    Models.User user = new Models.User();
-                    user.Id = id;
-                    user.Birthday = SqlQuery.getDateTime($"SELECT Birthdate FROM tbl_user WHERE tbl_user.ID = '{id}'");
-                    user.Firstname = SqlQuery.getString($"SELECT Firstname FROM tbl_user WHERE tbl_user.ID = '{id}'");
-                    user.Lastname = SqlQuery.getString($"SELECT Lastname FROM tbl_user WHERE tbl_user.ID = '{id}'");
-                    user.Username = SqlQuery.getString($"SELECT Username FROM tbl_user WHERE tbl_user.ID = '{id}'");
-                    this.User = user;
-                    showAccountInformation();
-                }
-                else
-                {
-                    MessageBox.Show("Password is wrong");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Username not found");
-            }
+            userLogin();
         }
 
 
@@ -201,6 +186,51 @@ namespace Kalender_Prg_Projekt
                 //loadDatagrid();
             }
         }
+
+        private void loginEnter_KeyDown_Tabcontrol(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyData == Keys.Enter) && (tabControl1.SelectedTab == accountTabPage1) && (passwordAccountTextbox1.Focused || usernameAccountTextbox1.Focused))
+            {
+                userLogin();
+
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
+
+
+
+        private void userLogin()
+        {
+            string query = $"SELECT * FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
+            if (SqlQuery.exists(query))
+            {
+                if (Password.checkHashedPassword(passwordAccountTextbox1.Text, usernameAccountTextbox1.Text))
+                {
+                    query = $"SELECT ID FROM tbl_user WHERE tbl_user.Username = '{usernameAccountTextbox1.Text}'";
+                    int id = SqlQuery.getInt(query);
+                    Models.User user = new Models.User();
+                    user.Birthday = SqlQuery.getDateTime($"SELECT Birthdate FROM tbl_user WHERE tbl_user.ID = '{id}'");
+                    user.Firstname = SqlQuery.getString($"SELECT Firstname FROM tbl_user WHERE tbl_user.ID = '{id}'");
+                    user.Lastname = SqlQuery.getString($"SELECT Lastname FROM tbl_user WHERE tbl_user.ID = '{id}'");
+                    user.Username = SqlQuery.getString($"SELECT Username FROM tbl_user WHERE tbl_user.ID = '{id}'");
+                    this.User = user;
+                    showAccountInformation();
+                }
+                else
+                {
+                    MessageBox.Show("Password is wrong");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Username not found");
+            }
+        }
+
+
+
+
     }
 }
     

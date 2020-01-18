@@ -28,55 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DateFix));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.accountTabPage1 = new System.Windows.Forms.TabPage();
-            this.accountInformationsPanel1 = new System.Windows.Forms.Panel();
-            this.usernameInformationLabel1 = new System.Windows.Forms.Label();
-            this.firstnameInformationLabel1 = new System.Windows.Forms.Label();
-            this.lastnameInforamtionLabel1 = new System.Windows.Forms.Label();
-            this.birthdateInformationLabel1 = new System.Windows.Forms.Label();
-            this.usernameInformationTextBox1 = new System.Windows.Forms.TextBox();
-            this.firstnameInformationTextBox1 = new System.Windows.Forms.TextBox();
-            this.lastnameInforamtionTextBox1 = new System.Windows.Forms.TextBox();
-            this.birthdateInformationTextBox1 = new System.Windows.Forms.TextBox();
             this.accountLoginPanel1 = new System.Windows.Forms.Panel();
-            this.usernameAccountLabel1 = new System.Windows.Forms.Label();
-            this.passwordAccountLabel1 = new System.Windows.Forms.Label();
-            this.usernameAccountTextbox1 = new System.Windows.Forms.TextBox();
-            this.passwordAccountTextbox1 = new System.Windows.Forms.TextBox();
-            this.signInAccountButton1 = new System.Windows.Forms.Button();
-            this.signUpAccountLinkLabel1 = new System.Windows.Forms.LinkLabel();
             this.titleAccountSignInLabel1 = new System.Windows.Forms.Label();
+            this.signUpAccountLinkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.signInAccountButton1 = new System.Windows.Forms.Button();
+            this.passwordAccountTextbox1 = new System.Windows.Forms.TextBox();
+            this.usernameAccountTextbox1 = new System.Windows.Forms.TextBox();
+            this.passwordAccountLabel1 = new System.Windows.Forms.Label();
+            this.usernameAccountLabel1 = new System.Windows.Forms.Label();
+            this.accountInformationsPanel1 = new System.Windows.Forms.Panel();
+            this.birthdateInformationTextBox1 = new System.Windows.Forms.TextBox();
+            this.lastnameInforamtionTextBox1 = new System.Windows.Forms.TextBox();
+            this.firstnameInformationTextBox1 = new System.Windows.Forms.TextBox();
+            this.usernameInformationTextBox1 = new System.Windows.Forms.TextBox();
+            this.birthdateInformationLabel1 = new System.Windows.Forms.Label();
+            this.lastnameInforamtionLabel1 = new System.Windows.Forms.Label();
+            this.firstnameInformationLabel1 = new System.Windows.Forms.Label();
+            this.usernameInformationLabel1 = new System.Windows.Forms.Label();
             this.appointmentTabPage1 = new System.Windows.Forms.TabPage();
-            this.BirthdayPanel1 = new System.Windows.Forms.Panel();
-            this.titelBirthdayAppointmentsLabel2 = new System.Windows.Forms.Label();
-            this.birthdayAppointmentsTextBox2 = new System.Windows.Forms.TextBox();
             this.AppointmentsPanel1 = new System.Windows.Forms.Panel();
-            this.titelAppointmentsAppointmentsLabel1 = new System.Windows.Forms.Label();
-            this.appointmentsAppointmentsTextBox1 = new System.Windows.Forms.TextBox();
             this.newEventButton1 = new System.Windows.Forms.Button();
+            this.appointmentsAppointmentsTextBox1 = new System.Windows.Forms.TextBox();
+            this.titelAppointmentsAppointmentsLabel1 = new System.Windows.Forms.Label();
+            this.BirthdayPanel1 = new System.Windows.Forms.Panel();
+            this.birthdayAppointmentsTextBox2 = new System.Windows.Forms.TextBox();
+            this.titelBirthdayAppointmentsLabel2 = new System.Windows.Forms.Label();
             this.contactsTabPage1 = new System.Windows.Forms.TabPage();
             this.contactsPanel1 = new System.Windows.Forms.Panel();
-            this.contactsToolBarPanel1 = new System.Windows.Forms.Panel();
-            this.NewUserContactsButton = new System.Windows.Forms.Button();
-            this.DeleteContactButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.contactsToolBarPanel1 = new System.Windows.Forms.Panel();
             this.calendarTabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.calendarPanel2 = new System.Windows.Forms.Panel();
+            this.monthSelectorPanel1 = new System.Windows.Forms.Panel();
+            this.monthNameLabel1 = new System.Windows.Forms.Label();
+            this.nextMonthButton1 = new System.Windows.Forms.Button();
+            this.prevMonthButton1 = new System.Windows.Forms.Button();
+            this.DeleteContactButton = new System.Windows.Forms.Button();
+            this.NewUserContactsButton = new System.Windows.Forms.Button();
             this.accountTabPage1.SuspendLayout();
-            this.accountInformationsPanel1.SuspendLayout();
             this.accountLoginPanel1.SuspendLayout();
+            this.accountInformationsPanel1.SuspendLayout();
             this.appointmentTabPage1.SuspendLayout();
-            this.BirthdayPanel1.SuspendLayout();
             this.AppointmentsPanel1.SuspendLayout();
+            this.BirthdayPanel1.SuspendLayout();
             this.contactsTabPage1.SuspendLayout();
             this.contactsPanel1.SuspendLayout();
-            this.contactsToolBarPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.contactsToolBarPanel1.SuspendLayout();
+            this.calendarTabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.calendarPanel2.SuspendLayout();
+            this.monthSelectorPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // accountTabPage1
@@ -89,6 +97,86 @@
             this.accountTabPage1.TabIndex = 3;
             this.accountTabPage1.Text = "Konto";
             this.accountTabPage1.UseVisualStyleBackColor = true;
+            // 
+            // accountLoginPanel1
+            // 
+            this.accountLoginPanel1.Controls.Add(this.titleAccountSignInLabel1);
+            this.accountLoginPanel1.Controls.Add(this.signUpAccountLinkLabel1);
+            this.accountLoginPanel1.Controls.Add(this.signInAccountButton1);
+            this.accountLoginPanel1.Controls.Add(this.passwordAccountTextbox1);
+            this.accountLoginPanel1.Controls.Add(this.usernameAccountTextbox1);
+            this.accountLoginPanel1.Controls.Add(this.passwordAccountLabel1);
+            this.accountLoginPanel1.Controls.Add(this.usernameAccountLabel1);
+            this.accountLoginPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.accountLoginPanel1.Location = new System.Drawing.Point(396, 0);
+            this.accountLoginPanel1.Name = "accountLoginPanel1";
+            this.accountLoginPanel1.Size = new System.Drawing.Size(333, 384);
+            this.accountLoginPanel1.TabIndex = 14;
+            // 
+            // titleAccountSignInLabel1
+            // 
+            this.titleAccountSignInLabel1.AutoSize = true;
+            this.titleAccountSignInLabel1.Location = new System.Drawing.Point(68, 75);
+            this.titleAccountSignInLabel1.Name = "titleAccountSignInLabel1";
+            this.titleAccountSignInLabel1.Size = new System.Drawing.Size(33, 13);
+            this.titleAccountSignInLabel1.TabIndex = 12;
+            this.titleAccountSignInLabel1.Text = "Login";
+            // 
+            // signUpAccountLinkLabel1
+            // 
+            this.signUpAccountLinkLabel1.AutoSize = true;
+            this.signUpAccountLinkLabel1.Location = new System.Drawing.Point(68, 195);
+            this.signUpAccountLinkLabel1.Name = "signUpAccountLinkLabel1";
+            this.signUpAccountLinkLabel1.Size = new System.Drawing.Size(94, 13);
+            this.signUpAccountLinkLabel1.TabIndex = 18;
+            this.signUpAccountLinkLabel1.TabStop = true;
+            this.signUpAccountLinkLabel1.Text = "Jetzt Registrieren?";
+            this.signUpAccountLinkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SignUpAccountLinkLabel1_LinkClicked);
+            // 
+            // signInAccountButton1
+            // 
+            this.signInAccountButton1.Location = new System.Drawing.Point(71, 160);
+            this.signInAccountButton1.Name = "signInAccountButton1";
+            this.signInAccountButton1.Size = new System.Drawing.Size(204, 23);
+            this.signInAccountButton1.TabIndex = 17;
+            this.signInAccountButton1.Text = "Anmelden";
+            this.signInAccountButton1.UseVisualStyleBackColor = true;
+            this.signInAccountButton1.Click += new System.EventHandler(this.SignInAccountButton1_Click);
+            // 
+            // passwordAccountTextbox1
+            // 
+            this.passwordAccountTextbox1.Location = new System.Drawing.Point(175, 124);
+            this.passwordAccountTextbox1.Name = "passwordAccountTextbox1";
+            this.passwordAccountTextbox1.Size = new System.Drawing.Size(100, 20);
+            this.passwordAccountTextbox1.TabIndex = 16;
+            this.passwordAccountTextbox1.UseSystemPasswordChar = true;
+            this.passwordAccountTextbox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.loginEnter_KeyDown_Tabcontrol);
+            // 
+            // usernameAccountTextbox1
+            // 
+            this.usernameAccountTextbox1.Location = new System.Drawing.Point(175, 96);
+            this.usernameAccountTextbox1.Name = "usernameAccountTextbox1";
+            this.usernameAccountTextbox1.Size = new System.Drawing.Size(100, 20);
+            this.usernameAccountTextbox1.TabIndex = 15;
+            this.usernameAccountTextbox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.loginEnter_KeyDown_Tabcontrol);
+            // 
+            // passwordAccountLabel1
+            // 
+            this.passwordAccountLabel1.AutoSize = true;
+            this.passwordAccountLabel1.Location = new System.Drawing.Point(68, 127);
+            this.passwordAccountLabel1.Name = "passwordAccountLabel1";
+            this.passwordAccountLabel1.Size = new System.Drawing.Size(50, 13);
+            this.passwordAccountLabel1.TabIndex = 14;
+            this.passwordAccountLabel1.Text = "Passwort";
+            // 
+            // usernameAccountLabel1
+            // 
+            this.usernameAccountLabel1.AutoSize = true;
+            this.usernameAccountLabel1.Location = new System.Drawing.Point(68, 99);
+            this.usernameAccountLabel1.Name = "usernameAccountLabel1";
+            this.usernameAccountLabel1.Size = new System.Drawing.Size(75, 13);
+            this.usernameAccountLabel1.TabIndex = 13;
+            this.usernameAccountLabel1.Text = "Benutzername";
             // 
             // accountInformationsPanel1
             // 
@@ -106,32 +194,37 @@
             this.accountInformationsPanel1.Size = new System.Drawing.Size(396, 384);
             this.accountInformationsPanel1.TabIndex = 13;
             // 
-            // usernameInformationLabel1
+            // birthdateInformationTextBox1
             // 
-            this.usernameInformationLabel1.AutoSize = true;
-            this.usernameInformationLabel1.Location = new System.Drawing.Point(35, 62);
-            this.usernameInformationLabel1.Name = "usernameInformationLabel1";
-            this.usernameInformationLabel1.Size = new System.Drawing.Size(75, 13);
-            this.usernameInformationLabel1.TabIndex = 0;
-            this.usernameInformationLabel1.Text = "Benutzername";
+            this.birthdateInformationTextBox1.Location = new System.Drawing.Point(158, 169);
+            this.birthdateInformationTextBox1.Name = "birthdateInformationTextBox1";
+            this.birthdateInformationTextBox1.ReadOnly = true;
+            this.birthdateInformationTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.birthdateInformationTextBox1.TabIndex = 7;
             // 
-            // firstnameInformationLabel1
+            // lastnameInforamtionTextBox1
             // 
-            this.firstnameInformationLabel1.AutoSize = true;
-            this.firstnameInformationLabel1.Location = new System.Drawing.Point(35, 100);
-            this.firstnameInformationLabel1.Name = "firstnameInformationLabel1";
-            this.firstnameInformationLabel1.Size = new System.Drawing.Size(49, 13);
-            this.firstnameInformationLabel1.TabIndex = 1;
-            this.firstnameInformationLabel1.Text = "Vorname";
+            this.lastnameInforamtionTextBox1.Location = new System.Drawing.Point(158, 132);
+            this.lastnameInforamtionTextBox1.Name = "lastnameInforamtionTextBox1";
+            this.lastnameInforamtionTextBox1.ReadOnly = true;
+            this.lastnameInforamtionTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.lastnameInforamtionTextBox1.TabIndex = 6;
             // 
-            // lastnameInforamtionLabel1
+            // firstnameInformationTextBox1
             // 
-            this.lastnameInforamtionLabel1.AutoSize = true;
-            this.lastnameInforamtionLabel1.Location = new System.Drawing.Point(35, 135);
-            this.lastnameInforamtionLabel1.Name = "lastnameInforamtionLabel1";
-            this.lastnameInforamtionLabel1.Size = new System.Drawing.Size(59, 13);
-            this.lastnameInforamtionLabel1.TabIndex = 2;
-            this.lastnameInforamtionLabel1.Text = "Nachname";
+            this.firstnameInformationTextBox1.Location = new System.Drawing.Point(158, 97);
+            this.firstnameInformationTextBox1.Name = "firstnameInformationTextBox1";
+            this.firstnameInformationTextBox1.ReadOnly = true;
+            this.firstnameInformationTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.firstnameInformationTextBox1.TabIndex = 5;
+            // 
+            // usernameInformationTextBox1
+            // 
+            this.usernameInformationTextBox1.Location = new System.Drawing.Point(158, 59);
+            this.usernameInformationTextBox1.Name = "usernameInformationTextBox1";
+            this.usernameInformationTextBox1.ReadOnly = true;
+            this.usernameInformationTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.usernameInformationTextBox1.TabIndex = 4;
             // 
             // birthdateInformationLabel1
             // 
@@ -142,115 +235,32 @@
             this.birthdateInformationLabel1.TabIndex = 3;
             this.birthdateInformationLabel1.Text = "Geburtsdatum";
             // 
-            // usernameInformationTextBox1
+            // lastnameInforamtionLabel1
             // 
-            this.usernameInformationTextBox1.Location = new System.Drawing.Point(158, 59);
-            this.usernameInformationTextBox1.Name = "usernameInformationTextBox1";
-            this.usernameInformationTextBox1.ReadOnly = true;
-            this.usernameInformationTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.usernameInformationTextBox1.TabIndex = 4;
+            this.lastnameInforamtionLabel1.AutoSize = true;
+            this.lastnameInforamtionLabel1.Location = new System.Drawing.Point(35, 135);
+            this.lastnameInforamtionLabel1.Name = "lastnameInforamtionLabel1";
+            this.lastnameInforamtionLabel1.Size = new System.Drawing.Size(59, 13);
+            this.lastnameInforamtionLabel1.TabIndex = 2;
+            this.lastnameInforamtionLabel1.Text = "Nachname";
             // 
-            // firstnameInformationTextBox1
+            // firstnameInformationLabel1
             // 
-            this.firstnameInformationTextBox1.Location = new System.Drawing.Point(158, 97);
-            this.firstnameInformationTextBox1.Name = "firstnameInformationTextBox1";
-            this.firstnameInformationTextBox1.ReadOnly = true;
-            this.firstnameInformationTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.firstnameInformationTextBox1.TabIndex = 5;
+            this.firstnameInformationLabel1.AutoSize = true;
+            this.firstnameInformationLabel1.Location = new System.Drawing.Point(35, 100);
+            this.firstnameInformationLabel1.Name = "firstnameInformationLabel1";
+            this.firstnameInformationLabel1.Size = new System.Drawing.Size(49, 13);
+            this.firstnameInformationLabel1.TabIndex = 1;
+            this.firstnameInformationLabel1.Text = "Vorname";
             // 
-            // lastnameInforamtionTextBox1
+            // usernameInformationLabel1
             // 
-            this.lastnameInforamtionTextBox1.Location = new System.Drawing.Point(158, 132);
-            this.lastnameInforamtionTextBox1.Name = "lastnameInforamtionTextBox1";
-            this.lastnameInforamtionTextBox1.ReadOnly = true;
-            this.lastnameInforamtionTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.lastnameInforamtionTextBox1.TabIndex = 6;
-            // 
-            // birthdateInformationTextBox1
-            // 
-            this.birthdateInformationTextBox1.Location = new System.Drawing.Point(158, 169);
-            this.birthdateInformationTextBox1.Name = "birthdateInformationTextBox1";
-            this.birthdateInformationTextBox1.ReadOnly = true;
-            this.birthdateInformationTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.birthdateInformationTextBox1.TabIndex = 7;
-            // 
-            // accountLoginPanel1
-            // 
-            this.accountLoginPanel1.Controls.Add(this.titleAccountSignInLabel1);
-            this.accountLoginPanel1.Controls.Add(this.signUpAccountLinkLabel1);
-            this.accountLoginPanel1.Controls.Add(this.signInAccountButton1);
-            this.accountLoginPanel1.Controls.Add(this.passwordAccountTextbox1);
-            this.accountLoginPanel1.Controls.Add(this.usernameAccountTextbox1);
-            this.accountLoginPanel1.Controls.Add(this.passwordAccountLabel1);
-            this.accountLoginPanel1.Controls.Add(this.usernameAccountLabel1);
-            this.accountLoginPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.accountLoginPanel1.Location = new System.Drawing.Point(396, 0);
-            this.accountLoginPanel1.Name = "accountLoginPanel1";
-            this.accountLoginPanel1.Size = new System.Drawing.Size(333, 384);
-            this.accountLoginPanel1.TabIndex = 14;
-            // 
-            // usernameAccountLabel1
-            // 
-            this.usernameAccountLabel1.AutoSize = true;
-            this.usernameAccountLabel1.Location = new System.Drawing.Point(68, 99);
-            this.usernameAccountLabel1.Name = "usernameAccountLabel1";
-            this.usernameAccountLabel1.Size = new System.Drawing.Size(75, 13);
-            this.usernameAccountLabel1.TabIndex = 13;
-            this.usernameAccountLabel1.Text = "Benutzername";
-            // 
-            // passwordAccountLabel1
-            // 
-            this.passwordAccountLabel1.AutoSize = true;
-            this.passwordAccountLabel1.Location = new System.Drawing.Point(68, 127);
-            this.passwordAccountLabel1.Name = "passwordAccountLabel1";
-            this.passwordAccountLabel1.Size = new System.Drawing.Size(50, 13);
-            this.passwordAccountLabel1.TabIndex = 14;
-            this.passwordAccountLabel1.Text = "Passwort";
-            // 
-            // usernameAccountTextbox1
-            // 
-            this.usernameAccountTextbox1.Location = new System.Drawing.Point(175, 96);
-            this.usernameAccountTextbox1.Name = "usernameAccountTextbox1";
-            this.usernameAccountTextbox1.Size = new System.Drawing.Size(100, 20);
-            this.usernameAccountTextbox1.TabIndex = 15;
-            // 
-            // passwordAccountTextbox1
-            // 
-            this.passwordAccountTextbox1.Location = new System.Drawing.Point(175, 124);
-            this.passwordAccountTextbox1.Name = "passwordAccountTextbox1";
-            this.passwordAccountTextbox1.Size = new System.Drawing.Size(100, 20);
-            this.passwordAccountTextbox1.TabIndex = 16;
-            this.passwordAccountTextbox1.UseSystemPasswordChar = true;
-            // 
-            // signInAccountButton1
-            // 
-            this.signInAccountButton1.Location = new System.Drawing.Point(71, 160);
-            this.signInAccountButton1.Name = "signInAccountButton1";
-            this.signInAccountButton1.Size = new System.Drawing.Size(204, 23);
-            this.signInAccountButton1.TabIndex = 17;
-            this.signInAccountButton1.Text = "Anmelden";
-            this.signInAccountButton1.UseVisualStyleBackColor = true;
-            this.signInAccountButton1.Click += new System.EventHandler(this.SignInAccountButton1_Click);
-            // 
-            // signUpAccountLinkLabel1
-            // 
-            this.signUpAccountLinkLabel1.AutoSize = true;
-            this.signUpAccountLinkLabel1.Location = new System.Drawing.Point(68, 195);
-            this.signUpAccountLinkLabel1.Name = "signUpAccountLinkLabel1";
-            this.signUpAccountLinkLabel1.Size = new System.Drawing.Size(94, 13);
-            this.signUpAccountLinkLabel1.TabIndex = 18;
-            this.signUpAccountLinkLabel1.TabStop = true;
-            this.signUpAccountLinkLabel1.Text = "Jetzt Registrieren?";
-            this.signUpAccountLinkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SignUpAccountLinkLabel1_LinkClicked);
-            // 
-            // titleAccountSignInLabel1
-            // 
-            this.titleAccountSignInLabel1.AutoSize = true;
-            this.titleAccountSignInLabel1.Location = new System.Drawing.Point(68, 75);
-            this.titleAccountSignInLabel1.Name = "titleAccountSignInLabel1";
-            this.titleAccountSignInLabel1.Size = new System.Drawing.Size(33, 13);
-            this.titleAccountSignInLabel1.TabIndex = 12;
-            this.titleAccountSignInLabel1.Text = "Login";
+            this.usernameInformationLabel1.AutoSize = true;
+            this.usernameInformationLabel1.Location = new System.Drawing.Point(35, 62);
+            this.usernameInformationLabel1.Name = "usernameInformationLabel1";
+            this.usernameInformationLabel1.Size = new System.Drawing.Size(75, 13);
+            this.usernameInformationLabel1.TabIndex = 0;
+            this.usernameInformationLabel1.Text = "Benutzername";
             // 
             // appointmentTabPage1
             // 
@@ -263,6 +273,46 @@
             this.appointmentTabPage1.TabIndex = 1;
             this.appointmentTabPage1.Text = "Termine";
             this.appointmentTabPage1.UseVisualStyleBackColor = true;
+            // 
+            // AppointmentsPanel1
+            // 
+            this.AppointmentsPanel1.Controls.Add(this.newEventButton1);
+            this.AppointmentsPanel1.Controls.Add(this.appointmentsAppointmentsTextBox1);
+            this.AppointmentsPanel1.Controls.Add(this.titelAppointmentsAppointmentsLabel1);
+            this.AppointmentsPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AppointmentsPanel1.Location = new System.Drawing.Point(3, 3);
+            this.AppointmentsPanel1.Name = "AppointmentsPanel1";
+            this.AppointmentsPanel1.Size = new System.Drawing.Size(723, 188);
+            this.AppointmentsPanel1.TabIndex = 6;
+            // 
+            // newEventButton1
+            // 
+            this.newEventButton1.Location = new System.Drawing.Point(483, 27);
+            this.newEventButton1.Name = "newEventButton1";
+            this.newEventButton1.Size = new System.Drawing.Size(103, 38);
+            this.newEventButton1.TabIndex = 4;
+            this.newEventButton1.Text = "Neuer Termin";
+            this.newEventButton1.UseVisualStyleBackColor = true;
+            this.newEventButton1.Click += new System.EventHandler(this.NewEventButton1_Click);
+            // 
+            // appointmentsAppointmentsTextBox1
+            // 
+            this.appointmentsAppointmentsTextBox1.Location = new System.Drawing.Point(3, 27);
+            this.appointmentsAppointmentsTextBox1.MinimumSize = new System.Drawing.Size(397, 135);
+            this.appointmentsAppointmentsTextBox1.Multiline = true;
+            this.appointmentsAppointmentsTextBox1.Name = "appointmentsAppointmentsTextBox1";
+            this.appointmentsAppointmentsTextBox1.Size = new System.Drawing.Size(397, 135);
+            this.appointmentsAppointmentsTextBox1.TabIndex = 0;
+            this.appointmentsAppointmentsTextBox1.Text = "\r\n\r\n";
+            // 
+            // titelAppointmentsAppointmentsLabel1
+            // 
+            this.titelAppointmentsAppointmentsLabel1.AutoSize = true;
+            this.titelAppointmentsAppointmentsLabel1.Location = new System.Drawing.Point(3, 11);
+            this.titelAppointmentsAppointmentsLabel1.Name = "titelAppointmentsAppointmentsLabel1";
+            this.titelAppointmentsAppointmentsLabel1.Size = new System.Drawing.Size(119, 13);
+            this.titelAppointmentsAppointmentsLabel1.TabIndex = 3;
+            this.titelAppointmentsAppointmentsLabel1.Text = "Termine dieses Monats ";
             // 
             // BirthdayPanel1
             // 
@@ -277,15 +327,6 @@
             this.BirthdayPanel1.Size = new System.Drawing.Size(723, 164);
             this.BirthdayPanel1.TabIndex = 5;
             // 
-            // titelBirthdayAppointmentsLabel2
-            // 
-            this.titelBirthdayAppointmentsLabel2.AutoSize = true;
-            this.titelBirthdayAppointmentsLabel2.Location = new System.Drawing.Point(3, 10);
-            this.titelBirthdayAppointmentsLabel2.Name = "titelBirthdayAppointmentsLabel2";
-            this.titelBirthdayAppointmentsLabel2.Size = new System.Drawing.Size(152, 13);
-            this.titelBirthdayAppointmentsLabel2.TabIndex = 2;
-            this.titelBirthdayAppointmentsLabel2.Text = "Die Geburstage dieses Monats";
-            // 
             // birthdayAppointmentsTextBox2
             // 
             this.birthdayAppointmentsTextBox2.Location = new System.Drawing.Point(3, 26);
@@ -295,45 +336,14 @@
             this.birthdayAppointmentsTextBox2.Size = new System.Drawing.Size(397, 135);
             this.birthdayAppointmentsTextBox2.TabIndex = 1;
             // 
-            // AppointmentsPanel1
+            // titelBirthdayAppointmentsLabel2
             // 
-            this.AppointmentsPanel1.Controls.Add(this.newEventButton1);
-            this.AppointmentsPanel1.Controls.Add(this.appointmentsAppointmentsTextBox1);
-            this.AppointmentsPanel1.Controls.Add(this.titelAppointmentsAppointmentsLabel1);
-            this.AppointmentsPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AppointmentsPanel1.Location = new System.Drawing.Point(3, 3);
-            this.AppointmentsPanel1.Name = "AppointmentsPanel1";
-            this.AppointmentsPanel1.Size = new System.Drawing.Size(723, 188);
-            this.AppointmentsPanel1.TabIndex = 6;
-            // 
-            // titelAppointmentsAppointmentsLabel1
-            // 
-            this.titelAppointmentsAppointmentsLabel1.AutoSize = true;
-            this.titelAppointmentsAppointmentsLabel1.Location = new System.Drawing.Point(3, 11);
-            this.titelAppointmentsAppointmentsLabel1.Name = "titelAppointmentsAppointmentsLabel1";
-            this.titelAppointmentsAppointmentsLabel1.Size = new System.Drawing.Size(119, 13);
-            this.titelAppointmentsAppointmentsLabel1.TabIndex = 3;
-            this.titelAppointmentsAppointmentsLabel1.Text = "Termine dieses Monats ";
-            // 
-            // appointmentsAppointmentsTextBox1
-            // 
-            this.appointmentsAppointmentsTextBox1.Location = new System.Drawing.Point(3, 27);
-            this.appointmentsAppointmentsTextBox1.MinimumSize = new System.Drawing.Size(397, 135);
-            this.appointmentsAppointmentsTextBox1.Multiline = true;
-            this.appointmentsAppointmentsTextBox1.Name = "appointmentsAppointmentsTextBox1";
-            this.appointmentsAppointmentsTextBox1.Size = new System.Drawing.Size(397, 135);
-            this.appointmentsAppointmentsTextBox1.TabIndex = 0;
-            this.appointmentsAppointmentsTextBox1.Text = "\r\n\r\n";
-            // 
-            // newEventButton1
-            // 
-            this.newEventButton1.Location = new System.Drawing.Point(483, 27);
-            this.newEventButton1.Name = "newEventButton1";
-            this.newEventButton1.Size = new System.Drawing.Size(103, 38);
-            this.newEventButton1.TabIndex = 4;
-            this.newEventButton1.Text = "Neuer Termin";
-            this.newEventButton1.UseVisualStyleBackColor = true;
-            this.newEventButton1.Click += new System.EventHandler(this.NewEventButton1_Click);
+            this.titelBirthdayAppointmentsLabel2.AutoSize = true;
+            this.titelBirthdayAppointmentsLabel2.Location = new System.Drawing.Point(3, 10);
+            this.titelBirthdayAppointmentsLabel2.Name = "titelBirthdayAppointmentsLabel2";
+            this.titelBirthdayAppointmentsLabel2.Size = new System.Drawing.Size(152, 13);
+            this.titelBirthdayAppointmentsLabel2.TabIndex = 2;
+            this.titelBirthdayAppointmentsLabel2.Text = "Die Geburstage dieses Monats";
             // 
             // contactsTabPage1
             // 
@@ -355,6 +365,42 @@
             this.contactsPanel1.Size = new System.Drawing.Size(729, 384);
             this.contactsPanel1.TabIndex = 9;
             // 
+            // dataGridView1
+            // 
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
+            this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            this.dataGridView1.Size = new System.Drawing.Size(729, 356);
+            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            // 
             // contactsToolBarPanel1
             // 
             this.contactsToolBarPanel1.Controls.Add(this.DeleteContactButton);
@@ -365,66 +411,9 @@
             this.contactsToolBarPanel1.Size = new System.Drawing.Size(729, 28);
             this.contactsToolBarPanel1.TabIndex = 8;
             // 
-            // NewUserContactsButton
-            // 
-            this.NewUserContactsButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.NewUserContactsButton.Image = ((System.Drawing.Image)(resources.GetObject("NewUserContactsButton.Image")));
-            this.NewUserContactsButton.Location = new System.Drawing.Point(654, 0);
-            this.NewUserContactsButton.Name = "NewUserContactsButton";
-            this.NewUserContactsButton.Size = new System.Drawing.Size(75, 28);
-            this.NewUserContactsButton.TabIndex = 0;
-            this.NewUserContactsButton.UseVisualStyleBackColor = true;
-            this.NewUserContactsButton.Click += new System.EventHandler(this.NewContactButton1_Click);
-            // 
-            // DeleteContactButton
-            // 
-            this.DeleteContactButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.DeleteContactButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteContactButton.Image")));
-            this.DeleteContactButton.Location = new System.Drawing.Point(579, 0);
-            this.DeleteContactButton.Name = "DeleteContactButton";
-            this.DeleteContactButton.Size = new System.Drawing.Size(75, 28);
-            this.DeleteContactButton.TabIndex = 1;
-            this.DeleteContactButton.UseVisualStyleBackColor = true;
-            this.DeleteContactButton.Click += new System.EventHandler(this.DeleteContactButton_Click);
-            // 
-            // dataGridView1
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView1.Size = new System.Drawing.Size(729, 356);
-            this.dataGridView1.TabIndex = 9;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
-            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
-            // 
             // calendarTabPage1
             // 
+            this.calendarTabPage1.Controls.Add(this.calendarPanel2);
             this.calendarTabPage1.Location = new System.Drawing.Point(4, 22);
             this.calendarTabPage1.Name = "calendarTabPage1";
             this.calendarTabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -446,6 +435,79 @@
             this.tabControl1.Size = new System.Drawing.Size(737, 410);
             this.tabControl1.TabIndex = 7;
             // 
+            // calendarPanel2
+            // 
+            this.calendarPanel2.Controls.Add(this.monthSelectorPanel1);
+            this.calendarPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.calendarPanel2.Location = new System.Drawing.Point(3, 3);
+            this.calendarPanel2.Name = "calendarPanel2";
+            this.calendarPanel2.Size = new System.Drawing.Size(723, 378);
+            this.calendarPanel2.TabIndex = 0;
+            // 
+            // monthSelectorPanel1
+            // 
+            this.monthSelectorPanel1.Controls.Add(this.monthNameLabel1);
+            this.monthSelectorPanel1.Controls.Add(this.nextMonthButton1);
+            this.monthSelectorPanel1.Controls.Add(this.prevMonthButton1);
+            this.monthSelectorPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.monthSelectorPanel1.Location = new System.Drawing.Point(0, 0);
+            this.monthSelectorPanel1.Name = "monthSelectorPanel1";
+            this.monthSelectorPanel1.Size = new System.Drawing.Size(723, 36);
+            this.monthSelectorPanel1.TabIndex = 0;
+            // 
+            // monthNameLabel1
+            // 
+            this.monthNameLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.monthNameLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthNameLabel1.Location = new System.Drawing.Point(75, 0);
+            this.monthNameLabel1.Name = "monthNameLabel1";
+            this.monthNameLabel1.Size = new System.Drawing.Size(573, 36);
+            this.monthNameLabel1.TabIndex = 2;
+            this.monthNameLabel1.Text = "April";
+            this.monthNameLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // nextMonthButton1
+            // 
+            this.nextMonthButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.nextMonthButton1.Image = global::Kalender_Prg_Projekt.Properties.Resources.baseline_keyboard_arrow_right_black_18dp;
+            this.nextMonthButton1.Location = new System.Drawing.Point(648, 0);
+            this.nextMonthButton1.Name = "nextMonthButton1";
+            this.nextMonthButton1.Size = new System.Drawing.Size(75, 36);
+            this.nextMonthButton1.TabIndex = 0;
+            this.nextMonthButton1.UseVisualStyleBackColor = true;
+            // 
+            // prevMonthButton1
+            // 
+            this.prevMonthButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.prevMonthButton1.Image = global::Kalender_Prg_Projekt.Properties.Resources.baseline_keyboard_arrow_left_black_18dp;
+            this.prevMonthButton1.Location = new System.Drawing.Point(0, 0);
+            this.prevMonthButton1.Name = "prevMonthButton1";
+            this.prevMonthButton1.Size = new System.Drawing.Size(75, 36);
+            this.prevMonthButton1.TabIndex = 1;
+            this.prevMonthButton1.UseVisualStyleBackColor = true;
+            // 
+            // DeleteContactButton
+            // 
+            this.DeleteContactButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.DeleteContactButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteContactButton.Image")));
+            this.DeleteContactButton.Location = new System.Drawing.Point(579, 0);
+            this.DeleteContactButton.Name = "DeleteContactButton";
+            this.DeleteContactButton.Size = new System.Drawing.Size(75, 28);
+            this.DeleteContactButton.TabIndex = 1;
+            this.DeleteContactButton.UseVisualStyleBackColor = true;
+            this.DeleteContactButton.Click += new System.EventHandler(this.DeleteContactButton_Click);
+            // 
+            // NewUserContactsButton
+            // 
+            this.NewUserContactsButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.NewUserContactsButton.Image = ((System.Drawing.Image)(resources.GetObject("NewUserContactsButton.Image")));
+            this.NewUserContactsButton.Location = new System.Drawing.Point(654, 0);
+            this.NewUserContactsButton.Name = "NewUserContactsButton";
+            this.NewUserContactsButton.Size = new System.Drawing.Size(75, 28);
+            this.NewUserContactsButton.TabIndex = 0;
+            this.NewUserContactsButton.UseVisualStyleBackColor = true;
+            this.NewUserContactsButton.Click += new System.EventHandler(this.NewContactButton1_Click);
+            // 
             // DateFix
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,21 +521,24 @@
             this.Text = "DateFix";
             this.Load += new System.EventHandler(this.DateFix_Load);
             this.accountTabPage1.ResumeLayout(false);
-            this.accountInformationsPanel1.ResumeLayout(false);
-            this.accountInformationsPanel1.PerformLayout();
             this.accountLoginPanel1.ResumeLayout(false);
             this.accountLoginPanel1.PerformLayout();
+            this.accountInformationsPanel1.ResumeLayout(false);
+            this.accountInformationsPanel1.PerformLayout();
             this.appointmentTabPage1.ResumeLayout(false);
             this.appointmentTabPage1.PerformLayout();
-            this.BirthdayPanel1.ResumeLayout(false);
-            this.BirthdayPanel1.PerformLayout();
             this.AppointmentsPanel1.ResumeLayout(false);
             this.AppointmentsPanel1.PerformLayout();
+            this.BirthdayPanel1.ResumeLayout(false);
+            this.BirthdayPanel1.PerformLayout();
             this.contactsTabPage1.ResumeLayout(false);
             this.contactsPanel1.ResumeLayout(false);
-            this.contactsToolBarPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.contactsToolBarPanel1.ResumeLayout(false);
+            this.calendarTabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.calendarPanel2.ResumeLayout(false);
+            this.monthSelectorPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -514,5 +579,10 @@
         private System.Windows.Forms.Button NewUserContactsButton;
         private System.Windows.Forms.TabPage calendarTabPage1;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Panel calendarPanel2;
+        private System.Windows.Forms.Panel monthSelectorPanel1;
+        private System.Windows.Forms.Label monthNameLabel1;
+        private System.Windows.Forms.Button nextMonthButton1;
+        private System.Windows.Forms.Button prevMonthButton1;
     }
 }
