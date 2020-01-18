@@ -55,13 +55,13 @@ namespace Kalender_Prg_Projekt
         {
             if (this.User == null)
             {
-                panel2.Hide();
+                contactsPanel1.Hide();
             }
             //string testquery = "SELECT Birthdate FROM tbl_contacts";
             //var dummy = SqlQuery.getDataSource(testquery);
             else
             {
-                panel2.Show();
+                contactsPanel1.Show();
                 string query = $"SELECT ID, Firstname, Lastname, Username, E_Mail, Address FROM tbl_contacts WHERE UID= '{this.User.Id}' ";
                 dataGridView1.DataSource = SqlQuery.getDataSource(query).GetBinding();
             }

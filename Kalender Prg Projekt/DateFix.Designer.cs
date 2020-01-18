@@ -32,8 +32,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.calendarTabPage1 = new System.Windows.Forms.TabPage();
             this.contactsTabPage1 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.contactsPanel1 = new System.Windows.Forms.Panel();
+            this.contactsToolBarPanel1 = new System.Windows.Forms.Panel();
             this.DeleteContactButton = new System.Windows.Forms.Button();
             this.NewUserContactsButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -64,8 +64,8 @@
             this.usernameInformationLabel1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.contactsTabPage1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.contactsPanel1.SuspendLayout();
+            this.contactsToolBarPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.appointmentTabPage1.SuspendLayout();
             this.accountTabPage1.SuspendLayout();
@@ -99,7 +99,7 @@
             // 
             // contactsTabPage1
             // 
-            this.contactsTabPage1.Controls.Add(this.panel2);
+            this.contactsTabPage1.Controls.Add(this.contactsPanel1);
             this.contactsTabPage1.Location = new System.Drawing.Point(4, 22);
             this.contactsTabPage1.Name = "contactsTabPage1";
             this.contactsTabPage1.Size = new System.Drawing.Size(792, 424);
@@ -107,25 +107,25 @@
             this.contactsTabPage1.Text = "Kontakte";
             this.contactsTabPage1.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // contactsPanel1
             // 
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(792, 424);
-            this.panel2.TabIndex = 9;
+            this.contactsPanel1.Controls.Add(this.contactsToolBarPanel1);
+            this.contactsPanel1.Controls.Add(this.dataGridView1);
+            this.contactsPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contactsPanel1.Location = new System.Drawing.Point(0, 0);
+            this.contactsPanel1.Name = "contactsPanel1";
+            this.contactsPanel1.Size = new System.Drawing.Size(792, 424);
+            this.contactsPanel1.TabIndex = 9;
             // 
-            // panel1
+            // contactsToolBarPanel1
             // 
-            this.panel1.Controls.Add(this.DeleteContactButton);
-            this.panel1.Controls.Add(this.NewUserContactsButton);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(792, 28);
-            this.panel1.TabIndex = 8;
+            this.contactsToolBarPanel1.Controls.Add(this.DeleteContactButton);
+            this.contactsToolBarPanel1.Controls.Add(this.NewUserContactsButton);
+            this.contactsToolBarPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.contactsToolBarPanel1.Location = new System.Drawing.Point(0, 0);
+            this.contactsToolBarPanel1.Name = "contactsToolBarPanel1";
+            this.contactsToolBarPanel1.Size = new System.Drawing.Size(792, 28);
+            this.contactsToolBarPanel1.TabIndex = 8;
             // 
             // DeleteContactButton
             // 
@@ -417,8 +417,8 @@
             this.Text = "DateFix";
             this.tabControl1.ResumeLayout(false);
             this.contactsTabPage1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.contactsPanel1.ResumeLayout(false);
+            this.contactsToolBarPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.appointmentTabPage1.ResumeLayout(false);
             this.appointmentTabPage1.PerformLayout();
@@ -454,7 +454,7 @@
         private System.Windows.Forms.Label usernameAccountLabel1;
         private System.Windows.Forms.Button NewUserContactsButton;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel contactsToolBarPanel1;
         private System.Windows.Forms.Panel accountInformationsPanel1;
         private System.Windows.Forms.Label birthdateInformationLabel1;
         private System.Windows.Forms.Label lastnameInforamtionLabel1;
@@ -464,7 +464,7 @@
         private System.Windows.Forms.TextBox lastnameInforamtionTextBox1;
         private System.Windows.Forms.TextBox firstnameInformationTextBox1;
         private System.Windows.Forms.TextBox usernameInformationTextBox1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel contactsPanel1;
         private System.Windows.Forms.Button DeleteContactButton;
     }
 }
