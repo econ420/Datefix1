@@ -52,9 +52,10 @@ namespace Kalender_Prg_Projekt
             else
             {
                 Utilities utilities = new Utilities();
-                string query = $"INSERT INTO tbl_contacts (`ID`, `UID` , `Firstname` , `Lastname`, `Username`, `Birthdate`,`E-Mail`,`Address`) VALUES (NULL,'{loggedInID}','{txtBoxFirstname.Text}', '{txtBoxLastname.Text}', '{txtBoxUsername.Text}','{utilities.formatdate(birthdateDateTimePicker1.Value.ToString())}', '{txtBoxEmail.Text}','{txtBoxAdresse.Text}')";
+                string query = $"INSERT INTO tbl_contacts (`ID`, `UID` , `Firstname` , `Lastname`, `Username`, `Birthdate`,`E_Mail`,`Address`) VALUES (NULL,'{loggedInID}','{txtBoxFirstname.Text}', '{txtBoxLastname.Text}', '{txtBoxUsername.Text}','{utilities.formatdate(birthdateDateTimePicker1.Value.ToString())}', '{txtBoxEmail.Text}','{txtBoxAdresse.Text}')";
                 SqlQuery.insert(query);
                 MessageBox.Show("Nutzer Angelegt");
+                this.Close();
             }
         }
     }

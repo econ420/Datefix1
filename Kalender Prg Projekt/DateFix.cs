@@ -69,8 +69,8 @@ namespace Kalender_Prg_Projekt
         private void NewContactButton1_Click(object sender, EventArgs e)
         {
             var popupNewContact = new NewContact(user.Id);
-            popupNewContact.Show();
-
+            popupNewContact.ShowDialog();
+            loadDatagrid();
         }
 
         public void showAccountInformation()
@@ -134,7 +134,6 @@ namespace Kalender_Prg_Projekt
             {
                 DataGridViewRow row = this.dataGridView1.Rows[0];
                 int selectedRow = Convert.ToInt32(row.Cells["ID"].Value);
-                //string query = $"SELECT count(*) FROM tbl_contacts WHERE ID = {selectedRow}";
                 string query = $"DELETE FROM tbl_contacts WHERE ID = {selectedRow}";
                 SqlQuery.delete(query);
                 loadDatagrid();
