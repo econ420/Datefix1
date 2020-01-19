@@ -66,12 +66,12 @@
             this.NewUserContactsButton = new System.Windows.Forms.Button();
             this.calendarTabPage1 = new System.Windows.Forms.TabPage();
             this.calendarPanel2 = new System.Windows.Forms.Panel();
+            this.calendarDaysPanel1 = new System.Windows.Forms.Panel();
             this.monthSelectorPanel1 = new System.Windows.Forms.Panel();
             this.monthNameLabel1 = new System.Windows.Forms.Label();
             this.nextMonthButton1 = new System.Windows.Forms.Button();
             this.prevMonthButton1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.calendarDaysPanel1 = new System.Windows.Forms.Panel();
             this.accountTabPage1.SuspendLayout();
             this.accountLoginPanel1.SuspendLayout();
             this.accountInformationsPanel1.SuspendLayout();
@@ -302,6 +302,7 @@
             this.appointmentsAppointmentsTextBox1.MinimumSize = new System.Drawing.Size(397, 135);
             this.appointmentsAppointmentsTextBox1.Multiline = true;
             this.appointmentsAppointmentsTextBox1.Name = "appointmentsAppointmentsTextBox1";
+            this.appointmentsAppointmentsTextBox1.ReadOnly = true;
             this.appointmentsAppointmentsTextBox1.Size = new System.Drawing.Size(397, 135);
             this.appointmentsAppointmentsTextBox1.TabIndex = 0;
             this.appointmentsAppointmentsTextBox1.Text = "\r\n\r\n";
@@ -334,6 +335,7 @@
             this.birthdayAppointmentsTextBox2.MinimumSize = new System.Drawing.Size(397, 135);
             this.birthdayAppointmentsTextBox2.Multiline = true;
             this.birthdayAppointmentsTextBox2.Name = "birthdayAppointmentsTextBox2";
+            this.birthdayAppointmentsTextBox2.ReadOnly = true;
             this.birthdayAppointmentsTextBox2.Size = new System.Drawing.Size(397, 135);
             this.birthdayAppointmentsTextBox2.TabIndex = 1;
             // 
@@ -455,6 +457,14 @@
             this.calendarPanel2.Size = new System.Drawing.Size(723, 378);
             this.calendarPanel2.TabIndex = 0;
             // 
+            // calendarDaysPanel1
+            // 
+            this.calendarDaysPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.calendarDaysPanel1.Location = new System.Drawing.Point(0, 36);
+            this.calendarDaysPanel1.Name = "calendarDaysPanel1";
+            this.calendarDaysPanel1.Size = new System.Drawing.Size(723, 342);
+            this.calendarDaysPanel1.TabIndex = 1;
+            // 
             // monthSelectorPanel1
             // 
             this.monthSelectorPanel1.Controls.Add(this.monthNameLabel1);
@@ -509,14 +519,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(737, 410);
             this.tabControl1.TabIndex = 7;
-            // 
-            // calendarDaysPanel1
-            // 
-            this.calendarDaysPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.calendarDaysPanel1.Location = new System.Drawing.Point(0, 36);
-            this.calendarDaysPanel1.Name = "calendarDaysPanel1";
-            this.calendarDaysPanel1.Size = new System.Drawing.Size(723, 342);
-            this.calendarDaysPanel1.TabIndex = 1;
             // 
             // DateFix
             // 

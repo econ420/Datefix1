@@ -12,7 +12,6 @@ namespace Kalender_Prg_Projekt
 {
     public partial class CreateEvent : Form
     {
-        string query = "";
         int loggedInID = 0;
 
         public CreateEvent()
@@ -28,27 +27,24 @@ namespace Kalender_Prg_Projekt
 
         private void saveEvent_Click(object sender, EventArgs e)
         {
+            int result = DateTime.Compare(eventStartDateTimePicker1.Value, eventEndtDateTimePicker1.Value);
+
             if (maskedTextBox1.Text == "" || maskedTextBox1.Text == null)
             {
                 MessageBox.Show("Bitte Füllen sie alle Felder aus");
             }
-            else if (maskedTextBox3.Text == "" || maskedTextBox3.Text == null)
+            else if (result > 0)
             {
-                MessageBox.Show("Bitte Füllen sie alle Felder aus");
-            }
-            else if (maskedTextBox2.Text == "" || maskedTextBox2.Text == null)
-            {
-                MessageBox.Show("Bitte Füllen sie alle Felder aus");
-
-            }
-            else if (maskedTextBox4.Text == "" || maskedTextBox4.Text == null)
-            {
-                MessageBox.Show("Bitte Füllen sie alle Felder aus");
+                MessageBox.Show("Fehlerhaftes Datum, Bitte Füllen sie alle Felder Richtig aus");
 
             }
             else
             {
-
+                Utilities utilities = new Utilities();
+                string query = $"INSERT INTO tbl_events (`eventID`, `UID` , `eventDescription` , `eventDate`, `eventDeadline`) VALUES (NULL,'{loggedInID}','{maskedTextBox1.Text}', '{utilities.formatdate(eventStartDateTimePicker1.Value.ToString())}', '{utilities.formatdate(eventEndtDateTimePicker1.Value.ToString())}')";
+                SqlQuery.insert(query);
+                MessageBox.Show("Termin Angelegt");
+                this.Close();
             }
 
         }

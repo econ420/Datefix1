@@ -46,18 +46,15 @@ namespace Kalender_Prg_Projekt
         public DateFix()
         {
             InitializeComponent();
-            string query1 = $"SELECT Birthdate FROM tbl_user WHERE tbl_user.ID = '{3}'";
-            //MessageBox.Show(SqlQuery.getDateTime(query1).ToShortDateString());
 
             appointmentsAppointmentsTextBox1.Text = "Du hast keine Termine in nächster Zeit.";
             birthdayAppointmentsTextBox2.Text = "In nächster Zeit hat keiner Geburstag.";
 
-            Getnextevents();
-            GetNextBirthdays();
-
             if (this.User == null)
             {
                 accountInformationsPanel1.Hide();
+                AppointmentsPanel1.Hide();
+                BirthdayPanel1.Hide();
             }
             loadDatagrid();
             GenerateCalendar();
@@ -69,8 +66,6 @@ namespace Kalender_Prg_Projekt
             {
                 contactsPanel1.Hide();
             }
-            //string testquery = "SELECT Birthdate FROM tbl_contacts";
-            //var dummy = SqlQuery.getDataSource(testquery);
             else
             {
                 contactsPanel1.Show();
@@ -85,6 +80,7 @@ namespace Kalender_Prg_Projekt
             var popupNewContact = new NewContact(user.Id);
             popupNewContact.ShowDialog();
             loadDatagrid();
+            GetNextBirthdays();
         }
 
         public void showAccountInformation()
@@ -113,9 +109,7 @@ namespace Kalender_Prg_Projekt
 
         private void GetNextBirthdays()
         {
-            string query = "SELECT Username,' ', Birthdate FROM tbl_user WHERE MONTH(Birthdate) = MONTH(NOW())";    //Auslesen der Geburstage dieses Monats 
-
-
+            string query = $"SELECT Firstname,' ', Lastname,' ', Birthdate FROM tbl_contacts WHERE MONTH(Birthdate) = MONTH(NOW()) AND UID= '{this.User.Id}'";    //Auslesen der Geburstage dieses Monats 
             birthdayAppointmentsTextBox2.Text = SqlQuery.getRowString(query).Replace(" 00:00:00","\r\n");       //Löschung der Uhrzeit weil das sonst dämlich aussieht 
 
         }
@@ -123,8 +117,8 @@ namespace Kalender_Prg_Projekt
 
         private void Getnextevents()
         {
-            string query = "SELECT eventDescription,' ', eventDate From,' - ', eventDeadline tbl_events WHERE MONTH(eventDate) = MONTH (NOW())";
-            appointmentsAppointmentsTextBox1.Text = SqlQuery.getRowString(query);    //Hier soll er die Daten vom Tabelle Event in der Box Angeben die in diesen Monat sind 
+            string query = $"SELECT eventDescription,' ', eventDate, ' - ', eventDeadline, '|' From tbl_events WHERE MONTH(eventDate) = MONTH(NOW()) AND UID= '{this.User.Id}'";
+            appointmentsAppointmentsTextBox1.Text = SqlQuery.getRowString(query).Replace(" 00:00:00", "\r").Replace("|", "\r\n");    //Hier soll er die Daten vom Tabelle Event in der Box Angeben die in diesen Monat sind 
 
         }
 
@@ -136,8 +130,9 @@ namespace Kalender_Prg_Projekt
 
         private void NewEventButton1_Click(object sender, EventArgs e)    
         {
-            CreateEvent createEvent = new CreateEvent();
+            CreateEvent createEvent = new CreateEvent(user.Id);
             createEvent.ShowDialog();
+            Getnextevents();
         }
 
         private void DeleteContactButton_Click(object sender, EventArgs e)
@@ -185,6 +180,11 @@ namespace Kalender_Prg_Projekt
             }
         }
 
+
+
+
+
+
         private void loginEnter_KeyDown_Tabcontrol(object sender, KeyEventArgs e)
         {
             if ((e.KeyData == Keys.Enter) && (tabControl1.SelectedTab == accountTabPage1) && (passwordAccountTextbox1.Focused || usernameAccountTextbox1.Focused))
@@ -195,7 +195,6 @@ namespace Kalender_Prg_Projekt
                 e.SuppressKeyPress = true;
             }
         }
-
 
         private void userLogin()
         {
@@ -224,7 +223,14 @@ namespace Kalender_Prg_Projekt
             {
                 MessageBox.Show("Username not found");
             }
+            Getnextevents();
+            GetNextBirthdays();
+            AppointmentsPanel1.Show();
+            BirthdayPanel1.Show();
+
         }
+
+
 
         private void GenerateCalendar()
         {
@@ -295,7 +301,6 @@ namespace Kalender_Prg_Projekt
             }
             setValueForDay(GetStartdateofMonth(date.ToString("dddd")), days, GetDaysPrevMonth(monthSelector, yearSelector));
         }
-
 
         private int GetStartdateofMonth(string dayName)
         {
