@@ -40,12 +40,12 @@
             this.birthdateLabel1 = new System.Windows.Forms.Label();
             this.passwordTextbox1 = new System.Windows.Forms.TextBox();
             this.passwordConfirmTextbox1 = new System.Windows.Forms.TextBox();
-            this.birthdateTextbox1 = new System.Windows.Forms.TextBox();
             this.sign_UpButton1 = new System.Windows.Forms.Button();
             this.emailLabel1 = new System.Windows.Forms.Label();
             this.addressLabel1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.emailTextbox1 = new System.Windows.Forms.TextBox();
+            this.addressTextbox1 = new System.Windows.Forms.TextBox();
+            this.birthdateDateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // firstnameLabel1
@@ -61,7 +61,7 @@
             // 
             this.firstnameTextbox1.Location = new System.Drawing.Point(139, 29);
             this.firstnameTextbox1.Name = "firstnameTextbox1";
-            this.firstnameTextbox1.Size = new System.Drawing.Size(100, 20);
+            this.firstnameTextbox1.Size = new System.Drawing.Size(200, 20);
             this.firstnameTextbox1.TabIndex = 1;
             // 
             // lastnameLabel1
@@ -77,7 +77,7 @@
             // 
             this.lastnameTextbox1.Location = new System.Drawing.Point(139, 57);
             this.lastnameTextbox1.Name = "lastnameTextbox1";
-            this.lastnameTextbox1.Size = new System.Drawing.Size(100, 20);
+            this.lastnameTextbox1.Size = new System.Drawing.Size(200, 20);
             this.lastnameTextbox1.TabIndex = 3;
             // 
             // usernameLabel1
@@ -93,7 +93,7 @@
             // 
             this.usernameTextbox1.Location = new System.Drawing.Point(139, 85);
             this.usernameTextbox1.Name = "usernameTextbox1";
-            this.usernameTextbox1.Size = new System.Drawing.Size(100, 20);
+            this.usernameTextbox1.Size = new System.Drawing.Size(200, 20);
             this.usernameTextbox1.TabIndex = 5;
             // 
             // passwordLabel1
@@ -128,7 +128,7 @@
             // 
             this.passwordTextbox1.Location = new System.Drawing.Point(139, 113);
             this.passwordTextbox1.Name = "passwordTextbox1";
-            this.passwordTextbox1.Size = new System.Drawing.Size(100, 20);
+            this.passwordTextbox1.Size = new System.Drawing.Size(200, 20);
             this.passwordTextbox1.TabIndex = 9;
             this.passwordTextbox1.UseSystemPasswordChar = true;
             this.passwordTextbox1.TextChanged += new System.EventHandler(this.PasswordConfirmationCorrect_Textchanged);
@@ -137,23 +137,16 @@
             // 
             this.passwordConfirmTextbox1.Location = new System.Drawing.Point(139, 141);
             this.passwordConfirmTextbox1.Name = "passwordConfirmTextbox1";
-            this.passwordConfirmTextbox1.Size = new System.Drawing.Size(100, 20);
+            this.passwordConfirmTextbox1.Size = new System.Drawing.Size(200, 20);
             this.passwordConfirmTextbox1.TabIndex = 10;
             this.passwordConfirmTextbox1.UseSystemPasswordChar = true;
             this.passwordConfirmTextbox1.TextChanged += new System.EventHandler(this.PasswordConfirmationCorrect_Textchanged);
-            // 
-            // birthdateTextbox1
-            // 
-            this.birthdateTextbox1.Location = new System.Drawing.Point(139, 169);
-            this.birthdateTextbox1.Name = "birthdateTextbox1";
-            this.birthdateTextbox1.Size = new System.Drawing.Size(100, 20);
-            this.birthdateTextbox1.TabIndex = 11;
             // 
             // sign_UpButton1
             // 
             this.sign_UpButton1.Location = new System.Drawing.Point(35, 261);
             this.sign_UpButton1.Name = "sign_UpButton1";
-            this.sign_UpButton1.Size = new System.Drawing.Size(204, 23);
+            this.sign_UpButton1.Size = new System.Drawing.Size(304, 23);
             this.sign_UpButton1.TabIndex = 12;
             this.sign_UpButton1.Text = "Registrieren";
             this.sign_UpButton1.UseVisualStyleBackColor = true;
@@ -177,31 +170,38 @@
             this.addressLabel1.TabIndex = 14;
             this.addressLabel1.Text = "Addresse";
             // 
-            // textBox1
+            // emailTextbox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(139, 197);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 15;
+            this.emailTextbox1.Location = new System.Drawing.Point(139, 197);
+            this.emailTextbox1.Name = "emailTextbox1";
+            this.emailTextbox1.Size = new System.Drawing.Size(200, 20);
+            this.emailTextbox1.TabIndex = 15;
             // 
-            // textBox2
+            // addressTextbox1
             // 
-            this.textBox2.Location = new System.Drawing.Point(139, 225);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 16;
+            this.addressTextbox1.Location = new System.Drawing.Point(139, 225);
+            this.addressTextbox1.Name = "addressTextbox1";
+            this.addressTextbox1.Size = new System.Drawing.Size(200, 20);
+            this.addressTextbox1.TabIndex = 16;
+            // 
+            // birthdateDateTimePicker1
+            // 
+            this.birthdateDateTimePicker1.Location = new System.Drawing.Point(139, 171);
+            this.birthdateDateTimePicker1.Name = "birthdateDateTimePicker1";
+            this.birthdateDateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.birthdateDateTimePicker1.TabIndex = 17;
             // 
             // Sign_Up
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 304);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(370, 304);
+            this.Controls.Add(this.birthdateDateTimePicker1);
+            this.Controls.Add(this.addressTextbox1);
+            this.Controls.Add(this.emailTextbox1);
             this.Controls.Add(this.addressLabel1);
             this.Controls.Add(this.emailLabel1);
             this.Controls.Add(this.sign_UpButton1);
-            this.Controls.Add(this.birthdateTextbox1);
             this.Controls.Add(this.passwordConfirmTextbox1);
             this.Controls.Add(this.passwordTextbox1);
             this.Controls.Add(this.birthdateLabel1);
@@ -235,11 +235,11 @@
         private System.Windows.Forms.Label birthdateLabel1;
         private System.Windows.Forms.TextBox passwordTextbox1;
         private System.Windows.Forms.TextBox passwordConfirmTextbox1;
-        private System.Windows.Forms.TextBox birthdateTextbox1;
         private System.Windows.Forms.Button sign_UpButton1;
         private System.Windows.Forms.Label emailLabel1;
         private System.Windows.Forms.Label addressLabel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox emailTextbox1;
+        private System.Windows.Forms.TextBox addressTextbox1;
+        private System.Windows.Forms.DateTimePicker birthdateDateTimePicker1;
     }
 }

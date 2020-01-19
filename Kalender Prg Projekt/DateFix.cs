@@ -91,6 +91,8 @@ namespace Kalender_Prg_Projekt
             firstnameInformationTextBox1.Text = this.User.Firstname;
             lastnameInforamtionTextBox1.Text = this.User.Lastname;
             birthdateInformationTextBox1.Text = this.User.Birthday.ToShortDateString();
+            emailInformationTextbox1.Text = this.User.Email;
+            addressInformationTextBox1.Text = this.User.Address;
             loadDatagrid();
         }
 
@@ -211,6 +213,8 @@ namespace Kalender_Prg_Projekt
                     user.Firstname = SqlQuery.getString($"SELECT Firstname FROM tbl_user WHERE tbl_user.ID = '{id}'");
                     user.Lastname = SqlQuery.getString($"SELECT Lastname FROM tbl_user WHERE tbl_user.ID = '{id}'");
                     user.Username = SqlQuery.getString($"SELECT Username FROM tbl_user WHERE tbl_user.ID = '{id}'");
+                    user.Email = SqlQuery.getString($"SELECT `E-Mail` FROM tbl_user WHERE tbl_user.ID = '{id}'");
+                    user.Address = SqlQuery.getString($"SELECT Address FROM tbl_user WHERE tbl_user.ID = '{id}'");
                     this.User = user;
                     showAccountInformation();
                 }

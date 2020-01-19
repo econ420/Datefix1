@@ -72,6 +72,10 @@
             this.nextMonthButton1 = new System.Windows.Forms.Button();
             this.prevMonthButton1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.emailInformationLabel1 = new System.Windows.Forms.Label();
+            this.addressInformationLabel1 = new System.Windows.Forms.Label();
+            this.emailInformationTextbox1 = new System.Windows.Forms.TextBox();
+            this.addressInformationTextBox1 = new System.Windows.Forms.TextBox();
             this.accountTabPage1.SuspendLayout();
             this.accountLoginPanel1.SuspendLayout();
             this.accountInformationsPanel1.SuspendLayout();
@@ -181,6 +185,10 @@
             // 
             // accountInformationsPanel1
             // 
+            this.accountInformationsPanel1.Controls.Add(this.addressInformationTextBox1);
+            this.accountInformationsPanel1.Controls.Add(this.emailInformationTextbox1);
+            this.accountInformationsPanel1.Controls.Add(this.addressInformationLabel1);
+            this.accountInformationsPanel1.Controls.Add(this.emailInformationLabel1);
             this.accountInformationsPanel1.Controls.Add(this.birthdateInformationTextBox1);
             this.accountInformationsPanel1.Controls.Add(this.lastnameInforamtionTextBox1);
             this.accountInformationsPanel1.Controls.Add(this.firstnameInformationTextBox1);
@@ -520,6 +528,40 @@
             this.tabControl1.Size = new System.Drawing.Size(737, 410);
             this.tabControl1.TabIndex = 7;
             // 
+            // emailInformationLabel1
+            // 
+            this.emailInformationLabel1.AutoSize = true;
+            this.emailInformationLabel1.Location = new System.Drawing.Point(35, 208);
+            this.emailInformationLabel1.Name = "emailInformationLabel1";
+            this.emailInformationLabel1.Size = new System.Drawing.Size(36, 13);
+            this.emailInformationLabel1.TabIndex = 8;
+            this.emailInformationLabel1.Text = "E-Mail";
+            // 
+            // addressInformationLabel1
+            // 
+            this.addressInformationLabel1.AutoSize = true;
+            this.addressInformationLabel1.Location = new System.Drawing.Point(35, 245);
+            this.addressInformationLabel1.Name = "addressInformationLabel1";
+            this.addressInformationLabel1.Size = new System.Drawing.Size(51, 13);
+            this.addressInformationLabel1.TabIndex = 9;
+            this.addressInformationLabel1.Text = "Addresse";
+            // 
+            // emailInformationTextbox1
+            // 
+            this.emailInformationTextbox1.Location = new System.Drawing.Point(158, 201);
+            this.emailInformationTextbox1.Name = "emailInformationTextbox1";
+            this.emailInformationTextbox1.ReadOnly = true;
+            this.emailInformationTextbox1.Size = new System.Drawing.Size(100, 20);
+            this.emailInformationTextbox1.TabIndex = 10;
+            // 
+            // addressInformationTextBox1
+            // 
+            this.addressInformationTextBox1.Location = new System.Drawing.Point(158, 238);
+            this.addressInformationTextBox1.Name = "addressInformationTextBox1";
+            this.addressInformationTextBox1.ReadOnly = true;
+            this.addressInformationTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.addressInformationTextBox1.TabIndex = 11;
+            // 
             // DateFix
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -597,5 +639,9 @@
         private System.Windows.Forms.Button nextMonthButton1;
         private System.Windows.Forms.Button prevMonthButton1;
         private System.Windows.Forms.Panel calendarDaysPanel1;
+        private System.Windows.Forms.TextBox addressInformationTextBox1;
+        private System.Windows.Forms.TextBox emailInformationTextbox1;
+        private System.Windows.Forms.Label addressInformationLabel1;
+        private System.Windows.Forms.Label emailInformationLabel1;
     }
 }
