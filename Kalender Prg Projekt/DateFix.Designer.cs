@@ -42,6 +42,10 @@
             this.passwordAccountLabel1 = new System.Windows.Forms.Label();
             this.usernameAccountLabel1 = new System.Windows.Forms.Label();
             this.accountInformationsPanel1 = new System.Windows.Forms.Panel();
+            this.addressInformationTextBox1 = new System.Windows.Forms.TextBox();
+            this.emailInformationTextbox1 = new System.Windows.Forms.TextBox();
+            this.addressInformationLabel1 = new System.Windows.Forms.Label();
+            this.emailInformationLabel1 = new System.Windows.Forms.Label();
             this.birthdateInformationTextBox1 = new System.Windows.Forms.TextBox();
             this.lastnameInforamtionTextBox1 = new System.Windows.Forms.TextBox();
             this.firstnameInformationTextBox1 = new System.Windows.Forms.TextBox();
@@ -72,10 +76,6 @@
             this.nextMonthButton1 = new System.Windows.Forms.Button();
             this.prevMonthButton1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.emailInformationLabel1 = new System.Windows.Forms.Label();
-            this.addressInformationLabel1 = new System.Windows.Forms.Label();
-            this.emailInformationTextbox1 = new System.Windows.Forms.TextBox();
-            this.addressInformationTextBox1 = new System.Windows.Forms.TextBox();
             this.accountTabPage1.SuspendLayout();
             this.accountLoginPanel1.SuspendLayout();
             this.accountInformationsPanel1.SuspendLayout();
@@ -202,6 +202,40 @@
             this.accountInformationsPanel1.Name = "accountInformationsPanel1";
             this.accountInformationsPanel1.Size = new System.Drawing.Size(396, 384);
             this.accountInformationsPanel1.TabIndex = 13;
+            // 
+            // addressInformationTextBox1
+            // 
+            this.addressInformationTextBox1.Location = new System.Drawing.Point(158, 238);
+            this.addressInformationTextBox1.Name = "addressInformationTextBox1";
+            this.addressInformationTextBox1.ReadOnly = true;
+            this.addressInformationTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.addressInformationTextBox1.TabIndex = 11;
+            // 
+            // emailInformationTextbox1
+            // 
+            this.emailInformationTextbox1.Location = new System.Drawing.Point(158, 201);
+            this.emailInformationTextbox1.Name = "emailInformationTextbox1";
+            this.emailInformationTextbox1.ReadOnly = true;
+            this.emailInformationTextbox1.Size = new System.Drawing.Size(100, 20);
+            this.emailInformationTextbox1.TabIndex = 10;
+            // 
+            // addressInformationLabel1
+            // 
+            this.addressInformationLabel1.AutoSize = true;
+            this.addressInformationLabel1.Location = new System.Drawing.Point(35, 245);
+            this.addressInformationLabel1.Name = "addressInformationLabel1";
+            this.addressInformationLabel1.Size = new System.Drawing.Size(51, 13);
+            this.addressInformationLabel1.TabIndex = 9;
+            this.addressInformationLabel1.Text = "Addresse";
+            // 
+            // emailInformationLabel1
+            // 
+            this.emailInformationLabel1.AutoSize = true;
+            this.emailInformationLabel1.Location = new System.Drawing.Point(35, 208);
+            this.emailInformationLabel1.Name = "emailInformationLabel1";
+            this.emailInformationLabel1.Size = new System.Drawing.Size(36, 13);
+            this.emailInformationLabel1.TabIndex = 8;
+            this.emailInformationLabel1.Text = "E-Mail";
             // 
             // birthdateInformationTextBox1
             // 
@@ -528,40 +562,6 @@
             this.tabControl1.Size = new System.Drawing.Size(737, 410);
             this.tabControl1.TabIndex = 7;
             // 
-            // emailInformationLabel1
-            // 
-            this.emailInformationLabel1.AutoSize = true;
-            this.emailInformationLabel1.Location = new System.Drawing.Point(35, 208);
-            this.emailInformationLabel1.Name = "emailInformationLabel1";
-            this.emailInformationLabel1.Size = new System.Drawing.Size(36, 13);
-            this.emailInformationLabel1.TabIndex = 8;
-            this.emailInformationLabel1.Text = "E-Mail";
-            // 
-            // addressInformationLabel1
-            // 
-            this.addressInformationLabel1.AutoSize = true;
-            this.addressInformationLabel1.Location = new System.Drawing.Point(35, 245);
-            this.addressInformationLabel1.Name = "addressInformationLabel1";
-            this.addressInformationLabel1.Size = new System.Drawing.Size(51, 13);
-            this.addressInformationLabel1.TabIndex = 9;
-            this.addressInformationLabel1.Text = "Addresse";
-            // 
-            // emailInformationTextbox1
-            // 
-            this.emailInformationTextbox1.Location = new System.Drawing.Point(158, 201);
-            this.emailInformationTextbox1.Name = "emailInformationTextbox1";
-            this.emailInformationTextbox1.ReadOnly = true;
-            this.emailInformationTextbox1.Size = new System.Drawing.Size(100, 20);
-            this.emailInformationTextbox1.TabIndex = 10;
-            // 
-            // addressInformationTextBox1
-            // 
-            this.addressInformationTextBox1.Location = new System.Drawing.Point(158, 238);
-            this.addressInformationTextBox1.Name = "addressInformationTextBox1";
-            this.addressInformationTextBox1.ReadOnly = true;
-            this.addressInformationTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.addressInformationTextBox1.TabIndex = 11;
-            // 
             // DateFix
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -570,6 +570,7 @@
             this.ClientSize = new System.Drawing.Size(737, 410);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DateFix";
             this.Text = "DateFix";
